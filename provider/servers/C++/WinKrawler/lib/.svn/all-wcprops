@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib
+END
+SocketsR.lib
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/SocketsR.lib
+END
+iconv.lib
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/iconv.lib
+END
+iconv_a.lib
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/iconv_a.lib
+END
+SocketsD.lib
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/SocketsD.lib
+END
+libxml2.lib
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/libxml2.lib
+END
+libxml2_a.lib
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/lib/libxml2_a.lib
+END

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemoteIslandManager", "RemoteIslandManager\RemoteIslandManager.vcproj", "{0BA6210E-CFC9-4045-9A42-A90810A94986}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemoteIslandShell", "RemoteIslandShell\RemoteIslandShell.vcproj", "{7AE64B44-8AE5-413F-9B70-AEAFCEB4D2CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemoteIsland", "RemoteIsland\RemoteIsland.vcproj", "{6C5FD4F9-D66F-4ECC-B6E8-76CE06D98152}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BA6210E-CFC9-4045-9A42-A90810A94986}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0BA6210E-CFC9-4045-9A42-A90810A94986}.Debug|Win32.Build.0 = Debug|Win32
+		{0BA6210E-CFC9-4045-9A42-A90810A94986}.Release|Win32.ActiveCfg = Release|Win32
+		{0BA6210E-CFC9-4045-9A42-A90810A94986}.Release|Win32.Build.0 = Release|Win32
+		{7AE64B44-8AE5-413F-9B70-AEAFCEB4D2CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7AE64B44-8AE5-413F-9B70-AEAFCEB4D2CA}.Debug|Win32.Build.0 = Debug|Win32
+		{7AE64B44-8AE5-413F-9B70-AEAFCEB4D2CA}.Release|Win32.ActiveCfg = Release|Win32
+		{7AE64B44-8AE5-413F-9B70-AEAFCEB4D2CA}.Release|Win32.Build.0 = Release|Win32
+		{6C5FD4F9-D66F-4ECC-B6E8-76CE06D98152}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C5FD4F9-D66F-4ECC-B6E8-76CE06D98152}.Debug|Win32.Build.0 = Debug|Win32
+		{6C5FD4F9-D66F-4ECC-B6E8-76CE06D98152}.Release|Win32.ActiveCfg = Release|Win32
+		{6C5FD4F9-D66F-4ECC-B6E8-76CE06D98152}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
