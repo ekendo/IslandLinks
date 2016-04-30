@@ -1,0 +1,56 @@
+8
+
+dir
+61
+svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/windows/Java/IslandLinks/homeIsland/dist
+svn://ekendotech.net/islandsoft
+
+
+
+2007-12-02T22:37:19.075860Z
+12
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+dmcl
+dir
+
+README.TXT
+file
+
+
+
+
+2008-06-05T15:05:19.170163Z
+b02444a462606f07e52e5c13c0b7cfc5
+2007-12-02T22:37:19.075860Z
+12
+ekendo
+
+homeIsland.jar
+file
+
+
+
+
+2008-06-05T15:05:20.051430Z
+38ce2d98b2555978622d0df7839598c5
+2007-12-02T22:37:19.075860Z
+12
+ekendo
+has-props
+

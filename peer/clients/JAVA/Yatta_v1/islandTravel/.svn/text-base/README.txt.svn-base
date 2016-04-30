@@ -1,0 +1,4 @@
+islandTravel
+============
+This involves the fun stuff. Talking over the wire, sending files, real time streaming, you name it.
+The benefit here is the P2p consolidation for JXTA (Advertise), Gnutella(Query,Search) and Http (streams,POST, GET).

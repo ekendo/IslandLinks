@@ -1,0 +1,34 @@
+4.0
+OBJ QUERY_CACHE_HDR_TYPE 3
+xxx Aug 23 14:13:50 2007
+A 4 dctm
+A 57 5.3.0.510 SP5 Win32/5.3.0.510 SP5 sun5.Oracle/1 (365,600)
+0OBJ QUERY_CACHE_TYPE 3
+  8
+A 65 select r_object_id from dm_type where name = 'dm_xml_application'
+A 60 select r_object_id from dm_type where name = 'dm_xml_config'
+A 56 select r_object_id from dm_type where name = 'dm_format'
+A 58 select r_object_id from dm_type where name = 'kapture_doc'
+A 58 select r_object_id from dm_type where name = 'dm_document'
+A 59 select r_object_id from dm_type where name = 'dm_sysobject'
+A 36 select name, super_name from dm_type
+A 70 select r_object_id, attr_name from dm_type where name = 'dm_sysobject'
+  8
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e43SKBDWKKR.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e43WVTPAWRJ.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e43CTFHBTYI.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e434JEVWYK8.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e43C63FHXCG.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e43X7AALTYO.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e44WW21GO88.txt
+A 151 C:\Earl\EKenDo\Svn\trunk\framework\client\desktop\Java\IslandLinks\homeIsland\dmcl\qrycache\c-98-196-141-224\00002af9\dctm0000.390\80001e4480OKRNWL.txt
+  8
+xxx Aug 23 19:10:38 2007
+xxx Aug 23 19:10:38 2007
+xxx Aug 23 19:10:40 2007
+xxx Aug 23 19:10:42 2007
+xxx Aug 23 19:10:43 2007
+xxx Aug 23 19:10:43 2007
+xxx Aug 23 19:11:52 2007
+xxx Aug 23 19:11:53 2007
+0

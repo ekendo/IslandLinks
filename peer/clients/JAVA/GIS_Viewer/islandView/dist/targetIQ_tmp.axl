@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ARCXML version="1.1">
+  <CONFIG>
+    <ENVIRONMENT>
+      <LOCALE country="US" language="en" variant="" />
+      <UIFONT color="0,0,0" name="SansSerif" size="12" style="regular" />
+      <SCREEN dpi="96" />
+    </ENVIRONMENT>
+    <MAP>
+      <PROPERTIES>
+	<ENVELOPE minx="-113.51133496983564" miny="9.836690218283316" maxx="-38.84463032573839" maxy="65.83671870135626" name="Initial_Extent" />
+	<MAPUNITS units="decimal_degrees" />
+      </PROPERTIES>
+      <WORKSPACES>
+	<SHAPEWORKSPACE name="shp_ws-0" directory="C:\Earl\Consulting\CampaignLocal\trunk\apps\Campaignlocal.TargetIQ\Viewer\build\classes\com\campaignlocal\data\countries" />
+	<SHAPEWORKSPACE name="shp_ws-1" directory="C:\Earl\Consulting\CampaignLocal\trunk\apps\Campaignlocal.TargetIQ\Viewer\build\classes\com\campaignlocal\data\Rivers" />
+	<SHAPEWORKSPACE name="shp_ws-2" directory="C:\Earl\Consulting\CampaignLocal\trunk\apps\Campaignlocal.TargetIQ\Viewer\build\classes\com\campaignlocal\data\63467961" />
+	<SHAPEWORKSPACE name="shp_ws-3" directory="C:\Earl\Consulting\CampaignLocal\trunk\apps\Campaignlocal.TargetIQ\Viewer\build\classes\com\campaignlocal\data\67669316" />
+	<SHAPEWORKSPACE name="shp_ws-4" directory="C:\Earl\Consulting\CampaignLocal\trunk\apps\Campaignlocal.TargetIQ\Viewer\build\classes\com\campaignlocal\data\01357094" />
+      </WORKSPACES>
+      <LAYER type="featureclass" name="countries" visible="true" id="0">
+	<DATASET name="countries" type="polygon" workspace="shp_ws-0" />
+	<SIMPLERENDERER>
+	  <SIMPLEPOLYGONSYMBOL boundarytransparency="1.0" filltransparency="1.0" fillcolor="27,227,127" boundarycaptype="round" />
+	</SIMPLERENDERER>
+      </LAYER>
+      <LAYER type="featureclass" name="Rivers 2" visible="true" id="1">
+	<DATASET name="Rivers 2" type="line" workspace="shp_ws-1" />
+	<SIMPLERENDERER>
+	  <SIMPLELINESYMBOL width="1" captype="round" color="227,27,127" />
+	</SIMPLERENDERER>
+      </LAYER>
+      <LAYER type="featureclass" name="63467961" visible="true" id="2">
+	<DATASET name="63467961" type="polygon" workspace="shp_ws-2" />
+	<SIMPLERENDERER>
+	  <SIMPLEPOLYGONSYMBOL boundarytransparency="1.0" filltransparency="1.0" fillcolor="27,227,127" boundarycaptype="round" />
+	</SIMPLERENDERER>
+      </LAYER>
+      <LAYER type="featureclass" name="67669316" visible="true" id="3">
+	<DATASET name="67669316" type="polygon" workspace="shp_ws-3" />
+	<SIMPLERENDERER>
+	  <SIMPLEPOLYGONSYMBOL boundarytransparency="1.0" filltransparency="1.0" fillcolor="27,227,27" boundarycaptype="round" />
+	</SIMPLERENDERER>
+      </LAYER>
+      <LAYER type="featureclass" name="01357094" visible="true" id="4">
+	<DATASET name="01357094" type="polygon" workspace="shp_ws-4" />
+	<SIMPLERENDERER>
+	  <SIMPLEPOLYGONSYMBOL boundarytransparency="1.0" filltransparency="1.0" fillcolor="127,27,227" boundarycaptype="round" />
+	</SIMPLERENDERER>
+      </LAYER>
+    </MAP>
+  </CONFIG>
+</ARCXML>

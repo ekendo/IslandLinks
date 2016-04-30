@@ -1,0 +1,52 @@
+8
+
+dir
+83
+svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/windows/Java/IslandLinks/islandTravel/src/com/ekendoTech/islandCommunication
+svn://ekendotech.net/islandsoft
+
+
+
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+SpeakToIslandGroups.java
+file
+
+
+
+
+2008-06-06T04:13:20.767446Z
+41d58739fb52d6afc4a45aa0a40e3c32
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+
+ListenToIslandGroups.java
+file
+
+
+
+
+2008-06-06T04:13:21.047849Z
+c0980abe9bd072979f1ad76132b680cb
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+

@@ -1,0 +1,5676 @@
+1.0
+OBJ TYPE_CACHE_FILE_HEADER_TYPE 3
+xxx Aug 23 19:10:45 2007
+A 57 5.3.0.510 SP5 Win32/5.3.0.510 SP5 sun5.Oracle/1 (365,600)
+A 5 UTF-8
+0
+<TYPE>
+TYPE dm_type 03002af980000001
+ NULL 
+15
+  name  STRING S 27
+  super_name  STRING S 40
+  attr_count  INT S 0
+  start_pos  INT S 0
+  owner  STRING S 40
+  s_index_attr  ID S 0
+  r_index_attr  ID S 0
+  info  ID S 0
+  attr_name  STRING R 40
+  attr_type  INT R 0
+  attr_repeating  BOOL R 0
+  attr_length  INT R 0
+  views_valid  BOOL S 0
+  unique_tag  INT S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dmi_type_info 03002af980000007
+ NULL 
+15
+  r_type_id  ID S 0
+  r_type_name  STRING S 27
+  default_storage  ID S 0
+  default_owner_permit  INT S 0
+  default_group_permit  INT S 0
+  default_world_permit  INT S 0
+  default_group  STRING S 27
+  r_supertype  STRING R 27
+  acl_domain  STRING S 32
+  acl_name  STRING S 32
+  ftindex_attrs  STRING R 27
+  r_orig_declaration  BOOL R 0
+  locally_managed  BOOL R 0
+  type_override  ID S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dm_acl 03002af980000101
+ NULL 
+20
+  object_name  STRING S 32
+  description  STRING S 128
+  owner_name  STRING S 32
+  r_is_internal  BOOL S 0
+  r_accessor_name  STRING R 32
+  r_accessor_permit  INT R 0
+  r_accessor_xpermit  INT R 0
+  r_is_group  BOOL R 0
+  globally_managed  BOOL S 0
+  acl_class  INT S 0
+  r_has_events  BOOL S 0
+  r_permit_type  INT R 0
+  r_application_permit  STRING R 128
+  i_has_required_groups  BOOL S 0
+  i_has_required_group_set  BOOL S 0
+  i_has_access_restrictions  BOOL S 0
+  r_template_id  ID S 0
+  r_alias_set_id  ID S 0
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dm_sysobject 03002af980000105
+ NULL 
+85
+  object_name  STRING S 255
+  r_object_type  STRING S 32
+  title  STRING S 400
+  subject  STRING S 192
+  authors  STRING R 48
+  keywords  STRING R 48
+  a_application_type  STRING S 32
+  a_status  STRING S 16
+  r_creation_date  TIME S 0
+  r_modify_date  TIME S 0
+  r_modifier  STRING S 32
+  r_access_date  TIME S 0
+  a_is_hidden  BOOL S 0
+  i_is_deleted  BOOL S 0
+  a_retention_date  TIME S 0
+  a_archive  BOOL S 0
+  a_compound_architecture  STRING S 16
+  a_link_resolved  BOOL S 0
+  i_reference_cnt  INT S 0
+  i_has_folder  BOOL S 0
+  i_folder_id  ID R 0
+  r_composite_id  ID R 0
+  r_composite_label  STRING R 32
+  r_component_label  STRING R 32
+  r_order_no  INT R 0
+  r_link_cnt  INT S 0
+  r_link_high_cnt  INT S 0
+  r_assembled_from_id  ID S 0
+  r_frzn_assembly_cnt  INT S 0
+  r_has_frzn_assembly  BOOL S 0
+  resolution_label  STRING S 32
+  r_is_virtual_doc  INT S 0
+  i_contents_id  ID S 0
+  a_content_type  STRING S 32
+  r_page_cnt  INT S 0
+  r_content_size  INT S 0
+  a_full_text  BOOL S 0
+  a_storage_type  STRING S 32
+  i_cabinet_id  ID S 0
+  owner_name  STRING S 32
+  owner_permit  INT S 0
+  group_name  STRING S 32
+  group_permit  INT S 0
+  world_permit  INT S 0
+  i_antecedent_id  ID S 0
+  i_chronicle_id  ID S 0
+  i_latest_flag  BOOL S 0
+  r_lock_owner  STRING S 32
+  r_lock_date  TIME S 0
+  r_lock_machine  STRING S 32
+  log_entry  STRING S 120
+  r_version_label  STRING R 32
+  i_branch_cnt  INT S 0
+  i_direct_dsc  BOOL S 0
+  r_immutable_flag  BOOL S 0
+  r_frozen_flag  BOOL S 0
+  r_has_events  BOOL S 0
+  acl_domain  STRING S 32
+  acl_name  STRING S 32
+  a_special_app  STRING S 32
+  i_is_reference  BOOL S 0
+  r_creator_name  STRING S 32
+  r_is_public  BOOL S 0
+  r_policy_id  ID S 0
+  r_resume_state  INT S 0
+  r_current_state  INT S 0
+  r_alias_set_id  ID S 0
+  a_effective_date  TIME R 0
+  a_expiration_date  TIME R 0
+  a_publish_formats  STRING R 32
+  a_effective_label  STRING R 32
+  a_effective_flag  STRING R 8
+  a_category  STRING S 64
+  language_code  STRING S 5
+  a_is_template  BOOL S 0
+  a_controlling_app  STRING S 32
+  r_full_content_size  DOUBLE S 0
+  a_extended_properties  STRING R 32
+  a_is_signed  BOOL S 0
+  a_last_review_date  TIME S 0
+  i_retain_until  TIME S 0
+  r_aspect_name  STRING R 64
+  i_retainer_id  ID R 0
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dm_docbase_config 03002af98000011c
+dm_sysobject
+37
+  r_dbms_name  STRING S 32
+  mac_access_protocol  STRING S 32
+  security_mode  STRING S 32
+  auth_protocol  STRING S 32
+  index_store  STRING S 80
+  r_docbase_id  INT S 0
+  r_address_partitions  INT S 0
+  r_starting_partition  INT S 0
+  r_ending_partition  INT S 0
+  folder_security  BOOL S 0
+  effective_date  TIME S 0
+  r_federation_name  STRING S 120
+  a_bpaction_run_as  STRING S 32
+  richmedia_enabled  BOOL S 0
+  dd_locales  STRING R 5
+  default_app_permit  INT S 0
+  oldest_client_version  STRING S 32
+  max_auth_attempt  INT S 0
+  i_crypto_key  STRING S 255
+  client_pcaching_disabled  BOOL S 0
+  client_pcaching_change  INT S 0
+  fulltext_install_locs  STRING R 32
+  offline_sync_level  INT S 0
+  offline_checkin_flag  INT S 0
+  wf_package_control_enabled  BOOL S 0
+  r_storage_mode  INT S 0
+  macl_security_disabled  BOOL S 0
+  i_ticket_crypto_key  STRING S 255
+  trust_by_default  BOOL S 0
+  trusted_docbases  STRING R 255
+  login_ticket_cutoff  TIME S 0
+  auth_failure_interval  INT S 0
+  auth_deactivation_interval  INT S 0
+  dir_user_sync_on_demand  BOOL S 0
+  r_module_name  STRING R 32
+  r_module_mode  INT R 0
+  check_client_version  BOOL S 0
+
+<TYPE>
+TYPE dm_server_config 03002af98000011d
+dm_sysobject
+69
+  concurrent_sessions  INT S 0
+  server_cache_size  INT S 0
+  client_cache_size  INT S 0
+  nfs_enabled  BOOL S 0
+  r_server_version  STRING S 32
+  secure_writer_location  STRING S 32
+  user_validation_location  STRING S 32
+  compound_integrity  BOOL S 0
+  system_converter_location  STRING S 32
+  stage_destroyer_location  STRING S 32
+  cached_types  STRING R 32
+  far_stores  STRING R 32
+  user_converter_location  STRING S 32
+  netstor_bin_location  STRING S 32
+  log_location  STRING S 32
+  common_location  STRING S 32
+  temp_location  STRING S 32
+  nls_location  STRING S 32
+  locale_name  STRING S 32
+  checkpoint_interval  INT S 0
+  keep_entry_interval  INT S 0
+  sibling_checkpoint_interval  INT S 0
+  sibling_export_enabled  BOOL S 0
+  r_host_name  STRING S 64
+  r_process_id  INT S 0
+  operator_name  STRING S 32
+  assume_user_location  STRING S 32
+  change_password_location  STRING S 32
+  turbo_backing_store  STRING S 32
+  events_location  STRING S 32
+  agent_launcher  STRING S 32
+  default_acl  INT S 0
+  r_install_owner  STRING S 32
+  r_install_domain  STRING S 16
+  verity_location  STRING S 32
+  rend_backing_store  STRING S 32
+  projection_targets  STRING R 80
+  projection_ports  INT R 0
+  projection_proxval  INT R 0
+  projection_notes  STRING R 80
+  projection_enable  BOOL R 0
+  a_silent_login  BOOL S 0
+  signature_chk_loc  STRING S 32
+  alias_set_id  ID S 0
+  web_server_loc  STRING S 255
+  rightsite_image  STRING S 255
+  web_server_port  INT S 0
+  ldap_config_id  ID S 0
+  login_ticket_timeout  INT S 0
+  default_client_codepage  STRING S 64
+  server_os_codepage  STRING S 64
+  app_server_name  STRING R 32
+  app_server_uri  STRING R 255
+  smtp_server  STRING S 64
+  secure_connect_mode  STRING S 16
+  auth_plugin_location  STRING S 32
+  r_trusted_mode  INT S 0
+  dba_location  STRING S 32
+  wf_agent_worker_threads  INT S 0
+  wf_sleep_interval  INT S 0
+  r_castore_enabled  INT S 0
+  mail_method  STRING S 32
+  application_access_control  BOOL S 0
+  max_login_ticket_timeout  INT S 0
+  restrict_su_ticket_login  BOOL S 0
+  extra_directory_config_id  ID R 0
+  fulltext_location  STRING S 64
+  projection_netloc_enable  BOOL R 0
+  projection_netloc_id  STRING R 80
+
+<TYPE>
+TYPE dmi_dd_common_info 03002af98000011f
+ NULL 
+54
+  nls_key  STRING S 5
+  business_policy_id  ID S 0
+  state_name  STRING S 32
+  type_name  STRING S 32
+  resync_needed  BOOL S 0
+  label_text  STRING S 64
+  help_text  STRING S 255
+  comment_text  STRING S 255
+  is_searchable  BOOL S 0
+  ignore_constraints  BOOL S 0
+  life_cycle  INT S 0
+  val_constraint  ID R 0
+  val_constraint_enf  INT R 0
+  val_constraint_dep  STRING R 32
+  val_constraint_msg  STRING R 255
+  constraint_dep_usr  BOOL S 0
+  unique_keys  ID R 0
+  unique_key_enfs  INT R 0
+  unique_key_msgs  STRING R 255
+  foreign_keys  ID R 0
+  foreign_key_enfs  INT R 0
+  foreign_key_msgs  STRING R 255
+  primary_key  ID S 0
+  primary_key_enf  INT S 0
+  primary_key_msg  STRING S 255
+  map_display_string  STRING R 128
+  map_data_string  STRING R 128
+  map_description  STRING R 255
+  i_label_text  BOOL S 0
+  i_help_text  BOOL S 0
+  i_comment_text  BOOL S 0
+  i_is_searchable  BOOL S 0
+  i_ignore_constraints  BOOL S 0
+  i_life_cycle  BOOL S 0
+  i_val_constraint  INT S 0
+  i_val_constraint_enf  INT S 0
+  i_val_constraint_dep  INT S 0
+  i_val_constraint_msg  INT S 0
+  i_constraint_dep_usr  BOOL S 0
+  i_unique_keys  INT S 0
+  i_unique_key_enfs  INT S 0
+  i_unique_key_msgs  INT S 0
+  i_foreign_keys  INT S 0
+  i_foreign_key_enfs  INT S 0
+  i_foreign_key_msgs  INT S 0
+  i_primary_key  BOOL S 0
+  i_primary_key_enf  BOOL S 0
+  i_primary_key_msg  BOOL S 0
+  i_dd_flags  INT R 0
+  i_map_display_string  INT S 0
+  i_map_data_string  INT S 0
+  i_map_description  INT S 0
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dmi_dd_type_info 03002af980000121
+dmi_dd_common_info
+30
+  default_policy_id  ID S 0
+  policy_ver_label  STRING S 32
+  icon_index  INT S 0
+  attr_domain_name  STRING R 32
+  attr_domain_id  ID R 0
+  comp_classifier  STRING R 128
+  qual_comp_id  ID R 0
+  r_has_unique_key  BOOL R 0
+  r_has_foreign_key  BOOL R 0
+  r_has_primary_key  BOOL R 0
+  r_has_not_null  BOOL R 0
+  r_has_check  BOOL R 0
+  r_has_constraint  BOOL R 0
+  r_has_default  BOOL R 0
+  r_has_value_assist  BOOL R 0
+  r_has_dependency  BOOL R 0
+  r_has_ignore_immutable  BOOL R 0
+  i_default_policy_id  BOOL S 0
+  i_policy_ver_label  BOOL S 0
+  i_icon_index  BOOL S 0
+  i_attr_domain_name  INT S 0
+  i_attr_domain_id  INT S 0
+  i_comp_classifier  INT S 0
+  i_qual_comp_id  INT S 0
+  auditable_sysevents  STRING R 64
+  auditable_appevents  STRING R 64
+  i_auditable_sysevents  INT S 0
+  i_auditable_appevents  INT S 0
+  scope_config  ID R 0
+  i_scope_config  INT S 0
+
+<TYPE>
+TYPE dm_folder 03002af980000127
+dm_sysobject
+2
+  r_folder_path  STRING R 740
+  i_ancestor_id  ID R 0
+
+<TYPE>
+TYPE dm_document 03002af980000129
+dm_sysobject
+0
+
+<TYPE>
+TYPE dm_store 03002af98000012d
+ NULL 
+22
+  name  STRING S 64
+  store_type  INT S 0
+  capacity  INT S 0
+  current_use  INT S 0
+  component  STRING R 64
+  r_component  ID R 0
+  r_component_count  INT S 0
+  r_status  INT S 0
+  get_method  STRING S 32
+  offline_get_method  BOOL S 0
+  i_use_mask_after  INT S 0
+  require_ticket  BOOL S 0
+  media_type  INT S 0
+  base_url  STRING S 255
+  crypto_mode  INT S 0
+  crypto_key  STRING S 255
+  digital_shredding  BOOL S 0
+  compression_mode  INT S 0
+  content_dupl_pref  INT S 0
+  content_hash_mode  INT S 0
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dmr_content 03002af98000013b
+ NULL 
+52
+  parent_id  ID R 0
+  page  INT R 0
+  rendition  INT S 0
+  parent_count  INT S 0
+  storage_id  ID S 0
+  data_ticket  INT S 0
+  other_ticket  INT S 0
+  content_size  INT S 0
+  full_format  STRING S 64
+  format  ID S 0
+  resolution  INT S 0
+  x_range  INT S 0
+  y_range  INT S 0
+  z_range  INT S 0
+  encoding  STRING S 10
+  loss  INT S 0
+  transform_path  STRING S 32
+  set_client  STRING S 64
+  set_file  STRING S 255
+  set_time  TIME S 0
+  is_offline  BOOL S 0
+  i_contents  STRING S 4000
+  is_archived  BOOL S 0
+  index_format  ID S 0
+  index_parent  ID S 0
+  fulltext_index  ID R 0
+  index_pending  BOOL R 0
+  update_count  INT R 0
+  i_index_format  ID R 0
+  i_format  ID R 0
+  i_rendition  INT R 0
+  i_px  INT R 0
+  i_py  INT R 0
+  i_pz  INT R 0
+  i_encoding  STRING R 10
+  i_full_format  STRING R 64
+  index_parents  ID R 0
+  index_set_times  TIME R 0
+  index_pages  INT R 0
+  index_subtypes  STRING R 27
+  index_operations  INT R 0
+  index_formats  ID R 0
+  content_attr_name  STRING R 64
+  content_attr_value  STRING R 255
+  full_content_size  DOUBLE S 0
+  page_modifier  STRING R 16
+  content_attr_num_value  DOUBLE R 0
+  content_attr_date_value  TIME R 0
+  content_attr_data_type  INT R 0
+  r_content_hash  STRING S 256
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dm_format 03002af980000143
+ NULL 
+22
+  name  STRING S 64
+  description  STRING S 64
+  can_index  BOOL S 0
+  topic_transform  BOOL S 0
+  topic_filter  STRING S 64
+  topic_format  ID S 0
+  topic_format_name  STRING S 64
+  mac_creator  STRING S 4
+  mac_type  STRING S 4
+  dos_extension  STRING S 10
+  is_hidden  BOOL S 0
+  win31_app  STRING S 12
+  com_class_id  STRING S 38
+  mime_type  STRING S 256
+  icon_index  INT S 0
+  richmedia_enabled  BOOL S 0
+  asset_class  STRING S 32
+  default_storage  ID S 0
+  filename_modifier  STRING S 16
+  format_class  STRING R 32
+  i_is_replica  BOOL S 0
+  i_vstamp  INT S 0
+
+<TYPE>
+TYPE dm_java 03002af980000164
+dm_document
+3
+  full_name  STRING S 255
+  assoc_type  STRING S 32
+  a_checksum  INT S 0
+
+<TYPE>
+TYPE kapture_doc 03002af9800001aa
+dm_document
+3
+  kapture_title  STRING S 128
+  kapture_url  STRING S 256
+  kapture_date  TIME S 0
+
+
+<============>
+<DATA_DICT>
+
+69002af9800005b1
+dmi_dd_type_info
+OBJ dmi_dd_type_info 84
+A 2 en
+0000000000000000
+A 0 
+A 11 kapture_doc
+F
+A 8 Document
+A 0 
+A 0 
+T
+F
+1
+  0
+  0
+  0
+  0
+F
+  0
+  0
+  0
+  0
+  0
+  0
+0000000000000000
+2
+A 0 
+  6
+A 4 Info
+A 7 General
+A 7 Summary
+A 7 Version
+A 8 Security
+A 8 Advanced
+  6
+A 7 dm_info
+A 10 dm_general
+A 10 dm_summary
+A 10 dm_version
+A 11 dm_security
+A 11 dm_advanced
+  6
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+T
+T
+T
+T
+T
+T
+0
+0
+0
+0
+F
+0
+0
+0
+0
+0
+0
+T
+T
+T
+  6
+1536
+128
+0
+0
+0
+0
+0
+0
+0
+F
+0
+0000000000000000
+A 0 
+0
+  0
+  0
+  0
+  0
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+F
+T
+T
+F
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+T
+T
+T
+F
+F
+F
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+0
+0
+0
+0
+  64
+A 6 dm_all
+A 10 dm_checkin
+A 11 dm_checkout
+A 10 dm_destroy
+A 8 dm_fetch
+A 7 dm_lock
+A 8 dm_prune
+A 7 dm_save
+A 9 dm_unlock
+A 8 dm_route
+A 10 dm_forward
+A 10 dm_reverse
+A 11 dm_reassign
+A 7 dm_halt
+A 6 dm_end
+A 10 dm_signoff
+A 10 dm_acquire
+A 8 dm_force
+A 8 dm_pause
+A 9 dm_resume
+A 8 dm_start
+A 9 dm_branch
+A 7 dm_mark
+A 10 dm_archive
+A 15 dm_archive_done
+A 10 dm_restore
+A 15 dm_restore_done
+A 7 dm_link
+A 9 dm_unlink
+A 9 dm_status
+A 10 dm_setfile
+A 9 dm_freeze
+A 11 dm_unfreeze
+A 13 dm_bp_promote
+A 12 dm_bp_demote
+A 12 dm_bp_attach
+A 13 dm_bp_suspend
+A 12 dm_bp_resume
+A 10 dm_addnote
+A 13 dm_removenote
+A 11 dm_assemble
+A 11 dm_jobstart
+A 9 dm_unmark
+A 12 dm_saveasnew
+A 10 dm_getfile
+A 16 dm_removecontent
+A 15 dm_addrendition
+A 18 dm_removerendition
+A 13 dm_appendpart
+A 13 dm_insertpart
+A 13 dm_removepart
+A 13 dm_updatepart
+A 15 dm_checkout_ref
+A 14 dm_checkin_ref
+A 15 dm_checkcan_ref
+A 14 dm_disassemble
+A 18 dm_adddigsignature
+A 8 dm_audit
+A 10 dm_unaudit
+A 16 dm_addesignature
+A 15 dm_move_content
+A 15 dm_addretention
+A 18 dm_removeretention
+A 23 dm_addesignature_failed
+  0
+0
+0
+  2
+6c002af980000102
+6c002af980000103
+0
+26
+r_object_id ID S 0
+69002af9800005b1
+name STRING S 0
+A 11 kapture_doc
+super_name STRING S 0
+A 11 dm_document
+attr_count INT S 0
+88
+start_pos INT S 0
+85
+owner STRING S 0
+A 4 dctm
+s_index_attr ID S 0
+0000000000000000
+r_index_attr ID S 0
+0000000000000000
+info ID S 0
+2e002af980000500
+attr_name STRING R 0
+  88
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+A 13 kapture_title
+A 11 kapture_url
+A 12 kapture_date
+attr_type INT R 0
+  88
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+2
+2
+4
+attr_repeating BOOL R 0
+  88
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+attr_length INT R 0
+  88
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+128
+256
+0
+views_valid BOOL S 0
+T
+unique_tag INT S 0
+0
+r_type_id ID S 0
+03002af9800001aa
+r_type_name STRING S 0
+A 11 kapture_doc
+default_storage ID S 0
+0000000000000000
+default_owner_permit INT S 0
+0
+default_group_permit INT S 0
+0
+default_world_permit INT S 0
+0
+default_group STRING S 0
+A 0 
+r_supertype STRING R 0
+  3
+A 12 dm_sysobject
+A 11 dm_document
+A 11 kapture_doc
+acl_domain STRING S 0
+A 0 
+acl_name STRING S 0
+A 0 
+type_override ID S 0
+0000000000000000
+
+<DATA_DICT>
+
+69002af980000503
+dmi_dd_type_info
+OBJ dmi_dd_type_info 84
+A 2 en
+0000000000000000
+A 0 
+A 11 dm_document
+F
+A 8 Document
+A 0 
+A 0 
+T
+F
+1
+  0
+  0
+  0
+  0
+F
+  0
+  0
+  0
+  0
+  0
+  0
+0000000000000000
+2
+A 0 
+  6
+A 4 Info
+A 7 General
+A 7 Summary
+A 7 Version
+A 8 Security
+A 8 Advanced
+  6
+A 7 dm_info
+A 10 dm_general
+A 10 dm_summary
+A 10 dm_version
+A 11 dm_security
+A 11 dm_advanced
+  6
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+F
+T
+T
+T
+T
+T
+0
+0
+0
+0
+F
+0
+0
+0
+0
+0
+0
+T
+T
+T
+  6
+1536
+128
+0
+0
+0
+0
+0
+0
+0
+F
+0
+0000000000000000
+A 0 
+0
+  0
+  0
+  0
+  0
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+F
+T
+T
+F
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+T
+T
+T
+F
+F
+F
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+0
+0
+0
+0
+  64
+A 6 dm_all
+A 10 dm_checkin
+A 11 dm_checkout
+A 10 dm_destroy
+A 8 dm_fetch
+A 7 dm_lock
+A 8 dm_prune
+A 7 dm_save
+A 9 dm_unlock
+A 8 dm_route
+A 10 dm_forward
+A 10 dm_reverse
+A 11 dm_reassign
+A 7 dm_halt
+A 6 dm_end
+A 10 dm_signoff
+A 10 dm_acquire
+A 8 dm_force
+A 8 dm_pause
+A 9 dm_resume
+A 8 dm_start
+A 9 dm_branch
+A 7 dm_mark
+A 10 dm_archive
+A 15 dm_archive_done
+A 10 dm_restore
+A 15 dm_restore_done
+A 7 dm_link
+A 9 dm_unlink
+A 9 dm_status
+A 10 dm_setfile
+A 9 dm_freeze
+A 11 dm_unfreeze
+A 13 dm_bp_promote
+A 12 dm_bp_demote
+A 12 dm_bp_attach
+A 13 dm_bp_suspend
+A 12 dm_bp_resume
+A 10 dm_addnote
+A 13 dm_removenote
+A 11 dm_assemble
+A 11 dm_jobstart
+A 9 dm_unmark
+A 12 dm_saveasnew
+A 10 dm_getfile
+A 16 dm_removecontent
+A 15 dm_addrendition
+A 18 dm_removerendition
+A 13 dm_appendpart
+A 13 dm_insertpart
+A 13 dm_removepart
+A 13 dm_updatepart
+A 15 dm_checkout_ref
+A 14 dm_checkin_ref
+A 15 dm_checkcan_ref
+A 14 dm_disassemble
+A 18 dm_adddigsignature
+A 8 dm_audit
+A 10 dm_unaudit
+A 16 dm_addesignature
+A 15 dm_move_content
+A 15 dm_addretention
+A 18 dm_removeretention
+A 23 dm_addesignature_failed
+  0
+0
+0
+  2
+6c002af980000102
+6c002af980000103
+2
+26
+r_object_id ID S 0
+69002af980000503
+name STRING S 0
+A 11 dm_document
+super_name STRING S 0
+A 12 dm_sysobject
+attr_count INT S 0
+85
+start_pos INT S 0
+85
+owner STRING S 0
+A 7 kapture
+s_index_attr ID S 0
+0000000000000000
+r_index_attr ID S 0
+0000000000000000
+info ID S 0
+2e002af980000129
+attr_name STRING R 0
+  85
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+attr_type INT R 0
+  85
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+attr_repeating BOOL R 0
+  85
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+attr_length INT R 0
+  85
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+views_valid BOOL S 0
+T
+unique_tag INT S 0
+0
+r_type_id ID S 0
+03002af980000129
+r_type_name STRING S 0
+A 11 dm_document
+default_storage ID S 0
+0000000000000000
+default_owner_permit INT S 0
+0
+default_group_permit INT S 0
+0
+default_world_permit INT S 0
+0
+default_group STRING S 0
+A 0 
+r_supertype STRING R 0
+  2
+A 12 dm_sysobject
+A 11 dm_document
+acl_domain STRING S 0
+A 0 
+acl_name STRING S 0
+A 0 
+type_override ID S 0
+51002af980000107
+
+<DATA_DICT>
+
+69002af980000501
+dmi_dd_type_info
+OBJ dmi_dd_type_info 84
+A 2 en
+0000000000000000
+A 0 
+A 12 dm_sysobject
+F
+A 9 Sysobject
+A 0 
+A 0 
+T
+F
+1
+  0
+  0
+  0
+  0
+F
+  0
+  0
+  0
+  0
+  0
+  0
+0000000000000000
+2
+A 0 
+  6
+A 4 Info
+A 7 General
+A 7 Summary
+A 7 Version
+A 8 Security
+A 8 Advanced
+  6
+A 7 dm_info
+A 10 dm_general
+A 10 dm_summary
+A 10 dm_version
+A 11 dm_security
+A 11 dm_advanced
+  6
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+A 0 
+F
+T
+T
+F
+T
+T
+0
+0
+0
+0
+F
+0
+0
+0
+0
+0
+0
+T
+T
+T
+  6
+1536
+128
+0
+0
+0
+0
+6
+6
+6
+F
+0
+0000000000000000
+A 0 
+0
+  0
+  0
+  0
+  0
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+T
+T
+T
+F
+T
+F
+F
+T
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  85
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+F
+T
+T
+F
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+F
+T
+T
+T
+F
+F
+F
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+0
+0
+0
+0
+  64
+A 6 dm_all
+A 10 dm_checkin
+A 11 dm_checkout
+A 10 dm_destroy
+A 8 dm_fetch
+A 7 dm_lock
+A 8 dm_prune
+A 7 dm_save
+A 9 dm_unlock
+A 8 dm_route
+A 10 dm_forward
+A 10 dm_reverse
+A 11 dm_reassign
+A 7 dm_halt
+A 6 dm_end
+A 10 dm_signoff
+A 10 dm_acquire
+A 8 dm_force
+A 8 dm_pause
+A 9 dm_resume
+A 8 dm_start
+A 9 dm_branch
+A 7 dm_mark
+A 10 dm_archive
+A 15 dm_archive_done
+A 10 dm_restore
+A 15 dm_restore_done
+A 7 dm_link
+A 9 dm_unlink
+A 9 dm_status
+A 10 dm_setfile
+A 9 dm_freeze
+A 11 dm_unfreeze
+A 13 dm_bp_promote
+A 12 dm_bp_demote
+A 12 dm_bp_attach
+A 13 dm_bp_suspend
+A 12 dm_bp_resume
+A 10 dm_addnote
+A 13 dm_removenote
+A 11 dm_assemble
+A 11 dm_jobstart
+A 9 dm_unmark
+A 12 dm_saveasnew
+A 10 dm_getfile
+A 16 dm_removecontent
+A 15 dm_addrendition
+A 18 dm_removerendition
+A 13 dm_appendpart
+A 13 dm_insertpart
+A 13 dm_removepart
+A 13 dm_updatepart
+A 15 dm_checkout_ref
+A 14 dm_checkin_ref
+A 15 dm_checkcan_ref
+A 14 dm_disassemble
+A 18 dm_adddigsignature
+A 8 dm_audit
+A 10 dm_unaudit
+A 16 dm_addesignature
+A 15 dm_move_content
+A 15 dm_addretention
+A 18 dm_removeretention
+A 23 dm_addesignature_failed
+  0
+64
+0
+  2
+6c002af980000100
+6c002af980000101
+2
+26
+r_object_id ID S 0
+69002af980000501
+name STRING S 0
+A 12 dm_sysobject
+super_name STRING S 0
+A 0 
+attr_count INT S 0
+85
+start_pos INT S 0
+0
+owner STRING S 0
+A 7 kapture
+s_index_attr ID S 0
+0000000000000000
+r_index_attr ID S 0
+0000000000000000
+info ID S 0
+2e002af980000105
+attr_name STRING R 0
+  85
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+attr_type INT R 0
+  85
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+attr_repeating BOOL R 0
+  85
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+attr_length INT R 0
+  85
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+views_valid BOOL S 0
+T
+unique_tag INT S 0
+0
+r_type_id ID S 0
+03002af980000105
+r_type_name STRING S 0
+A 12 dm_sysobject
+default_storage ID S 0
+28002af980000100
+default_owner_permit INT S 0
+0
+default_group_permit INT S 0
+0
+default_world_permit INT S 0
+0
+default_group STRING S 0
+A 0 
+r_supertype STRING S 0
+A 12 dm_sysobject
+acl_domain STRING S 0
+A 0 
+acl_name STRING S 0
+A 0 
+type_override ID S 0
+51002af980000106
+
+<DATA_DICT>
+
+69002af980000504
+dmi_dd_type_info
+OBJ dmi_dd_type_info 84
+A 2 en
+0000000000000000
+A 0 
+A 11 dmr_content
+F
+A 7 Content
+A 0 
+A 0 
+F
+F
+1
+  0
+  0
+  0
+  0
+F
+  0
+  0
+  0
+  0
+  0
+  0
+0000000000000000
+2
+A 0 
+  0
+  0
+  0
+F
+T
+T
+F
+T
+T
+0
+0
+0
+0
+F
+0
+0
+0
+0
+0
+0
+T
+T
+T
+  6
+1536
+128
+0
+0
+0
+0
+0
+0
+0
+F
+0
+0000000000000000
+A 0 
+0
+  0
+  0
+  0
+  0
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+T
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+T
+F
+F
+F
+T
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+T
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+  52
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+0
+0
+0
+0
+  1
+A 15 dm_move_content
+  0
+1
+0
+  0
+0
+26
+r_object_id ID S 0
+69002af980000504
+name STRING S 0
+A 11 dmr_content
+super_name STRING S 0
+A 0 
+attr_count INT S 0
+52
+start_pos INT S 0
+0
+owner STRING S 0
+A 7 kapture
+s_index_attr ID S 0
+0000000000000000
+r_index_attr ID S 0
+0000000000000000
+info ID S 0
+2e002af98000013b
+attr_name STRING R 0
+  52
+A 9 parent_id
+A 4 page
+A 9 rendition
+A 12 parent_count
+A 10 storage_id
+A 11 data_ticket
+A 12 other_ticket
+A 12 content_size
+A 11 full_format
+A 6 format
+A 10 resolution
+A 7 x_range
+A 7 y_range
+A 7 z_range
+A 8 encoding
+A 4 loss
+A 14 transform_path
+A 10 set_client
+A 8 set_file
+A 8 set_time
+A 10 is_offline
+A 10 i_contents
+A 11 is_archived
+A 12 index_format
+A 12 index_parent
+A 14 fulltext_index
+A 13 index_pending
+A 12 update_count
+A 14 i_index_format
+A 8 i_format
+A 11 i_rendition
+A 4 i_px
+A 4 i_py
+A 4 i_pz
+A 10 i_encoding
+A 13 i_full_format
+A 13 index_parents
+A 15 index_set_times
+A 11 index_pages
+A 14 index_subtypes
+A 16 index_operations
+A 13 index_formats
+A 17 content_attr_name
+A 18 content_attr_value
+A 17 full_content_size
+A 13 page_modifier
+A 22 content_attr_num_value
+A 23 content_attr_date_value
+A 22 content_attr_data_type
+A 14 r_content_hash
+A 12 i_is_replica
+A 8 i_vstamp
+attr_type INT R 0
+  52
+3
+1
+1
+1
+3
+1
+1
+1
+2
+3
+1
+1
+1
+1
+2
+1
+2
+2
+2
+4
+0
+2
+0
+3
+3
+3
+0
+1
+3
+3
+1
+1
+1
+1
+2
+2
+3
+4
+1
+2
+1
+3
+2
+2
+5
+2
+5
+4
+1
+2
+0
+1
+attr_repeating BOOL R 0
+  52
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+F
+T
+T
+T
+T
+F
+F
+F
+attr_length INT R 0
+  52
+0
+0
+0
+0
+0
+0
+0
+0
+64
+0
+0
+0
+0
+0
+10
+0
+32
+64
+255
+0
+0
+4000
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+10
+64
+0
+0
+0
+27
+0
+0
+64
+255
+0
+16
+0
+0
+0
+256
+0
+0
+views_valid BOOL S 0
+T
+unique_tag INT S 0
+6
+r_type_id ID S 0
+03002af98000013b
+r_type_name STRING S 0
+A 11 dmr_content
+default_storage ID S 0
+0000000000000000
+default_owner_permit INT S 0
+0
+default_group_permit INT S 0
+0
+default_world_permit INT S 0
+0
+default_group STRING S 0
+A 0 
+r_supertype STRING S 0
+A 11 dmr_content
+acl_domain STRING S 0
+A 0 
+acl_name STRING S 0
+A 0 
+type_override ID S 0
+51002af9800009c7
+
