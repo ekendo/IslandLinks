@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: Assessment
+RIM-COD-Module-Dependencies: net_rim_cldc
+MIDlet-Jar-Size: 0
+MIDlet-1: ,,
+RIM-COD-Creation-Time: 1286078962
+MIDlet-Jar-URL: Assessment.jar
+RIM-COD-URL: Assessment.cod
+RIM-COD-SHA1: bc cc 2a e0 a7 7b 12 c1 0c 51 6a 85 e6 33 4e 71 84 95 39 12
+RIM-COD-Size: 596
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.0
+MIDlet-Name: Assessment
+MIDlet-Vendor: <unknown>
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Flags-1: 0

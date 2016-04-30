@@ -1,0 +1,10 @@
+MIDlet-Name: FlashCards
+MIDlet-Version: 0.0.0.1
+MIDlet-Vendor: EKenDo,LLC
+MIDlet-Description: 21st Century Flashcards
+MIDlet-Jar-URL: FlashCards.jar
+MIDlet-Jar-Size: 0
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: 21C_Flashcards,,
+RIM-MIDlet-Flags-1: 0
