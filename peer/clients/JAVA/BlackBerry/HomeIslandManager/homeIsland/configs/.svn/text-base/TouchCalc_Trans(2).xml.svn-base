@@ -1,0 +1,650 @@
+<gridSettings name="gridSettings">
+    <guiMapping import="yes" name="APP_GRID">CalcDisplay[0]_iPhone:3GS</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_ORIGIN">CalcDisplay_0:0</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_MAX">CalcDisplay_12:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_COLOR">CalcDisplay_Color:Black</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_EVENT">CalcDisplay_Init:Scientific</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_EVENT">CalcDisplay_Load:BitInteger</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_EVENT">CalcDisplay_Load:Statistics</guiMapping>
+  </gridSettings>
+  <guiMappings name="guiMappings">
+    <!--**********************************************************************************/
+    **********************     SCIENTIFIC CALCULATOR  ********************************/
+    **********************************************************************************-->
+    <!--Textbox - Top 2 Rows-->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[0.0]_1.7:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_LAYOUT_ORIGIN">Scientific[0.0]_0:0</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_LAYOUT_COLOR">Scientific[0.0]_Color:White</guiMapping>
+    <guiMapping import="yes" name="APP_GUI_PLACEMENT">TextLabel[0.0]_0:0</guiMapping>
+    <guiMapping import="yes" name="APP_GUI_EVENT">TextLabel[0.0]_Init:                                                 0</guiMapping>
+    <guiMapping import="yes" name="APP_GUI_COLOR">TextLabel[0.0]_Color:Black</guiMapping>
+    <!--3rd Row-->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[1.0]_3:2</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_LAYOUT_ORIGIN">Scientific[1.0]_1.8:0</guiMapping>
+    <!--Group 1-->
+    <!--Mode Button-->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[12.1]_0:1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[12.1]_Width:Set[0]-1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[12.1]_Height:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[12.1]_Init:Set[0]-0x00000D90</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[12.1]_Click:Run[0]-ButtonPressed[37.1]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[12.1]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">ButtonPressed[37.1]_ARM:Execute-Function[15.1]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[15.1]_Return:WriteBack[16.1]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[16.1]_To-Address[17.1]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[17.1]_CalcDisplay</guiMapping>
+    <!--Group 2-->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[2.0]_3:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRID_LAYOUT_ORIGIN">Scientific[2.0]_1.8:2</guiMapping>
+    <!--Hyp Button-->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.2]_2:1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.2]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.2]_Height:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Init:Set[0]-0x00000D60</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Click:Run[0]-ButtonPressed[37.2]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.2]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">ButtonPressed[37.2]_ARM:Execute-Function[18.2]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[18.2]_Return:WriteBack[19.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[19.2]_To-Address[20.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[20.2]_CalcDisplay</guiMapping>
+    <!--Deg Button-->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.2]_3.6:1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.2]_Width:Set[1]-.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.2]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Init:Set[1]-0x00000D64</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Click:Run[1]-ButtonPressed[37.2]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.2]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">ButtonPressed[37.2]_ARM:Execute-Function[26.2]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[26.2]_Return:WriteBack[27.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[27.2]_To-Address[28.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[28.2]_CalcDisplay</guiMapping>
+    <!--Rad Button-->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.2]_4.4:1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.2]_Width:Set[2]-.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.2]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Init:Set[2]-0x00000D68</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Click:Run[2]-ButtonPressed[37.2]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.2]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">ButtonPressed[37.2]_ARM:Execute-Function[31.2]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[31.2]_Return:WriteBack[32.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[32.2]_To-Address[33.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[33.2]_CalcDisplay</guiMapping>
+    <!--Gra Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.2]_5.2:1.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.2]_Width:Set[3]-.8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.2]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Init:Set[3]-0x00000D6C</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.2]_Click:Run[3]-ButtonPressed[37.2]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.2]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">ButtonPressed[37.2]_ARM:Execute-Function[36.2]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[36.2]_Return:WriteBack[37.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[37.2]_To-Address[38.2]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[38.2]_CalcDisplay</guiMapping>
+    <!-- 4th  Row-->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[3.0]_4:6</guiMapping>
+    <!-- ( Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.3]_0:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.3]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.3]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.3]_Init:Set[0]-0x00000C0C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.3]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[40]_ARM:Execute-Function[41]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[41]_Return:WriteBack[42]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[42]_To-Address[43]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[43]_CalcDisplay</guiMapping>
+    <!-- ) Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.3]_1:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.3]_Width:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.3]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.3]_Init:Set[1]-0x00000C10</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.3]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[45]_ARM:Execute-Function[46]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[46]_Return:WriteBack[47]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[47]_To-Address[48]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[48]_CalcDisplay</guiMapping>
+    <!-- asin Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.3]_2:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.3]_Width:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.3]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Init:Set[2]-0x00000D20</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.3]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[50]_ARM:Execute-Function[51]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[51]_Return:WriteBack[52]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[52]_To-Address[53]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[53]_CalcDisplay</guiMapping>
+    <!-- acos Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.3]_3:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.3]_Width:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.3]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Init:Set[3]-0x00000D30</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[55]_ARM:Execute-Function[56]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[56]_Return:WriteBack[57]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[57]_To-Address[58]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[58]_CalcDisplay</guiMapping>
+    <!-- atan Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.3]_4:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.3]_Width:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.3]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Init:Set[4]-0x00000D40</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.3]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[60]_ARM:Execute-Function[61]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[61]_Return:WriteBack[62]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[62]_To-Address[63]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[63]_CalcDisplay</guiMapping>
+    <!-- acot Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.3]_5:3</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.3]_Width:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.3]_Height:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Init:Set[5]-0x00000D50</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.3]_Click:Run-ButtonPressed[37.3]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.3]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[65]_ARM:Execute-Function[66]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[66]_Return:WriteBack[67]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[67]_To-Address[68]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[68]_CalcDisplay</guiMapping>
+    <!--5th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[4.0]_5:6</guiMapping>
+    <!--1/x Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[14.4]_0:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[14.4]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[14.4]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[14.4]_Init:Set[0]-0x00000CEC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[14.4]_Click:Run-Operation[70]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[14.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[70]_ARM:Execute-Function[71]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[71]_Return:WriteBack[72]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[72]_To-Address[73]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[73]_CalcDisplay</guiMapping>
+    <!-- x! Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[11.4]_1:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[11.4]_Width:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[11.4]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[11.4]_Init:Set[1]-0x00000BAC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[11.4]_Click:Run-Operation[75]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[11.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[75]_ARM:Execute-Function[76]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[76]_Return:WriteBack[77]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[77]_To-Address[78]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[78]_CalcDisplay</guiMapping>
+    <!-- sin Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.4]_2:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.4]_Width:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.4]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Init:Set[2]-0x00000CF0</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Click:Run-Operation[80]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[80]_ARM:Execute-Function[81]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[81]_Return:WriteBack[82]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[82]_To-Address[83]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[83]_CalcDisplay</guiMapping>
+    <!-- cos Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.4]_3:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.4]_Width:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.4]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Init:Set[3]-0x00000CFC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Click:Run-Operation[85]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[85]_ARM:Execute-Function[86]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[86]_Return:WriteBack[87]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[87]_To-Address[88]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[88]_CalcDisplay</guiMapping>
+    <!-- tan Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.4]_4:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.4]_Width:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.4]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Init:Set[4]-0x00000D08</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Click:Run-Operation[90]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[90]_ARM:Execute-Function[91]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[91]_Return:WriteBack[92]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[92]_To-Address[93]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[93]_CalcDisplay</guiMapping>
+    <!-- cot Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[8.4]_5:4</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[8.4]_Width:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[8.4]_Height:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Init:Set[5]-0x00000D14</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[8.4]_Click:Run-Operation[95]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[8.4]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[95]_ARM:Execute-Function[96]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[96]_Return:WriteBack[97]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[97]_To-Address[98]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[98]_CalcDisplay</guiMapping>
+    <!--6th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[5.0]_6:6</guiMapping>
+    <!-- Root X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[15.5]_0:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[15.5]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[15.5]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[15.5]_Init:Set[0]-0x00000BC4</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[15.5]_Click:Run-Operation[100]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[15.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[100]_ARM:Execute-Function[101]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[101]_Return:WriteBack[102]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[102]_To-Address[103]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[103]_CalcDisplay</guiMapping>
+    <!-- Cuberoot X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[16.5]_1:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[16.5]_Width:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[16.5]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[16.5]_Init:Set[1]-0x00000CD4</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[16.5]_Click:Run-Operation[105]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[16.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[105]_ARM:Execute-Function[106]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[106]_Return:WriteBack[107]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[107]_To-Address[108]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[108]_CalcDisplay</guiMapping>
+    <!-- Y Root X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[17.5]_2:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[17.5]_Width:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[17.5]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[17.5]_Init:Set[2]-0x00000CDC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[17.5]_Click:Run-Operation[110]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[17.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[110]_ARM:Execute-Function[111]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[111]_Return:WriteBack[112]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[112]_To-Address[113]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[113]_CalcDisplay</guiMapping>
+    <!-- lb Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[11.5]_3:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[11.5]_Width:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[11.5]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Init:Set[3]-0x00000CE4</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Click:Run-Operation[115]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[11.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[115]_ARM:Execute-Function[116]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[116]_Return:WriteBack[117]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[117]_To-Address[118]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[118]_CalcDisplay</guiMapping>
+    <!-- ln Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[11.5]_4:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[11.5]_Width:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[11.5]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Init:Set[4]-0x00000BEC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Click:Run-Operation[120]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[11.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[120]_ARM:Execute-Function[121]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[121]_Return:WriteBack[122]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[122]_To-Address[123]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[123]_CalcDisplay</guiMapping>
+    <!-- log Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[11.5]_5:5</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[11.5]_Width:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[11.5]_Height:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Init:Set[5]-0x00000CE8</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[11.5]_Click:Run-Operation[125]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[11.5]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[125]_ARM:Execute-Function[126]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[126]_Return:WriteBack[127]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[127]_To-Address[128]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[128]_CalcDisplay</guiMapping>
+    <!--7th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[6.0]_7:6</guiMapping>
+    <!-- x Squared Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[18.6]_0:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[18.6]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[18.6]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[18.6]_Init:Set[0]-0x00000C104</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[18.6]_Click:Run-Operation[130]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[18.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[130]_ARM:Execute-Function[131]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[131]_Return:WriteBack[132]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[132]_To-Address[133]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[133]_CalcDisplay</guiMapping>
+    <!-- x cubed Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[19.6]_1:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[19.6]_Width:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[19.6]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[19.6]_Init:Set[1]-0x00000CC0</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[19.6]_Click:Run-Operation[135]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[19.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[135]_ARM:Execute-Function[136]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[136]_Return:WriteBack[137]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[137]_To-Address[138]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[138]_CalcDisplay</guiMapping>
+    <!-- X to the Y Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[20.6]_2:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[20.6]_Width:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[20.6]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[20.6]_Init:Set[2]-0x00000CC4</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[20.6]_Click:Run-Operation[140]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[20.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[140]_ARM:Execute-Function[141]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[141]_Return:WriteBack[142]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[142]_To-Address[143]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[143]_CalcDisplay</guiMapping>
+    <!-- 2 to the X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[21.6]_3:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[21.6]_Width:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[21.6]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[21.6]_Init:Set[3]-0x00000CC8</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[21.6]_Click:Run-Operation[145]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[21.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[145]_ARM:Execute-Function[146]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[146]_Return:WriteBack[147]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[147]_To-Address[148]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[148]_CalcDisplay</guiMapping>
+    <!-- e to the X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[22.6]_4:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[22.6]_Width:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[22.6]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[22.6]_Init:Set[4]-0x00000BE8</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[22.6]_Click:Run-Operation[150]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[22.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[150]_ARM:Execute-Function[151]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[151]_Return:WriteBack[152]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[152]_To-Address[153]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[153]_CalcDisplay</guiMapping>
+    <!-- 10 to the X Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[23.6]_5:6</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[23.6]_Width:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[23.6]_Height:Set[5]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[23.6]_Init:Set[5]-0x00000CCC</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[23.6]_Click:Run-Operation[155]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[23.6]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[155]_ARM:Execute-Function[156]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[156]_Return:WriteBack[157]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[157]_To-Address[158]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[158]_CalcDisplay</guiMapping>
+    <!--8th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[7.0]_8:6</guiMapping>
+    <!-- Pi Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[24.7]_0:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[24.7]_Width:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[24.7]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[24.7]_Init:Set[0]-0x00000B94</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[24.7]_Click:Run-Operation[170]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[24.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[170]_ARM:Execute-Function[171]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[171]_Return:WriteBack[172]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[172]_To-Address[173]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[173]_CalcDisplay</guiMapping>
+    <!-- Min Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[10.7]_1:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[10.7]_Width:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[10.7]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Init:Set[1]-0x00000B98</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Click:Run-Operation[175]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[10.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[175]_ARM:Execute-Function[176]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[176]_Return:WriteBack[177]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[177]_To-Address[178]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[178]_CalcDisplay</guiMapping>
+    <!-- M+ Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[10.7]_2:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[10.7]_Width:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[10.7]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Init:Set[2]-0x00000B9C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Click:Run-Operation[180]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[10.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[180]_ARM:Execute-Function[181]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[141]_Return:WriteBack[142]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[182]_To-Address[183]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[183]_CalcDisplay</guiMapping>
+    <!-- M- Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[10.7]_3:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[10.7]_Width:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[10.7]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Init:Set[3]-0x00000BA0</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Click:Run-Operation[185]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[10.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[185]_ARM:Execute-Function[186]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[186]_Return:WriteBack[187]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[187]_To-Address[188]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[188]_CalcDisplay</guiMapping>
+    <!-- MC Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[10.7]_4:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[10.7]_Width:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[10.7]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Init:Set[4]-0x00000BA4</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Click:Run-Operation[190]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[10.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[190]_ARM:Execute-Function[191]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[191]_Return:WriteBack[192]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[192]_To-Address[193]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[193]_CalcDisplay</guiMapping>
+    <!-- MR Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[10.7]_5:7</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[10.7]_Width:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[10.7]_Height:Set[5]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Init:Set[5]-0x00000BA8</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[10.7]_Click:Run-Operation[195]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[10.7]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[195]_ARM:Execute-Function[196]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[196]_Return:WriteBack[197]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[197]_To-Address[198]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[198]_CalcDisplay</guiMapping>
+    <!--9th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[8.0]_9:6</guiMapping>
+    <!-- 7 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.8]_0:8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.8]_Width:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.8]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Init:Set[0]-0x00000B68</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Click:Run-Operation[200]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.8]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[200]_ARM:Execute-Function[201]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[201]_Return:WriteBack[202]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[202]_To-Address[203]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[203]_CalcDisplay</guiMapping>
+    <!--8 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.8]_1.2:8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.8]_Width:Set[1]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.8]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Init:Set[1]-0x00000B6C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Click:Run-Operation[205]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.8]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[205]_ARM:Execute-Function[206]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[206]_Return:WriteBack[207]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[207]_To-Address[208]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[208]_CalcDisplay</guiMapping>
+    <!-- 9 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.8]_2.4:8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.8]_Width:Set[2]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.8]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Init:Set[2]-0x00000B70</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.8]_Click:Run-Operation[210]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.8]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[210]_ARM:Execute-Function[211]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[211]_Return:WriteBack[212]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[212]_To-Address[213]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[213]_CalcDisplay</guiMapping>
+    <!-- C Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[13.8]_3.6:8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[13.8]_Width:Set[3]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[13.8]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[13.8]_Init:Set[3]-0x00000B8C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[13.8]_Click:Run-Operation[215]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[13.8]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[215]_ARM:Execute-Function[216]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[216]_Return:WriteBack[217]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[217]_To-Address[218]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[218]_CalcDisplay</guiMapping>
+    <!-- AC Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[13.8]_4.8:8</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[13.8]_Width:Set[4]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[13.8]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[13.8]_Init:Set[4]-0x00000B90</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[13.8]_Click:Run-Operation[220]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[13.8]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[220]_ARM:Execute-Function[221]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[221]_Return:WriteBack[222]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[222]_To-Address[223]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[223]_CalcDisplay</guiMapping>
+    <!-- 10th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[9.0]_10:5</guiMapping>
+    <!-- 4 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.9]_0:9</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.9]_Width:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.9]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Init:Set[0]-0x00000B5C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Click:Run-Operation[225]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.9]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[225]_ARM:Execute-Function[226]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[226]_Return:WriteBack[227]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[227]_To-Address[228]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[228]_CalcDisplay</guiMapping>
+    <!-- 5 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.9]_1.2:9</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.9]_Width:Set[1]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.9]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Init:Set[1]-0x00000B60</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Click:Run-Operation[230]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.9]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[230]_ARM:Execute-Function[231]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[231]_Return:WriteBack[232]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[232]_To-Address[233]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[233]_CalcDisplay</guiMapping>
+    <!-- 6 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.9]_2.4:9</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.9]_Width:Set[2]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.9]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Init:Set[2]-0x00000B64</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.9]_Click:Run-Operation[235]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.9]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[235]_ARM:Execute-Function[236]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[236]_Return:WriteBack[237]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[237]_To-Address[238]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[238]_CalcDisplay</guiMapping>
+    <!-- Multiply Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.9]_3.6:9</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.9]_Width:Set[3]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.9]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.9]_Init:Set[3]-0x00000B84</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.9]_Click:Run-Operation[240]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.9]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[240]_ARM:Execute-Function[241]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[241]_Return:WriteBack[242]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[242]_To-Address[243]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[243]_CalcDisplay</guiMapping>
+    <!-- Divide Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.9]_4.8:9</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.9]_Width:Set[4]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.9]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.9]_Init:Set[4]-0x00000B88</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.9]_Click:Run-Operation[245]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.9]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[245]_ARM:Execute-Function[246]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[246]_Return:WriteBack[247]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[247]_To-Address[248]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[248]_CalcDisplay</guiMapping>
+    <!--11th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[10.0]_11:5</guiMapping>
+    <!-- 1 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.10]_0:10</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.10]_Width:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.10]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Init:Set[0]-0x00000B50</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Click:Run-Operation[260]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.10]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[260]_ARM:Execute-Function[261]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[261]_Return:WriteBack[262]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[262]_To-Address[263]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[263]_CalcDisplay</guiMapping>
+    <!-- 2 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.10]_1.2:10</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.10]_Width:Set[1]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.10]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Init:Set[1]-0x00000B52</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Click:Run-Operation[265]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.10]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[265]_ARM:Execute-Function[266]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[266]_Return:WriteBack[267]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[267]_To-Address[268]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[268]_CalcDisplay</guiMapping>
+    <!-- 3 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.10]_2.4:10</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.10]_Width:Set[2]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.10]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Init:Set[2]-0x00000B58</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.10]_Click:Run-Operation[270]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.10]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[270]_ARM:Execute-Function[271]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[271]_Return:WriteBack[272]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[272]_To-Address[273]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[273]_CalcDisplay</guiMapping>
+    <!-- + Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.10]_3.6:10</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.10]_Width:Set[3]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.10]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.10]_Init:Set[3]-0x00000B7C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.10]_Click:Run-Operation[275]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.10]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[275]_ARM:Execute-Function[276]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[276]_Return:WriteBack[277]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[277]_To-Address[278]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[278]_CalcDisplay</guiMapping>
+    <!-- - Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[6.10]_4.8:10</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[6.10]_Width:Set[4]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[6.10]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[6.10]_Init:Set[4]-0x00000B80</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[6.10]_Click:Run-Operation[280]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[6.10]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[280]_ARM:Execute-Function[281]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[281]_Return:WriteBack[282]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[282]_To-Address[283]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[283]_CalcDisplay</guiMapping>
+    <!-- 12th Row -->
+    <guiMapping import="yes" name="APP_GRID_LAYOUT">Scientific[11.0]_12:5</guiMapping>
+    <!-- 0 Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.11]_0:11</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.11]_Width:Set[0]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.11]_Height:Set[0]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Init:Set[0]-0x00000B44</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Click:Run-Operation[290]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.11]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[290]_ARM:Execute-Function[291]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[291]_Return:WriteBack[292]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[292]_To-Address[293]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[293]_CalcDisplay</guiMapping>
+    <!-- . Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.11]_1.2:11</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.11]_Width:Set[1]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.11]_Height:Set[1]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Init:Set[1]-0x00000B48</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Click:Run-Operation[295]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.11]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[295]_ARM:Execute-Function[296]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[296]_Return:WriteBack[297]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[297]_To-Address[298]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[298]_CalcDisplay</guiMapping>
+    <!-- Exp Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.11]_2.4:11</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.11]_Width:Set[2]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.11]_Height:Set[2]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Init:Set[2]-0x00000B4C</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Click:Run-Operation[300]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.11]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[300]_ARM:Execute-Function[301]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[301]_Return:WriteBack[302]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[302]_To-Address[303]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[303]_CalcDisplay</guiMapping>
+    <!-- +/- Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[5.11]_3.6:11</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[5.11]_Width:Set[3]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[5.11]_Height:Set[3]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Init:Set[3]-0x00000B74</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[5.11]_Click:Run-Operation[305]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[5.11]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[305]_ARM:Execute-Function[306]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[306]_Return:WriteBack[307]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[307]_To-Address[308]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[308]_CalcDisplay</guiMapping>
+    <!-- = Button -->
+    <guiMapping import="yes" name="APP_GRAPHIC_PLACEMENT">GenericStatic[9.11]_4.8:11</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_WIDTH">GenericStatic[9.11]_Width:Set[4]-1.2</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_HEIGHT">GenericStatic[9.11]_Height:Set[4]-1</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_EVENT">GenericStatic[9.11]_Init:Set[4]-0x00000B78</guiMapping>
+    <guiMapping import="no" name="APP_GRAPHIC_EVENT">GenericStatic[9.11]_Click:Run-Operation[310]</guiMapping>
+    <guiMapping import="yes" name="APP_GRAPHIC_COLOR">GenericStatic[9.11]_Color:White</guiMapping>
+    <guiMapping import="no" name="KERNEL_CPU">Operation[310]_ARM:Execute-Function[311]</guiMapping>
+    <guiMapping import="yes" name="PROCESSOR_STACK_EVENT">Function[311]_Return:WriteBack[312]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_MEMORY">WriteBack[312]_To-Address[313]</guiMapping>
+    <guiMapping import="yes" name="KERNEL_IO">From-Address[313]_CalcDisplay</guiMapping>
+</gridSettings name="gridSettings">

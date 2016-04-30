@@ -1,0 +1,64 @@
+/*            
+            public void DownloadAppEnumeration(Enumeration aire)
+            {
+                //Enumeration aire = this.applicationItems.getResourceEnumeration();
+                                        
+                try
+                {
+                    // Enumerate and get resource
+                    for (Enumeration e = aire; e.hasMoreElements();) 
+                    {
+                                                
+                        Object element = e.nextElement();
+                                                
+                        if(element instanceof String)
+                        {
+                            // Set resource loc 
+                            DOWNLOAD = (String)element;
+                                                    
+                            // replace resource loc with resource Value
+                            this.getApplicationResource();
+                                                    
+                            updateDisplay("[INFO] downloaded Needed resource File",DisplayInText);                                   
+                                                    
+                            if(this.debug)
+                            {
+                                System.out.println(element);
+                            }
+                         }
+                                                
+                         if(element instanceof Hashtable)
+                         {
+                            
+                            for(Enumeration he = ((Hashtable)element).elements(); he.hasMoreElements();)
+                            {
+                                // Set resource loc 
+                                DOWNLOAD = (String)he.nextElement();
+                                                        
+                                if(this.debug)
+                                {
+                                    System.out.println("about to get:"+DOWNLOAD);
+                                }
+                                                      
+                                if(DOWNLOAD.length()>0)
+                                {
+                                    // replace resource loc with resource Value
+                                    this.getApplicationResource();
+                                                            
+                                    //updateDisplay("[INFO] downloaded Needed resource Files",DisplayInText);                                   
+                                }
+                            }                                                        
+                        }
+                     }
+                                            
+                     updateDisplay("[INFO] Finished downloading application Files",DisplayInText);
+                }
+                catch(Exception ex)
+                {
+                    if(this.debug)
+                    {
+                        System.out.println("[ERROR] problems getting application Resource:"+ex.toString());
+                    }
+                }
+            }
+*/

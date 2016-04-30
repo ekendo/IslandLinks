@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<specialChars>
+  <specialChar>
+    <name>pi</name>
+    <charValue>&#x043F;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>plus/minus</name>
+    <charValue>&#x00B1;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>x shift y</name>
+    <charValue>x&#x00AB;y</charValue>
+  </specialChar>
+  <specialChar>
+    <name>y shift x</name>
+    <charValue>x&#x00BB;y</charValue>
+  </specialChar>
+  <specialChar>
+    <name>x tilda</name>
+    <charValue>x&#x0303;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>x bar</name>
+    <charValue>x&#x0305;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>x squared</name>
+    <charValue>x&#x00B2;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>x cubed</name>
+    <charValue>x&#x00B3;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>10 to the x</name>
+    <charValue>10 &#x036F; </charValue>
+  </specialChar>
+  <specialChar>
+    <name>e to the x</name>
+    <charValue>e &#x036F; </charValue>
+  </specialChar>
+  <specialChar>
+    <name>2 to the x</name>
+    <charValue>2 &#x036F; </charValue>
+  </specialChar>
+  <specialChar>
+    <name>division sign</name>
+    <charValue>&#x00F7;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>n subscript i</name>
+    <charValue>n&#x00A1;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>h subscript i</name>
+    <charValue>h&#x00A1;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>checkmark x</name>
+    <charValue>&#x2713;&#x0078;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>3 checkmark x</name>
+    <charValue>&#x00B3;&#x2713;&#x0078;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>y checkmark x</name>
+    <charValue>&#x02E0;&#x2713;&#x0078;</charValue>
+  </specialChar>
+  <specialChar>
+    <name>sum x</name>
+    <charValue>&#x03A3;x</charValue>
+  </specialChar>
+  <specialChar>
+    <name>sum x squared</name>
+    <charValue>&#x03A3;x&#x00B2;</charValue>
+  </specialChar>
+</specialChars>

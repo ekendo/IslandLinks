@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: UniApp
+RIM-COD-Module-Dependencies: net_rim_cldc,Kxml
+MIDlet-Jar-Size: 117523
+MIDlet-1: UniApp,,
+RIM-COD-Creation-Time: 1247759504
+MIDlet-Jar-URL: HomeIslandManager.jar
+RIM-COD-URL: UniApp.cod
+RIM-COD-SHA1: 6b 6d fe cb a0 7a 3b 8f 38 3e 4a 1c 19 aa 0d c6 64 8b dc 89
+RIM-COD-Size: 74116
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.0.1.8
+MIDlet-Name: HomeIslandManager
+MIDlet-Description: Client for Translater Engine, Key Set Generator, Yatta Communicator
+MIDlet-Vendor: EKenDo,LLC
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Flags-1: 0

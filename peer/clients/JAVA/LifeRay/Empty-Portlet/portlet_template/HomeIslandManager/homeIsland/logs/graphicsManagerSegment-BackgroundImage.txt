@@ -1,0 +1,64 @@
+/*
+                                                                    if((appGraphicDetails.Location!=null)&&(appGraphicDetails.Placement!=null))
+                                                                    {
+                                                                        if(appGraphicDetails.Event == null)
+                                                                        {
+                                                                            appGraphicDetails.Event = "";
+                                                                        }
+                                                                            
+                                                                        if(!appGraphicDetails.Event.equals("Removal"))
+                                                                        {
+                                                                            
+                                                                            graphics.drawBitmap(dPx.intValue(),dPy.intValue(),bmp.getWidth(),bmp.getHeight(),bmp, dLx.intValue(),dLy.intValue());
+                                                                        
+                                                                            if(appGraphicDetails.HasText)
+                                                                            {
+                                                                                if(_debug)
+                                                                                {
+                                                                                    System.out.println("[INFO] Graphic Has Text!");
+                                                                                    
+                                                                                    if(graphics.getColor()==Color.BLACK)
+                                                                                    {
+                                                                                        System.out.println("[INFO] Current Graphic Color is: BLACK");
+                                                                                    }
+                                                                                    
+                                                                                    if(graphics.getColor()==Color.WHITE)
+                                                                                    {
+                                                                                        System.out.println("[INFO] Current Graphic Color is: WHITE");
+                                                                                    }
+                                                                                    
+                                                                                    if(appGraphicDetails.ObjectColor==Color.BLACK)
+                                                                                    {
+                                                                                        System.out.println("[INFO] Current Graphic Object Color is: BLACK");
+                                                                                    }
+                                                                                        
+                                                                                    if(appGraphicDetails.ObjectColor==Color.WHITE)
+                                                                                    {
+                                                                                        System.out.println("[INFO] Current Graphic Object Color is: WHITE");
+                                                                                    } 
+                                                                                }
+                                                                                
+                                                                                tmpColor = graphics.getColor();
+                                                                                
+                                                                                graphics.setColor(appGraphicDetails.ObjectColor);
+                                            
+                                                                                graphics.drawText(appGraphicDetails.ObjectText, dPx.intValue(),dPy.intValue());
+                                                                            
+                                                                                graphics.setColor(tmpColor);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                if(_debug)
+                                                                                {
+                                                                                    System.out.println("[INFO] Graphic Has No Text");
+                                                                                    
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        if(_componentsManager !=null)
+                                                                        {
+                                                                            //_componentsManager.invalidate();
+                                                                        }
+                                                                    }
+                                                                    */
