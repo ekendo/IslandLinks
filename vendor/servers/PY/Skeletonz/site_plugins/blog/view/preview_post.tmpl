@@ -1,0 +1,15 @@
+$template.getHeader().renderText()
+<link rel="stylesheet" type="text/css" href="http://amix.dk/static_tmpl/styles/content.css" />
+<div id="container">
+    <b>Your rendered comment:</b>
+        <div id="holder" style="background-color: #ffffcc;"></div>
+</div>
+
+<div>
+    <input type="button" onclick="parent.parent.GB_hide()" value="Close window" />
+</div>
+
+<script>
+    parent.parent.Blog.renderComment(document.getElementById('holder')); 
+</script>
+$template.getFooter().renderText()

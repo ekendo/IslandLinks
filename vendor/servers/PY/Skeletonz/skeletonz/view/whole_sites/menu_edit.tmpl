@@ -1,0 +1,210 @@
+#def script1
+<script type="text/javascript">
+var action_bar_buttons = {
+    init: function(list_commander) {
+        this.lc = list_commander;
+
+        this.btn_delete = this.lc.btnDelete('menu_edit/delete', 'static_core/images/trash.png');
+
+        this.btn_up = this.lc.btnMove('Up', 'up', 'menu_edit/setNewOrder', 'static_core/admin/images/higher.png');
+        this.btn_down = this.lc.btnMove('Down', 'down', 'menu_edit/setNewOrder', 'static_core/admin/images/lower.png');
+    },
+
+    insertInternalButtons: function(action_bar) {
+        action_bar.addButtons('page',
+            this.lc.btnEdit('Edit item', 'menu_edit/update', 'static_core/images/edit.png', {'name': 'Name'}),
+            this.btn_up,
+            this.btn_down,
+            //Delete
+            this.btn_delete
+        );
+    },
+
+    insertMainButtons: function(action_bar) {
+        action_bar.addButtons('mainPage',
+            this.lc.btnEdit('Edit item', 'menu_edit/update', 'static_core/images/edit.png', {'name': 'Name'}),
+            this.btn_up,
+            this.btn_down
+        );
+    },
+
+    insertExternalButtons: function(action_bar) {
+        action_bar.addButtons('external',
+            this.lc.btnEdit('Edit item', 'menu_edit/updateExternal', 'static_core/images/edit.png', {'name': 'Name', 'url': 'URL'}),
+            this.btn_up,
+            this.btn_down,
+            this.btn_delete
+        );
+    }
+}
+
+var action_bar = new ActionBar();
+var list_commander = new ListCommander({'host_table': 'list_items',
+                                                                    'action_bar': action_bar});
+
+action_bar_buttons.init(list_commander);
+action_bar_buttons.insertInternalButtons(action_bar);
+action_bar_buttons.insertMainButtons(action_bar);
+action_bar_buttons.insertExternalButtons(action_bar);
+
+#for $m_item in $menu_obj.getAllItems()
+    list_commander.add($m_item.toJSON());
+#end for
+
+function getLastItemOrder() {
+    var order = 1;
+    var l_elms = getElementsByTagAndClassName("tr", "lc_item");
+    if(l_elms.length > 0) {
+        //The last items order
+        order = l_elms[l_elms.length - 1].json.order + 1;
+    }
+    return order;
+}
+
+function onSubmit() {
+    var name = AJS.\$('f_name').value;
+    if(name != "") {
+        var d = loadJSONDoc('menu_edit/add');
+        var add_elm = function(item_json) {
+            list_commander.add(item_json);
+            list_commander.render();
+        };
+        d.addCallbacks(add_elm);
+
+        var data = {'name': name, 'order': getLastItemOrder(), 'menu_id': $menu_obj.id};
+        d.sendReq(data);
+
+        AJS.\$('f_name').value = "";
+    }
+    else {
+        alert("The name may not be empty");
+    }
+}
+    
+function onSubmitExternal() {
+    var alias = AJS.\$('f_alias').value;
+    var url = AJS.\$('f_url').value;
+
+    if(alias != "" || url != "") {
+        var d = loadJSONDoc('menu_edit/addExternal');
+        var add_elm = function(item_json) {
+            list_commander.add(item_json);
+            list_commander.render();
+        };
+        d.addCallbacks(add_elm);
+
+        var data = {'name': alias,
+                                'url': url,
+                                'order': getLastItemOrder(),
+                                'menu_id': $menu_obj.id};
+        d.sendReq(data);
+    }
+    else {
+        alert("The alias/url may not be empty");
+    }
+}
+</script>
+#end def
+
+#def itemType
+<script type="text/javascript">
+    function selectTypeChange(elm) {
+        var div_internal = AJS.\$('div_internal');
+        var div_external = AJS.\$('div_external');
+
+        switch(elm.value) {
+            case 'internal_new':
+                hideElement(div_external);
+                showElement(div_internal);
+            break;
+
+            case 'internal_exst':
+            break;
+
+            case 'external':
+                hideElement(div_internal);
+                showElement(div_external);
+            break;
+
+            default:
+            break;
+        }
+    }
+</script>
+#end def
+##Header
+#silent $template.getHeader().appendScriptData($script1)
+#silent $template.getHeader().appendScriptData($itemType)
+$template.getHeader().renderText()
+<div id="container">
+    <div id="content">
+        <div class="section_content_list">
+            <table class="lc_list" id="list_items"></table>
+        </div>
+
+        <div class="section">
+            <img src="static_core/images/add.png" /> Add a new item
+        </div>
+        <div class="section_content">
+        <form class="add_form">
+            <dl>
+                <dt>Menu type:</dt>
+                <dd>
+                    <select name="type" onchange="selectTypeChange(this);" id="select_type">
+                        <option selected="selected" value="internal_new">Internal NEW page</option>
+                        <option value="external">External link</option>
+                    </select>
+                </dd>
+            </dl>
+        </form>
+
+        <div id="div_internal" style="padding-top: 5px">
+            <form onsubmit="onSubmit(); return false;" class="add_form">
+                <dl>
+                    <dt>Name:</dt>
+                    <dd>
+                        <input type="text" name="name" id="f_name" /> 
+                    </dd>
+
+                    <dt>
+                        <span class="link" onclick="onSubmit()">
+                         <img src="static_core/images/little_add.png" /> Add item</span>
+                    </dt>
+                </dl>
+            </form>
+        </div>
+
+        <div id="div_external" style="display: none; padding-top: 5px;">
+            <form onsubmit="onSubmitExternal(); return false;" class="add_form">
+                <dl>
+                    <dt>Alias:</dt>
+                    <dd>
+                        <input type="text" name="name" id="f_alias" style="margin-bottom: 5px" /> <br />
+                    </dd>
+                    <dt>URL:</dt>
+                    <dd>
+                        <input type="text" name="name" id="f_url" /> 
+                    </dd>
+
+                    <dt>
+                        <span class="link" onclick="onSubmitExternal()">
+                         <img src="static_core/images/little_add.png" /> Add item</span>
+                    </dt>
+                </dl>
+            </form>
+        </div>
+
+        </form>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    list_commander.render();
+    AJS.\$('select_type').selectedIndex = 0;
+</script>
+$template.getFooter().renderText()

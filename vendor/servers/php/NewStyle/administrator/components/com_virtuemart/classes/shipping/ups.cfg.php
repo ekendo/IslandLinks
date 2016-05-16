@@ -1,0 +1,41 @@
+<?php
+defined('_VALID_MOS') or die('Direct Access to this location is not allowed.'); 
+
+define ('UPS_ACCESS_CODE', 'xxx');
+define ('UPS_USER_ID', 'yyy');
+define ('UPS_PASSWORD', 'zzz');
+define ('UPS_PICKUP_TYPE', '02');
+define ('UPS_PACKAGE_TYPE', '02');
+define ('UPS_RESIDENTIAL', 'yes');
+define ('UPS_HANDLING_FEE', '0');
+define ('UPS_TAX_CLASS', '0');
+define ('Override_Source_Zip', '');
+define ('Show_Delivery_Days_Quote', '1');
+define ('Show_Delivery_ETA_Quote', '1');
+define ('Show_Delivery_Warning', '1');
+define ('UPS_Next_Day_Air', '01');
+define ('UPS_Next_Day_Air_FSC', '12.50');
+define ('UPS_2nd_Day_Air', '02');
+define ('UPS_2nd_Day_Air_FSC', '12.50');
+define ('UPS_Ground', '03');
+define ('UPS_Ground_FSC', '3.75');
+define ('UPS_Worldwide_Express_SM', '07');
+define ('UPS_Worldwide_Express_SM_FSC', '12.50');
+define ('UPS_Worldwide_Expedited_SM', '08');
+define ('UPS_Worldwide_Expedited_SM_FSC', '12.50');
+define ('UPS_Standard', '11');
+define ('UPS_Standard_FSC', '3.75');
+define ('UPS_3_Day_Select', '12');
+define ('UPS_3_Day_Select_FSC', '12.50');
+define ('UPS_Next_Day_Air_Saver', '13');
+define ('UPS_Next_Day_Air_Saver_FSC', '12.50');
+define ('UPS_Next_Day_Air_Early_AM', '14');
+define ('UPS_Next_Day_Air_Early_AM_FSC', '12.50');
+define ('UPS_Worldwide_Express_Plus_SM', '54');
+define ('UPS_Worldwide_Express_Plus_SM_FSC', '12.50');
+define ('UPS_2nd_Day_Air_AM', '59');
+define ('UPS_2nd_Day_Air_AM_FSC', '12.50');
+define ('UPS_Express_Saver', '65');
+define ('UPS_Express_Saver_FSC', '12.50');
+define ('na', '64');
+?>

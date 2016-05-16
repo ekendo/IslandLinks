@@ -1,0 +1,45 @@
+## NOTICE: All ID's that are prefixed with CMS are special skeletonz identifiers
+## The id's that can be used are:
+##      CMS_Menu: The menu container
+##      CMS_ListMenu: The menu items container
+##      CMS_HeadLine: The headline container
+##      CMS_ContentText: The content container
+##      CMS_NavCurrentPage: The current page container (navigation)
+<center>
+<div id="top">
+    <a href="$appendSiteEdit"><img src="static_tmpl/images/logo.gif" alt="skeletonz - The simple Python CMS system" /></a>
+</div>
+
+<div id="CMS_Menu">
+  <ul class="CMS_ListMenu">
+    <?= cms_list_menu ?>
+  </ul>
+</div>
+
+<div id="content">
+
+  #if len($parent_list) > 0
+  <div id="navigation">
+    #for $parent in $parent_list
+      <a href="$appendSiteEdit$parent.getFullLink()">$parent.title</a> /
+    #end for
+      <span id="CMS_NavCurrentPage">$page_obj.title</span>
+  </div>
+  #end if
+
+  <div id="CMS_ContentText">
+    #if $edit_mode
+      <span class="Content">$page_obj.getContentEdit()</span>
+    #else
+      <span class="Content">$page_obj.getContent()</span>
+    #end if
+  </div>
+</div>
+
+<div id="bottom">
+  <div class="login">
+    <?= cms_link_box ?>
+  </div>
+  <a href="http://orangoo.com/skeletonz/">Powered by Skeletonz</a>
+</div>
+</center>

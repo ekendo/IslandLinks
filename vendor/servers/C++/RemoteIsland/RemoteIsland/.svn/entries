@@ -1,0 +1,178 @@
+8
+
+dir
+81
+svn://ekendotech.net/islandsoft/trunk/framework/server/workstation/windows/C++/IslandLinks/remoteIsland/RemoteIslandManager/RemoteIsland
+svn://ekendotech.net/islandsoft
+
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+incomplete
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+ProxyHttpGetSocket.h
+file
+
+
+
+
+2008-06-05T21:44:43.439089Z
+7019b0c4c2bc9eeca83d73d01b7b73d5
+2007-12-03T01:44:30.200163Z
+20
+ekendo
+
+ISocketHandler.cpp
+file
+
+
+
+
+2008-06-05T21:44:43.689449Z
+073ba08e0906f3ba3d405075ccfad65d
+2007-12-03T01:44:30.200163Z
+20
+ekendo
+
+RemoteIslandSocket.cpp
+file
+
+
+
+
+2008-06-05T23:30:50.514494Z
+33f2270aebbc5bff560b467db70ebe50
+2007-12-03T01:44:30.200163Z
+20
+ekendo
+
+Include
+dir
+
+RemoteIslandSocket.h
+file
+
+
+
+
+2008-06-05T21:44:44.190169Z
+b7804361360bea742422fb0da889cf12
+2007-12-03T01:44:30.200163Z
+20
+ekendo
+
+ServerHandler.cpp
+file
+
+
+
+
+2008-06-05T21:44:44.460558Z
+39a3ad3b5733527e76ccef62e2999bc6
+2007-12-03T01:44:30.200163Z
+20
+ekendo
+
+Debug
+dir
+
+RemoteIsland.vcproj
+file
+0
+
+
+add
+
+RemoteIsland.vcproj.EKENDO.Administrator.user
+file
+0
+
+
+add
+
+serverhandler.h
+file
+0
+
+
+add
+
+HTTPServerSocket.cpp
+file
+0
+
+
+add
+
+MQServerSocket.h
+file
+0
+
+
+add
+
+PortForwardSocket.cpp
+file
+0
+
+
+add
+
+HTTPServerSocket.h
+file
+0
+
+
+add
+
+Gemensamt.h
+file
+0
+
+
+add
+
+PortForwardSocket.h
+file
+0
+
+
+add
+
+Ipv4Address.cpp
+file
+0
+
+
+add
+
+Ipv6Address.cpp
+file
+0
+
+
+add
+
+ReadMe.txt
+file
+0
+
+
+add
+

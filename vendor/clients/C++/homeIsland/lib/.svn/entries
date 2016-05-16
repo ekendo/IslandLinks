@@ -1,0 +1,54 @@
+8
+
+dir
+122
+svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/_nix/linux/RHEL/C++/IslandLinks/homeIsland/HomeIslandManager/HomeIslandManager/lib
+svn://ekendotech.net/islandsoft
+
+
+
+2008-02-14T21:10:13.701167Z
+33
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+libSockets.a
+file
+123
+
+
+
+2009-02-01T12:01:56.000000Z
+2037f89ca188e2e8e47bb30faf6ff6ec
+2009-02-01T16:43:50.253011Z
+123
+ekendo
+has-props
+
+libcryptopp.a
+file
+123
+
+
+
+2009-01-22T20:44:02.000000Z
+8b487b88c902f30efb879bd186654070
+2009-02-01T16:43:50.253011Z
+123
+ekendo
+has-props
+

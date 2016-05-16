@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- generator="FeedCreator 1.7.2" -->
+<rss version="0.91">
+	<channel>
+		<title>Joomla! powered Site</title>
+		<description>Joomla! site syndication</description>
+		<link>http://ekendotech.com/Joomla</link>
+		<lastBuildDate>Sun, 20 Aug 2006 01:46:31 +0100</lastBuildDate>
+		<generator>FeedCreator 1.7.2</generator>
+		<image>
+			<url>http://ekendotech.com/Joomla/images/M_images/joomla_rss.png</url>
+			<title>Powered by Joomla!</title>
+			<link>http://ekendotech.com/Joomla</link>
+			<description>Joomla! site syndication</description>
+		</image>
+		<item>
+			<title>Welcome to EKenDo!</title>
+			<link>http://ekendotech.com/Joomla/index.php?option=com_content&amp;task=view&amp;id=1&amp;Itemid=0</link>
+			<description>Not everyone can be a techy, but now everyone can have their own saavy consultant. It can be difficult reading...</description>
+			<pubDate>Sat, 19 Aug 2006 11:54:06 +0100</pubDate>
+		</item>
+		<item>
+			<title>Joomla! License Guidelines</title>
+			<link>http://ekendotech.com/Joomla/index.php?option=com_content&amp;task=view&amp;id=5&amp;Itemid=0</link>
+			<description>This website is powered by Joomla! (http://www.joomla.org/)  The software and default templates on which it runs are Copyright 2005...</description>
+			<pubDate>Thu, 19 Aug 2004 20:11:07 +0100</pubDate>
+		</item>
+	</channel>
+</rss>

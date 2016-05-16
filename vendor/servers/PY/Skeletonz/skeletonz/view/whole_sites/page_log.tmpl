@@ -1,0 +1,215 @@
+#def script
+<style>
+.section {
+  text-align: left;
+}
+
+.diffy {
+  background-color: #E4F2F9;
+  padding: 5px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.rev {
+  background-color: #ffffcc;
+}
+
+.e_by {
+  background-color: #ffccff;
+}
+
+.date {
+  background-color: #ddd;
+}
+
+.item {
+  display: inline;
+  padding-right: 10px;
+}
+
+.diff {
+  text-decoration: none;
+}
+
+ins {
+  background-color: #AAFFAA;
+}
+
+del {
+  background-color: #FFAAAA;
+}
+
+del.modified {
+  background-color: #FFFF77;
+}
+</style>
+
+<script type="text/javascript">
+var action_bar = new ActionBar();
+var list_commander = new ListCommander({'host_table': 'list_items', 'action_bar': action_bar});
+
+//Add the buttons
+function getDiffBtn(text, btn_c, fn) {
+  return new ActionButton(
+      {'text': text, 
+       'btn_class': btn_c,
+       'image': 'static_core/images/diff.png',
+       'on_click_fn': fn});
+}
+
+var btn_show_diff = getDiffBtn('Diff with below', 'CMS_link', showDiff);
+var btn_revert = new ActionButton({'text': 'Revert to', 
+       'btn_class': 'CMS_link CMS_critical_link',
+       'image': 'static_core/images/page_revert.png',
+       'on_click_fn': revertToRev});
+
+action_bar.addButtons('default',
+  btn_revert, btn_show_diff
+);
+
+//Add the items
+var objs = $all_logs;
+AJS.map(objs, function(obj) {
+  obj = AJS.evalTxt(obj);
+  var rev = AJS.DIV({'class': 'item'}, "Revision: ", AJS.SPAN({'class': 'rev'}, obj.revision));
+  var edit_by = AJS.DIV({'class': 'item'}, "Edited by: ", AJS.SPAN({'class': 'e_by'}, obj.edited_by));
+  var time = AJS.DIV({'class': 'item'}, "Date: ", AJS.SPAN({'class': 'date'}, obj.time_of_edit));
+  obj.content = AJS.DIV(rev, edit_by, time);
+  list_commander.add(obj);
+});
+
+/**
+  Click functions
+  **/
+function showDiff(elm, cur_elm) {
+  var n_sibling = elm.nextSibling;
+  if(n_sibling) {
+    list_commander.getActionBar().setDisable(true);
+    var rev1 = n_sibling.json.revision;
+    var rev2 = elm.json.revision;
+    var d = AJS.getRequest('pages/diffRevisions');
+    d.addCallback(function(res_txt) {
+      Indicator.remove(cur_elm);
+
+      //Insert the diff
+      var td = AJS.TD({'colspan': 3, 'class': 'diffy'});
+      td.colSpan = 3; //IE aka. the bitch
+
+      var diffed = AJS.setHTML(AJS.SPAN(), res_txt);
+      AJS.ACN(td, diffed);
+      var new_tr = AJS.TR(td);
+      AJS.insertAfter(new_tr, elm);
+
+      //Change the button
+      var fn = function(e, i_cur_elm) {
+        list_commander.getActionBar().setDisable(false);
+        AJS.removeElement(new_tr);
+        list_commander.getActionBar().changeButton(1, 'default', btn_show_diff);
+      };
+      var n_btn = getDiffBtn('Hide diff', 'CMS_link CMS_critical_link', fn);
+      list_commander.getActionBar().changeButton(1, 'default', n_btn);
+    });
+    Indicator.append(cur_elm);
+    d.sendReq({'page_id': $page_obj.id, 'rev1': rev1, 'rev2': rev2});
+  }
+}
+
+function revertToRev(elm, cur_elm) {
+  var rev = elm.json.revision;
+  action_bar.setDisable(true);
+  if(confirm('Are you sure you want to revert to revision ' + rev + '?')) {
+    Indicator.append(cur_elm);
+    var d = AJS.getRequest('pages/revert');
+    d.addCallback(function() {
+      window.location.reload();
+    });
+    d.sendReq({'page_id': $page_obj.id, 'rev': rev});
+  }
+  else {
+    action_bar.setDisable(false);
+  }
+}
+
+function submitDiff() {
+  var rev1 = AJS.\$('rev1');
+  var rev2 = AJS.\$('rev2');
+  var btn_show_diff = AJS.\$('btn_show_diff');
+  var diff_cnt = AJS.\$('diff_cnt');
+
+  if(rev1.value != '' && rev2.value != '') {
+    Indicator.append(btn_show_diff);
+    var d = AJS.getRequest('pages/diffRevisions');
+    d.addCallbacks(
+      function(res_txt) {
+        AJS.showElement(diff_cnt);
+        AJS.RCN(diff_cnt, AJS.setHTML(AJS.SPAN(), res_txt));
+        Indicator.remove(btn_show_diff);
+
+        //Disable rev1 and rev2
+        rev1.disabled = true;
+        rev2.disabled = true;
+
+        var new_btn = AJS.SPAN({'class': 'CMS_link CMS_critical_link'}, AJS.IMG({'src': 'static_core/images/diff.png'}), " Hide diff");
+        var old_btn = btn_show_diff;
+
+        AJS.swapDOM(btn_show_diff, new_btn);
+        AJS.AEV(new_btn, 'click', function() {
+          AJS.hideElement(diff_cnt);
+          AJS.swapDOM(new_btn, old_btn);
+          rev1.disabled = false;
+          rev2.disabled = false;
+        });
+      },
+
+      function() {
+        Indicator.remove(btn_show_diff);
+    });
+    d.sendReq({'page_id': $page_obj.id, 'rev1': rev1.value, 'rev2': rev2.value});
+  }
+  else {
+    alert('You must type in in both fields.');
+  }
+}
+
+</script>
+#end def
+#silent $template.getHeader().appendScriptData($script)
+$template.getHeader().renderText()
+
+<div class="section">
+  Compare revisions
+</div>
+<div class="section_content">
+  <form onsubmit="submitDiff()">
+    Compare revision <input type="text" id="rev2" value="" /> with revision <input type="text"  id="rev1" value="" /> <span class="CMS_link" onclick="submitDiff()" id="btn_show_diff"><img src="static_core/images/diff.png" /> Show diff</span>
+  </form>
+  <div id="diff_cnt" class="diffy" style="display:none; margin-top: 5px;"></div>
+</div>
+
+<script>
+var l = objs.length;
+if(l > 1) { 
+  AJS.\$('rev2').value = l;
+  AJS.\$('rev1').value = l-1;
+}
+</script>
+
+<div class="section">
+  Browser
+</div>
+<div class="section_content">
+  <table class="lc_list" id="list_items" style="font-size: 12px"></table>
+</div>
+
+<p style="font-size: 10px">
+  Legend: 
+  <ins class="diff">Added</ins>,
+  <del class="diff modified">Replaced</del>,
+  <del class="diff">Deleted</del>
+</p>
+
+<script type="text/javascript">
+  list_commander.render();
+</script>
+$template.getFooter().renderText()
