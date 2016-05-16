@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+ <configuration>
+  <!-- server settings -->
+  <server>
+    <debug value="true"/>
+    <spiderLevel value="0" />
+    <spiderProtocol value="http"/>
+    <spiderUrls value="www.athleticturf.net,theonion.com,www.bellepatri.com,finance.yahoo.com,ekendotech.com,google.com"/>
+    <!--google.com,finance.yahoo.com,ekendotech.com-->
+    <readBufferMemory value="750000" />
+    <writeBufferMemory value="750000" /> 
+    <krawlerIp value="127.0.0.1" />
+    <krawlerHostName value="krawl.kapture.info" />
+    <operatorId value="KaptureAdmin_74" />
+  </server>
+  <!-- mime -->
+  <mime>
+    <filename value="mime.types"/>
+  </mime>
+</configuration> 

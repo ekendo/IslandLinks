@@ -1,3 +1,67 @@
+ var IslandDataPoint;
+ var subXhttp = new XMLHttpRequest();
+
+function onMoreClick()
+{
+     //alert(IslandDataPoint);
+     var changeExampleVisibility = document.getElementById("home_item");
+     var changeMoreLink = document.getElementById("moreLink");
+     //alert();
+
+      if(changeExampleVisibility.style.display=='none')
+      {  
+          // Get the Latest Ads
+           subXhttp.onreadystatechange = function() 
+           {
+                 //alert(subXhttp .readyState)
+                 if (subXhttp.readyState == 4 && subXhttp.status == 200) 
+                 {
+                         if(IslandDataPoint == 'Ads')
+                         {
+                             var IslandDataDetails = JSON.parse(subXhttp.responseText);
+                             var changeElementImage= document.getElementById("home_item_element_image");
+                             changeElementImage.innerHTML = IslandDataDetails.ads.element;
+                             var changeElementText= document.getElementById("home_item_element_text");
+                             changeElementText.innerHTML =  IslandDataDetails.ads.example;
+                         }
+
+                         if(IslandDataPoint == 'Products')
+                         {
+                             var IslandDataDetails = JSON.parse(subXhttp.responseText);
+                             var changeElementImage= document.getElementById("home_item_element_image");
+                             changeElementImage.innerHTML = IslandDataDetails.products.element;
+                             var changeElementText= document.getElementById("home_item_element_text");
+                             changeElementText.innerHTML =  IslandDataDetails.products.example;
+                         }
+
+                         changeExampleVisibility.style.display='block';
+                         changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">less</a></h4>';
+
+                 }
+          }
+
+          if(IslandDataPoint == 'Ads')
+          {
+                subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb.py/louvriEnfomasyon/English/Ads/Examples", true);
+                subXhttp .send();
+          }
+
+          if(IslandDataPoint == 'Products')
+          {
+                subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb.py/louvriEnfomasyon/English/Products/Examples", true);
+                subXhttp .send();
+          }
+
+      }
+      else
+       {    //alert('block');
+          changeExampleVisibility.style.display='none';
+          changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">more</a></h4>';
+      }
+
+     
+}
+
 function showad()
     {	    var raw_random = Math.random();
             var raw = Math.ceil(raw_random * 3)
@@ -75,6 +139,7 @@ $(function(){
   var IslandDataObj;
 
 
+
   // IslandData Item View
   // --------------
 
@@ -144,12 +209,34 @@ $(function(){
                        //alert(xhttp.readyState)
                        if (xhttp.readyState == 4 && xhttp.status == 200) 
                        {
-                             //alert('Yo'+xhttp.responseText);
-                             //alert( document.getElementById("commentArea").innerHTML);
                              IslandDataObj =  JSON.parse(xhttp.responseText);
-                             //alert(IslandDataObj.ads.definition);
                              var changeText = document.getElementById("home_definition");
-                             changeText.innerHTML  =IslandDataObj.home.definition;
+                             changeText.innerHTML= IslandDataObj.home.definition;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML = IslandDataObj.home.question;
+                             var changeBlogText = document.getElementById("home_blog");
+                             changeBlogText.innerHTML  = IslandDataObj.home.comment;
+                             var changeTagText = document.getElementById("home_tags");
+                             changeTagText.innerHTML = IslandDataObj.home.tag1;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag2;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag3;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag4;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag5;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag9;
+                             IslandDataPoint = 'Home';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
                        }
                        //else {alert('loading');}
                 };
@@ -167,14 +254,11 @@ $(function(){
                        //alert(xhttp.readyState)
                        if (xhttp.readyState == 4 && xhttp.status == 200) 
                        {
-                             //alert('Yo'+xhttp.responseText);
-                             //alert( document.getElementById("commentArea").innerHTML);
                              IslandDataObj =  JSON.parse(xhttp.responseText);
-                             //alert(IslandDataObj.ads.definition);
                              var changeText = document.getElementById("home_definition");
                              changeText.innerHTML  =IslandDataObj.questions.definition;
                              var changeBlogText = document.getElementById("home_blog");
-                             changeBlogText.innerHTML = '...';
+                             changeBlogText.innerHTML = IslandDataObj.questions.comment;
                              var changeTagText = document.getElementById("home_tags");
                              changeTagText.innerHTML = IslandDataObj.questions.tag1;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
@@ -187,6 +271,17 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.questions.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.questions.tag6;
+                              changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.questions.tag7;
+                              changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.questions.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.questions.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.questions.question;
+                             IslandDataPoint = 'Questions';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
                        }
                 };
   
@@ -235,6 +330,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.answers.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.answers.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.answers.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.answers.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.answers.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.answers.question;
+                             IslandDataPoint = 'Answers';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                        //else {alert('loading');}
                 };
@@ -272,7 +379,7 @@ $(function(){
                              var changeText = document.getElementById("home_definition");
                              changeText.innerHTML  =IslandDataObj.ads.definition;
                              var changeBlogText = document.getElementById("home_blog");
-                             changeBlogText.innerHTML = '...';
+                             changeBlogText.innerHTML  = IslandDataObj.ads.comment;
                              var changeTagText = document.getElementById("home_tags");
                              changeTagText.innerHTML = IslandDataObj.ads.tag1;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
@@ -285,7 +392,20 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.ads.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.ads.tag6;
-                             
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.ads.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.ads.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.ads.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.ads.question;
+                             IslandDataPoint = 'Ads';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='block';
+                             var changeExampleVisibility = document.getElementById("home_item");
+                             changeExampleVisibility.style.display='none';
+                             changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">more</a></h4>';
                        }
                 };
   
@@ -320,14 +440,11 @@ $(function(){
                        //alert(xhttp.readyState)
                        if (xhttp.readyState == 4 && xhttp.status == 200) 
                        {
-                             //alert('Yo'+xhttp.responseText);
-                             //alert( document.getElementById("commentArea").innerHTML);
                              IslandDataObj =  JSON.parse(xhttp.responseText);
-                             //alert(IslandDataObj.ads.definition);
                              var changeText = document.getElementById("home_definition");
                              changeText.innerHTML  =IslandDataObj.products.definition;
                              var changeBlogText = document.getElementById("home_blog");
-                             changeBlogText.innerHTML = '...';
+                             changeBlogText.innerHTML = IslandDataObj.products.comment;
                              var changeTagText = document.getElementById("home_tags");
                              changeTagText.innerHTML = IslandDataObj.products.tag1;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
@@ -340,6 +457,20 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.products.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.products.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.products.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.products.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.products.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.products.question;
+                             IslandDataPoint = 'Products';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='block'; 
+                             var changeExampleVisibility = document.getElementById("home_item");
+                             changeExampleVisibility.style.display='none';
+                             changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">more</a></h4>';
                        }
                 };
   
@@ -388,6 +519,17 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.profiles.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.profiles.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.profiles.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.profiles.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.profiles.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.profiles.question;
+                             IslandDataPoint = 'Profiles';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
                        }
                 };
   
@@ -436,6 +578,17 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.definitions.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.definitions.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.definitions.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.definitions.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.definitions.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.definitions.question;
+                             IslandDataPoint = 'Definitions';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
                        }
                        //else {alert('loading');}
                 };
@@ -485,6 +638,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.registrations.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.registrations.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.registrations.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.registrations.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.registrations.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.registrations.question;
+                             IslandDataPoint = 'Registrations';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                 };
   
@@ -531,6 +696,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.charts.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.charts.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.charts.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.charts.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.charts.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.charts.question;
+                             IslandDataPoint = 'Charts';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                 };
   
@@ -579,6 +756,17 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.maps.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.maps.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.maps.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.maps.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.maps.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.maps.question;
+                             IslandDataPoint = 'Maps';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
                        }
                 };
   
@@ -627,6 +815,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.problems.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.problems.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.problems.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.problems.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.problems.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.problems.question;
+                             IslandDataPoint = 'Problems';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                        //else {alert('loading');}
                 };
@@ -676,6 +876,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.experiments.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.experiments.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.experiments.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.experiments.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.experiments.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.experiments.question;
+                             IslandDataPoint = 'Experiments';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                        //else {alert('loading');}
                 };
@@ -725,6 +937,18 @@ $(function(){
                              changeTagText.innerHTML += IslandDataObj.solutions.tag5;
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.solutions.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.solutions.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.solutions.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.solutions.tag9;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML  = IslandDataObj.solutions.question;
+                             IslandDataPoints = 'Solutions';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+                             
                        }
                        //else {alert('loading');}
                 };

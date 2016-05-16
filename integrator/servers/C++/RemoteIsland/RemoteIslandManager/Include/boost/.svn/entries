@@ -1,0 +1,22 @@
+8
+
+dir
+145
+svn://ekendotech.net/islandsoft/trunk/framework/server/workstation/_nix/linux/C++/IslandLinks/remoteIsland/RemoteIslandManager/RemoteIslandManager/Include/boost
+svn://ekendotech.net/islandsoft
+
+
+
+2009-02-02T20:26:28.220801Z
+134
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+archive
+dir
+
+serialization
+dir
+
