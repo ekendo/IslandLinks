@@ -1,0 +1,226 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+addPortletURLs = getAddPortletURLs(liferayPortletRequest, liferayPortletResponse, classNameIds, classTypeIds, assetEntryQuery.getAllCategoryIds(), allAssetTagNames);
+%>
+
+<c:if test="<%= !addPortletURLs.isEmpty() %>">
+	<liferay-ui:icon-menu
+		align="left"
+		icon='<%= themeDisplay.getPathThemeImages() + "/common/add.png" %>'
+		message='<%= LanguageUtil.format(pageContext, (groupIds.length == 1) ? "add-new" : "add-new-in-x", new Object[] {(GroupLocalServiceUtil.getGroup(groupId)).getDescriptiveName(locale)}) %>'
+		showWhenSingleIcon="<%= true %>"
+	>
+
+		<%
+		boolean hasDLFileEntrySubtype = hasSubtype(DLFileEntry.class.getName(), addPortletURLs);
+		boolean hasJournalArticleSubtype = hasSubtype(JournalArticle.class.getName(), addPortletURLs);
+
+		for (Map.Entry<String, PortletURL> entry : addPortletURLs.entrySet()) {
+			String className = entry.getKey();
+
+			String message = StringPool.BLANK;
+
+			if (className.equals(DLFileEntry.class.getName())) {
+				message = hasDLFileEntrySubtype ? "basic-document" : "document";
+			}
+			else if (className.equals(JournalArticle.class.getName())) {
+				message = hasJournalArticleSubtype ? "basic-web-content" : "web-content";
+			}
+			else {
+				message = ResourceActionsUtil.getModelResourceNamePrefix() + className;
+
+				int pos = className.indexOf(_CLASSNAME_SEPARATOR);
+
+				if (pos != -1) {
+					message = className.substring(pos + _CLASSNAME_SEPARATOR.length(), className.length());
+
+					className = className.substring(0, pos);
+				}
+			}
+
+			AssetRendererFactory assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(className);
+
+			PortletURL addPortletURL = entry.getValue();
+
+			addPortletURL.setParameter("groupId", String.valueOf(groupId));
+
+			String addPortletURLString = addPortletURL.toString();
+
+			addPortletURLString = HttpUtil.addParameter(addPortletURLString, "doAsGroupId", groupId);
+			addPortletURLString = HttpUtil.addParameter(addPortletURLString, "refererPlid", plid);
+
+			defaultAssetPublisherPortletId = typeSettingsProperties.getProperty(LayoutTypePortletConstants.DEFAULT_ASSET_PUBLISHER_PORTLET_ID);
+
+			if (defaultAssetPublisher) {
+				addPortletURLString = HttpUtil.addParameter(addPortletURLString, "layoutUuid", layout.getUuid());
+			}
+
+			String taglibEditURL = "javascript:Liferay.Util.openWindow({dialog: {width: 960}, id: '" + liferayPortletResponse.getNamespace() + "', title: '" + ResourceActionsUtil.getModelResource(locale, className) + "', uri:'" + HtmlUtil.escapeURL(addPortletURLString) + "'});";
+		%>
+
+			<liferay-ui:icon
+				message="<%= message %>"
+				src="<%= assetRendererFactory.getIconPath(renderRequest) %>"
+				url="<%= taglibEditURL %>"
+			/>
+
+		<%
+		}
+		%>
+
+	</liferay-ui:icon-menu>
+</c:if>
+
+<%!
+public PortletURL getAddPortletURL(LiferayPortletRequest liferayPortletRequest, LiferayPortletResponse liferayPortletResponse, String className, long classTypeId, long[] allAssetCategoryIds, String[] allAssetTagNames) throws Exception {
+	ThemeDisplay themeDisplay = (ThemeDisplay)liferayPortletRequest.getAttribute(WebKeys.THEME_DISPLAY);
+
+	AssetRendererFactory assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(className);
+
+	if (assetRendererFactory == null) {
+		return null;
+	}
+
+	liferayPortletRequest.setAttribute(WebKeys.ASSET_RENDERER_FACTORY_CLASS_TYPE_ID, classTypeId);
+
+	PortletURL addPortletURL = assetRendererFactory.getURLAdd(liferayPortletRequest, liferayPortletResponse);
+
+	if (addPortletURL == null) {
+		return null;
+	}
+
+	addPortletURL.setWindowState(LiferayWindowState.POP_UP);
+
+	addPortletURL.setPortletMode(PortletMode.VIEW);
+
+	PortletURL redirectURL = liferayPortletResponse.createRenderURL();
+
+	redirectURL.setWindowState(LiferayWindowState.POP_UP);
+
+	redirectURL.setParameter("struts_action", "/asset_publisher/add_asset_redirect");
+
+	addPortletURL.setParameter("redirect", redirectURL.toString());
+
+	String referringPortletResource = ParamUtil.getString(liferayPortletRequest, "portletResource");
+
+	if (Validator.isNotNull(referringPortletResource)) {
+		addPortletURL.setParameter("referringPortletResource", referringPortletResource);
+	}
+	else {
+		PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
+
+		addPortletURL.setParameter("referringPortletResource", portletDisplay.getId());
+
+		Map<Long, String> assetVocabularyAssetCategoryIds = new HashMap<Long, String>();
+
+		for (long assetCategoryId : allAssetCategoryIds) {
+			AssetCategory assetCategory = AssetCategoryLocalServiceUtil.getAssetCategory(assetCategoryId);
+
+			long assetVocabularyId = assetCategory.getVocabularyId();
+
+			if (assetVocabularyAssetCategoryIds.containsKey(assetVocabularyId)) {
+				String assetCategoryIds = assetVocabularyAssetCategoryIds.get(assetVocabularyId);
+
+				assetVocabularyAssetCategoryIds.put(assetVocabularyId, assetCategoryIds + StringPool.COMMA + assetCategoryId);
+			}
+			else {
+				assetVocabularyAssetCategoryIds.put(assetVocabularyId, String.valueOf(assetCategoryId));
+			}
+		}
+
+		for (Map.Entry<Long, String> entry : assetVocabularyAssetCategoryIds.entrySet()) {
+			long assetVocabularyId = entry.getKey();
+			String assetCategoryIds = entry.getValue();
+
+			addPortletURL.setParameter("assetCategoryIds" + StringPool.UNDERLINE + assetVocabularyId, assetCategoryIds);
+		}
+
+		addPortletURL.setParameter("assetTagNames", StringUtil.merge(allAssetTagNames));
+
+		if (classTypeId > 0) {
+			addPortletURL.setParameter("classTypeId", String.valueOf(classTypeId));
+
+			if (className.equals(DLFileEntry.class.getName())) {
+				addPortletURL.setParameter(Constants.CMD, Constants.ADD);
+				addPortletURL.setParameter("folderId", String.valueOf(DLFolderConstants.DEFAULT_PARENT_FOLDER_ID));
+				addPortletURL.setParameter("fileEntryTypeId", String.valueOf(classTypeId));
+			}
+
+			if (className.equals(JournalArticle.class.getName())) {
+				JournalStructure structure = JournalStructureLocalServiceUtil.getJournalStructure(classTypeId);
+
+				addPortletURL.setParameter("structureId", structure.getStructureId());
+			}
+		}
+	}
+
+	return addPortletURL;
+}
+
+public Map<String, PortletURL> getAddPortletURLs(LiferayPortletRequest liferayPortletRequest, LiferayPortletResponse liferayPortletResponse, long[] classNameIds, long[] classTypeIds, long[] allAssetCategoryIds, String[] allAssetTagNames) throws Exception {
+	ThemeDisplay themeDisplay = (ThemeDisplay)liferayPortletRequest.getAttribute(WebKeys.THEME_DISPLAY);
+
+	Map<String, PortletURL> addPortletURLs = new TreeMap<String, PortletURL>(new ModelResourceComparator(themeDisplay.getLocale()));
+
+	for (long classNameId : classNameIds) {
+		String className = PortalUtil.getClassName(classNameId);
+
+		AssetRendererFactory assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(className);
+
+		Map<Long, String> classTypes = assetRendererFactory.getClassTypes(new long[] {themeDisplay.getCompanyGroupId(), themeDisplay.getScopeGroupId()}, themeDisplay.getLocale());
+
+		if ((classTypeIds.length == 0) || (classTypes == null)) {
+			PortletURL addPortletURL = getAddPortletURL(liferayPortletRequest, liferayPortletResponse, className, 0, allAssetCategoryIds, allAssetTagNames);
+
+			if (addPortletURL != null) {
+				addPortletURLs.put(className, addPortletURL);
+			}
+		}
+
+		if (classTypes != null) {
+			for (long classTypeId : classTypes.keySet()) {
+				if (ArrayUtil.contains(classTypeIds, classTypeId) || (classTypeIds.length == 0)) {
+					PortletURL addPortletURL = getAddPortletURL(liferayPortletRequest, liferayPortletResponse, className, classTypeId, allAssetCategoryIds, allAssetTagNames);
+
+					if (addPortletURL != null) {
+						String mesage = className + _CLASSNAME_SEPARATOR + classTypes.get(classTypeId);
+
+						addPortletURLs.put(mesage, addPortletURL);
+					}
+				}
+			}
+		}
+	}
+
+	return addPortletURLs;
+}
+
+public boolean hasSubtype(String subtypeClassName, Map<String, PortletURL> addPortletURLs) {
+	for (Map.Entry<String, PortletURL> entry : addPortletURLs.entrySet()) {
+		String className = entry.getKey();
+
+		if (className.startsWith(subtypeClassName) && !className.equals(subtypeClassName)) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+private static final String _CLASSNAME_SEPARATOR = "_CLASSNAME_";
+%>

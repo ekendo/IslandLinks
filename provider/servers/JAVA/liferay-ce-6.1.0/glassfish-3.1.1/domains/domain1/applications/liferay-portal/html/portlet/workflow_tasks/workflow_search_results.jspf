@@ -1,0 +1,78 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+WorkflowTaskSearchTerms searchTerms = (WorkflowTaskSearchTerms)searchContainer.getSearchTerms();
+
+boolean allTasks = false;
+
+String[] assetTypes = WorkflowHandlerUtil.getSearchableAssetTypes();
+
+List<WorkflowTask> resultsTasks = null;
+int totalTasks = 0;
+
+if (portletName.equals(PortletKeys.WORKFLOW_TASKS)) {
+	searchContainer.setEmptyResultsMessage("there-are-no-tasks");
+
+	allTasks = true;
+
+	if (searchTerms.isAdvancedSearch()){
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), 0, searchTerms.getName(), searchTerms.getType(), null, null, null, null, null, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), 0, searchTerms.getName(), searchTerms.getType(), null, null, null, null, null, searchTerms.isAndOperator());
+	}
+	else {
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), 0, searchTerms.getKeywords(), assetTypes, null, null, searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), 0, searchTerms.getKeywords(), assetTypes, null, null);
+	}
+}
+else if (type.equals("assigned-to-my-roles")) {
+	searchContainer.setEmptyResultsMessage("there-are-no-pending-tasks-assigned-to-your-roles");
+
+	if (searchTerms.isAdvancedSearch()){
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), user.getUserId(), searchTerms.getName(), searchTerms.getType(), null, null, null, false, true, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), user.getUserId(), searchTerms.getName(), searchTerms.getType(), null, null, null, false, true, searchTerms.isAndOperator());
+	}
+	else {
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), user.getUserId(), searchTerms.getKeywords(), assetTypes, false, true, searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), user.getUserId(), searchTerms.getKeywords(), assetTypes, false, true);
+	}
+}
+else {
+	boolean completedTasks = false;
+
+	if (type.equals("completed")) {
+		completedTasks = true;
+
+		searchContainer.setEmptyResultsMessage("there-are-no-completed-tasks");
+	}
+	else {
+		searchContainer.setEmptyResultsMessage("there-are-no-pending-tasks-assigned-to-you");
+	}
+
+	if (searchTerms.isAdvancedSearch()){
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), user.getUserId(), searchTerms.getName(), searchTerms.getType(), null, null, null, completedTasks, false, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), user.getUserId(), searchTerms.getName(), searchTerms.getType(), null, null, null, completedTasks, false, searchTerms.isAndOperator());
+	}
+	else {
+		resultsTasks = WorkflowTaskManagerUtil.search(company.getCompanyId(), user.getUserId(), searchTerms.getKeywords(), assetTypes, completedTasks, false, searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+		totalTasks = WorkflowTaskManagerUtil.searchCount(company.getCompanyId(), user.getUserId(), searchTerms.getKeywords(), assetTypes, completedTasks, false);
+	}
+}
+
+if (Validator.isNotNull(searchTerms.getKeywords()) || Validator.isNotNull(searchTerms.getName()) || Validator.isNotNull(searchTerms.getType())) {
+	searchContainer.setEmptyResultsMessage(searchContainer.getEmptyResultsMessage() + "-with-the-specified-search-criteria");
+}
+%>

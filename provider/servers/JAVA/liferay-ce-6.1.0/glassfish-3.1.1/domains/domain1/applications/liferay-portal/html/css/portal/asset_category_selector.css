@@ -1,0 +1,89 @@
+.lfr-asset-category-container {
+	height: 260px;
+	margin-bottom: 0.5em;
+	overflow: auto;
+}
+
+.lfr-asset-category-container fieldset {
+	margin: 5px;
+}
+
+.lfr-asset-category-container legend {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.lfr-asset-category-container label {
+	display: block;
+}
+
+.lfr-asset-category-container label input {
+	vertical-align: middle;
+}
+
+.lfr-asset-category-container .lfr-asset-category-message {
+	display: none;
+}
+
+.lfr-asset-category-search-container {
+	background-color: #D3DADD;
+	border-bottom: 1px solid #AEB8BC;
+	margin: 3px 0;
+	padding: 5px;
+}
+
+.lfr-asset-category-search-input {
+	width: 250px;
+}
+
+.lfr-asset-category-container .no-matches {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	color: #999;
+	margin-bottom: 0;
+	margin-left: 5px;
+	margin-top: 0;
+	padding: 0;
+}
+
+.lfr-asset-vocabulary-container.no-matches legend {
+	padding-left: 0;
+}
+
+
+.lfr-asset-vocabulary-container .lfr-asset-category-message, .lfr-asset-vocabulary-container.no-matches .lfr-asset-category-list {
+	display: none;
+}
+
+.lfr-asset-vocabulary-container.no-matches .lfr-asset-category-message {
+	display: block;
+}
+
+.lfr-asset-category-list-container {
+	cursor: pointer;
+}
+
+.lfr-asset-category-list ul {
+	list-style: none;
+	margin-top: 4px;
+	padding: 0;
+}
+
+.lfr-asset-category-list li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 3px 16px;
+}
+
+.lfr-asset-category-list a.selected {
+	background-color: #EEE;
+}
+
+.lfr-asset-category-list span {
+	padding-left: 3px;
+}
+
+.lfr-categories-selector-list .aui-tree-node-paginator {
+	margin-left: 29px;
+}

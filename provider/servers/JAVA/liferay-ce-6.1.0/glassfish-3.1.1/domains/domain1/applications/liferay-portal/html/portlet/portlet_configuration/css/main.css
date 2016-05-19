@@ -1,0 +1,38 @@
+.portlet-configuration {
+	.archived-setups {
+		margin-bottom: 1em;
+		margin-right: 0.5em;
+		text-align: right;
+	}
+
+	.edit-permissions {
+		form:after {
+			clear: both;
+			content: ".";
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+
+		.assign-permissions {
+			float: left;
+
+			.aui-button-holder {
+				position: relative;
+
+				.finished {
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+.ie {
+	.portlet-configuration {
+		.edit-permissions form {
+			height: 1%;
+		}
+	}
+}

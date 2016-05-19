@@ -1,0 +1,172 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+String scheduleCMD = StringPool.BLANK;
+String unscheduleCMD = StringPool.BLANK;
+
+if (cmd.equals("copy_from_live")) {
+	scheduleCMD = "schedule_copy_from_live";
+	unscheduleCMD = "unschedule_copy_from_live";
+}
+else if (cmd.equals("publish_to_live")) {
+	scheduleCMD = "schedule_publish_to_live";
+	unscheduleCMD = "unschedule_publish_to_live";
+}
+else if (cmd.equals("publish_to_remote")) {
+	scheduleCMD = "schedule_publish_to_remote";
+	unscheduleCMD = "unschedule_publish_to_remote";
+}
+
+ResourceURL scheduledPublishEventsURL = renderResponse.createResourceURL();
+
+scheduledPublishEventsURL.setParameter("struts_action", "/layouts_admin/edit_layouts");
+scheduledPublishEventsURL.setParameter(Constants.CMD, ActionKeys.PUBLISH_STAGING);
+
+long targetGroupId = liveGroupId;
+
+if (scheduleCMD.equals("schedule_copy_from_live")) {
+	targetGroupId = stagingGroupId;
+}
+
+scheduledPublishEventsURL.setParameter("groupId", String.valueOf(targetGroupId));
+scheduledPublishEventsURL.setParameter("privateLayout", String.valueOf(privateLayout));
+scheduledPublishEventsURL.setParameter("destinationName", localPublishing ? DestinationNames.LAYOUTS_LOCAL_PUBLISHER : DestinationNames.LAYOUTS_REMOTE_PUBLISHER);
+%>
+
+<aui:input name="jobName" type="hidden" />
+
+<liferay-ui:input-scheduler />
+
+<br />
+
+<aui:script>
+	Liferay.provide(
+		window,
+		'<portlet:namespace />schedulePublishEvent',
+		function() {
+			var A = AUI();
+
+			var oldCmd = document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value;
+
+			document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value = '<%= scheduleCMD %>';
+
+			var addButton = A.one('#<portlet:namespace />addButton');
+
+			if (addButton) {
+				addButton.set('disabled', true);
+			}
+
+			var form = A.one(document.<portlet:namespace />exportPagesFm);
+
+			var uri = form.getAttribute('action');
+
+			A.io.request(
+				uri,
+				{
+					form: {
+						id: form
+					},
+					on: {
+						success: function(event, id, obj) {
+							<portlet:namespace />updateScheduledPublishEventsDiv();
+						}
+					}
+				}
+			);
+
+			document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value = oldCmd;
+		},
+		['aui-io']
+	);
+
+	Liferay.provide(
+		window,
+		'<portlet:namespace />unschedulePublishEvent',
+		function(jobName) {
+			var A = AUI();
+
+			if (confirm('<%= UnicodeLanguageUtil.get(pageContext, "are-you-sure-you-want-to-delete-the-scheduled-event") %>')) {
+				var oldCmd = document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value;
+
+				document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value = '<%= unscheduleCMD %>';
+				document.<portlet:namespace />exportPagesFm.<portlet:namespace />jobName.value = jobName;
+
+				var form = A.one(document.<portlet:namespace />exportPagesFm);
+
+				var uri = form.getAttribute('action');
+
+				A.io.request(
+					uri,
+					{
+						form: {
+							id: form
+						},
+						on: {
+							success: function(event, id, obj) {
+								<portlet:namespace />updateScheduledPublishEventsDiv();
+							}
+						}
+					}
+				);
+
+				document.<portlet:namespace />exportPagesFm.<portlet:namespace /><%= Constants.CMD %>.value = oldCmd;
+			}
+		},
+		['aui-io']
+	);
+
+	Liferay.provide(
+		window,
+		'<portlet:namespace />updateScheduledPublishEventsDiv',
+		function() {
+			var A = AUI();
+
+			var form = A.one(document.<portlet:namespace />exportPagesFm);
+
+			var uri = form.getAttribute('action');
+
+			A.io.request(
+				'<%= scheduledPublishEventsURL %>',
+				{
+					form: {
+						id: form
+					},
+					on: {
+						success: function(event, id, obj) {
+							var responseData = this.get('responseData');
+
+							var scheduledPublishEventsDiv = A.one('#<portlet:namespace />scheduledPublishEventsDiv');
+
+							if (scheduledPublishEventsDiv) {
+								scheduledPublishEventsDiv.html(responseData);
+							}
+
+							var addButton = A.one('#<portlet:namespace />addButton');
+
+							if (addButton) {
+								addButton.set('disabled', false);
+							}
+						}
+					}
+				}
+			);
+		},
+		['aui-io']
+	);
+
+	<portlet:namespace />updateScheduledPublishEventsDiv();
+</aui:script>

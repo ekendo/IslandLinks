@@ -1,0 +1,126 @@
+.taglib-form-navigator .form-navigator {
+	background-color: #D7F1FF;
+	border: 1px solid #88C5D9;
+	float: right;
+	margin: 0 0 0 15px;
+	padding: 10px;
+	position: relative;
+	width: 30%;
+	z-index: 1;
+}
+
+.taglib-form-navigator .form-navigator h3 {
+	color: #036;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.taglib-form-navigator .form-navigator ul {
+	margin-bottom: 10px;
+}
+
+.taglib-form-navigator .form-navigator li {
+}
+
+.taglib-form-navigator .form-navigator li a {
+	cursor: pointer;
+	display: block;
+	padding: 2px 0 2px 5px;
+}
+
+.taglib-form-navigator .form-navigator li a:hover {
+	background-color: #88C5D9;
+	text-decoration: none;
+}
+
+.taglib-form-navigator .form-navigator li.selected {
+	background: url(@theme_image_path@/control_panel/selected.png) no-repeat 0 50%;
+	font-weight: bold;
+	left: -22px;
+	margin-right: -22px;
+	padding: 0;
+	position: relative;
+}
+
+.taglib-form-navigator .form-navigator li.selected a {
+	background-color: #5C696E;
+	color: #FFF;
+	display: block;
+	margin: 0 0 0 11px;
+	overflow: hidden;
+	padding: 2px 10px;
+	text-decoration: none;
+}
+
+.ie6 .taglib-form-navigator .form-navigator li.selected a:hover {
+	background-color: #5C696E;
+}
+
+.taglib-form-navigator .form-navigator .modified-notice {
+	display: none;
+	font-weight: bold;
+}
+
+.taglib-form-navigator .form-navigator .section-modified .modified-notice {
+	color: #090;
+	display: inline;
+}
+
+.taglib-form-navigator .form-navigator .selected.section-modified .modified-notice {
+	color: #9F3;
+	display: inline;
+}
+
+.taglib-form-navigator .form-navigator li.section-error a {
+	background-image: url(@theme_image_path@/messages/alert.png);
+	background-position: 5px 50%;
+	background-repeat: no-repeat;
+	color: #F00;
+	font-weight: bold;
+	padding-left: 25px;
+}
+
+.taglib-form-navigator .form-navigator li.selected.section-error a {
+	background-position: 15px 50%;
+	color: #F99;
+	margin-left: 11px;
+	padding-left: 35px;
+}
+
+.taglib-form-navigator .form-navigator li a .error-notice {
+	display: none;
+}
+
+.taglib-form-navigator .form-navigator .aui-button-holder {
+	margin-top: 20px;
+}
+
+.taglib-form-navigator .form-section {
+	float: left;
+	width: 63%;
+}
+
+.taglib-form-navigator .form-section .aui-fieldset {
+	display: table-cell;
+}
+
+.ie .form-section .aui-fieldset {
+	display: block;
+}
+
+.taglib-form-navigator .form-section .aui-field-input, .taglib-form-navigator .lfr-change-logo img {
+	max-width: 100%;
+}
+
+.ie6 .taglib-form-navigator .form-section {
+	width: 60%;
+}
+
+.taglib-form-navigator .form-section h3 {
+	border-bottom: 1px solid #000;
+	clear: both;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 10px 0;
+}

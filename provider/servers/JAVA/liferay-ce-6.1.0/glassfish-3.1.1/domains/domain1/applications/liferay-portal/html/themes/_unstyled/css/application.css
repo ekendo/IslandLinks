@@ -1,0 +1,389 @@
+/* ---------- Main ---------- */
+
+.aui-state-default {
+}
+
+.aui-state-hover {
+}
+
+.aui-state-active {
+}
+
+.results-grid {
+}
+
+.results-header {
+}
+
+.results-header th {
+}
+
+.results-header th, .results-header td {
+}
+
+.results-header th.sort-column {
+}
+
+.results-header .sort-column .result-column-name {
+}
+
+.results-header .sort-desc .result-column-name {
+}
+
+.results-row td {
+}
+
+.results-row.alt td {
+}
+
+.results-row td.sort-column {
+}
+
+.results-row.hover td {
+}
+
+.results-header span, .results-header a {
+}
+
+.results-header a {
+}
+
+.results-header a:hover {
+}
+
+.taglib-search-iterator .results-row td.first, .taglib-search-iterator th.first {
+}
+
+.taglib-search-iterator .results-row td.last, .taglib-search-iterator th.last {
+}
+
+/* ---------- Dragging/sorting indicators ---------- */
+
+.portlet-layout.dragging {
+}
+
+.drop-area {
+}
+
+.active-area {
+}
+
+.portlet-boundary.yui3-dd-dragging {
+}
+
+.ie .portlet-boundary.yui3-dd-dragging {
+}
+
+.portlet-boundary.yui3-dd-dragging .portlet {
+}
+
+.aui-portal-layout-proxy {
+}
+
+.aui-portal-layout-proxy .portlet-topper {
+}
+
+.aui-proxy {
+}
+
+.ie .aui-proxy {
+}
+
+.aui-proxy.generic-portlet {
+}
+
+.aui-proxy.generic-portlet .portlet-title {
+}
+
+.aui-proxy.not-intersecting .forbidden-action {
+}
+
+.ie .aui-proxy.not-intersecting .forbidden-action {
+}
+
+.aui-resizable-proxy {
+}
+
+.aui-sortable-proxy {
+}
+
+.lfr-freeform-layout-drag-indicator {
+}
+
+.aui-portal-layout-drag-target-indicator {
+}
+
+/* ---------- Portal tool tips ---------- */
+
+.aui-tooltip {
+}
+
+/* ---------- Tags ---------- */
+
+.aui-tagselector-content {
+}
+
+.aui-tagselector-content .aui-textboxlistentry-holder {
+}
+
+.aui-tagselector .lfr-tag-selector-input {
+}
+
+.aui-tagselector-focused .aui-textboxlistentry-holder {
+}
+
+.aui-tagselector .aui-field .aui-field-content {
+}
+
+.aui-tagselector .aui-toolbar {
+}
+
+.aui-tagselector .aui-textboxlist-input-container {
+}
+
+.aui-categoriesselector-content .aui-textboxlistentry-holder {
+}
+
+/* ---------- Tag cloud and tag list ---------- */
+
+.tag-items {
+}
+
+.tag-cloud {
+}
+
+.tag-selected {
+}
+
+.tag-items li {
+}
+
+.tag-items a {
+}
+
+.tag-cloud .tag-asset-count {
+}
+
+.tag-cloud .tag-popularity-1 {
+}
+
+.tag-cloud .tag-popularity-2 {
+}
+
+.tag-cloud .tag-popularity-3 {
+}
+
+.tag-cloud .tag-popularity-4 {
+}
+
+.tag-cloud .tag-popularity-5 {
+}
+
+.tag-cloud .tag-popularity-6 {
+}
+
+/* ---------- Underlay ---------- */
+
+.aui-underlay {
+}
+
+.aui-underlay-hidden {
+}
+
+.aui-underlay-content {
+}
+
+.aui-underlay .yui3-widget-hd {
+}
+
+.aui-underlay-close {
+}
+
+.aui-underlay .lfr-portlet-item {
+}
+
+/* ---------- Tabs ---------- */
+
+.aui-tabview-list {
+}
+
+.ie7 .aui-tabview-list {
+}
+
+.aui-tab {
+}
+
+.aui-tab-content {
+}
+
+.aui-tab-active {
+}
+
+.aui-tab-active, .aui-tab-active a {
+}
+
+.aui-tabview-list .toggle {
+}
+
+/* ---------- Misc. ---------- */
+
+.lfr-panel-container {
+}
+
+.lfr-panel-container {
+}
+
+.aui-dialog-bd {
+}
+
+.aui-dialog-content {
+}
+
+.aui-panel-hd {
+}
+
+/* ---------- Menus ---------- */
+
+.lfr-actions.portlet-options .lfr-trigger strong span, .visible.portlet-options .lfr-trigger strong span {
+}
+
+.lfr-actions.portlet-options:hover, .lfr-actions.portlet-options:hover ul {
+}
+
+.lfr-menu-list {
+}
+
+.aui-menu .notice-message {
+}
+
+.aui-menu {
+}
+
+.aui-menu-content {
+}
+
+.aui-menu-content li {
+}
+
+.aui-menu-content, .lfr-menu-list ul {
+}
+
+.aui-menugroup-content .aui-menu-label {
+}
+
+.aui-menugroup-content ul, .lfr-menu-list ul ul {
+}
+
+.aui-menu-content li, .lfr-menu-list ul li {
+}
+
+.ie7 .aui-menu-content li {
+}
+
+.aui-menu-content li.first, .lfr-menu-list ul li.first {
+}
+
+.aui-menu-content li.last, .lfr-menu-list ul li.last {
+}
+
+.aui-menu-content li a, .lfr-menu-list ul li .taglib-icon, .aui-menu-content li .disabled {
+}
+
+.aui-menu-content li .disabled {
+}
+
+.aui-menu-content li a.aui-focus, .lfr-menu-list ul .taglib-icon.aui-focus, .lfr-menu-expanded li a:focus {
+}
+
+.aui-menu-content a, .lfr-menu-list li .taglib-icon, .aui-menu-content .disabled, .lfr-actions .lfr-trigger, .lfr-actions .lfr-trigger strong {
+}
+
+/* ---------- Toolbar ---------- */
+
+.aui-toolbar li {
+}
+
+.ie6 .aui-toolbar li, .ie7 .aui-toolbar li {
+}
+
+.aui-toolbar-separator {
+}
+
+/* ---------- Loading Mask ---------- */
+
+.aui-loadingmask-content {
+}
+
+.aui-loadingmask-message {
+}
+
+/* ---------- Tree View ---------- */
+
+.aui-tree-node-selected .aui-tree-label {
+}
+
+/* ---------- Page Customization ---------- */
+
+.aui-dragging .portlet-column.customizable {
+}
+
+.customizable-layout-column-content.yui3-widget-content-expanded {
+}
+
+.customizable-layout-column-content {
+}
+
+.customizable .customizable-layout-column-content {
+}
+
+.layout-customizable-controls {
+}
+
+.ie .layout-customizable-controls {
+}
+
+/* ---------- Pagination ---------- */
+
+.aui-paginator-link  {
+}
+
+.aui-paginator-link {
+}
+
+.ie7 .aui-paginator-link {
+}
+
+.aui-paginator-current-page {
+}
+
+.aui-paginator-page-link {
+}
+
+.ie7 .aui-paginator-page-link {
+}
+
+.aui-paginator-first-link {
+}
+
+.aui-paginator-prev-link {
+}
+
+.aui-paginator-last-link {
+}
+
+.aui-paginator-next-link {
+}
+
+.aui-paginator-current-page-report, .aui-paginator-total {
+}
+
+.aui-paginator-current-page-report {
+}
+
+/* ---------- Header row ---------- */
+
+.lfr-header-row {
+}
+
+.lfr-header-row .lfr-actions.show-arrow.direction-down .lfr-trigger strong a {
+}

@@ -1,0 +1,201 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #FFF;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+
+#header {
+	background-color: #003e7e;
+	border-bottom: 15px solid #5780AA;
+	height: 80px;
+	line-height: 80px;
+	margin: 20px 0 0;
+}
+
+#header-content {
+	margin: 0 auto;
+	text-align: left;
+	width: 760px;
+}
+
+#content {
+	background-color: #FFF;
+	margin: 0 auto;
+	padding: 20px 30px;
+	text-align: left;
+	width: 760px;
+}
+
+h1 {
+	color: #FFF;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0 auto;
+	width: 760px;
+}
+
+h1 a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+h1 a:visited {
+	color: #FFF;
+}
+
+h1 a:hover {
+	color: #FFF
+}
+
+h2 {
+	color: #003e73;
+	font-size: 2.0em;
+	font-weight: normal;
+	margin-bottom:5px;
+	margin-top: 20px;
+}
+
+h3 {
+	color: #003e73;
+	font-size: 1.6em;
+	font-weight: normal;
+	margin: 20px 0 0 0;
+}
+
+.signature {
+	font-size: 1.1em;
+	padding: 2px;
+}
+
+.signature a {
+	color: #047;
+}
+
+.signature a:visited {
+	color: #047;
+}
+
+.signature span.params {
+	color: #777;
+	display: none;
+	font-size: 0.7em;
+	padding-left: 6px;
+}
+
+div.actionmethod {
+	color: #555;
+	font-size: 1.3em;
+}
+
+div.actionmethod span.classname {
+	font-weight: bold;
+}
+
+div.actionmethod span.methodname {
+	color: #b00;
+	font-weight: bold;
+}
+
+div.comment {
+	background-color: #fafaf0;
+	border: 1px dotted #aaa;
+	color: #888;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 3px 0;
+	padding: 6px;
+}
+
+div.comment-param {
+	background-color: #fafaf0;
+	border: 1px dotted #ccc;
+	color: #888;
+	font-size: 0.8em;
+	font-style: italic;
+	margin: 3px 50px 10px 10px;
+	padding: 3px 6px;
+}
+
+div.method {
+	color: #0A0;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+div.param {
+	color: #696;
+	font-size: 1.2em;
+	margin-left: 10px;
+}
+
+div.param span {
+	color: #888;
+	font-size: 0.7em;
+	padding-left: 4px;
+}
+
+#footer {
+	background-color: #ddd;
+	border-top: 20px solid #eee;
+	color: #777;
+	margin-top: 20px;
+	padding: 40px;
+}
+
+#footer-content {
+	margin: 0 auto;
+	text-align: left;
+	width: 760px;
+}
+
+form#execute {
+	margin-left: 20px;
+}
+
+form#execute input {
+	padding: 4px;
+}
+
+form#execute input[type="text"] {
+	border: 1px solid #aaa;
+}
+
+form#execute label {
+	color: #666;
+}
+
+form#execute label span {
+	color: #777;
+	font-size: 0.7em;
+}
+
+form#execute #submit {
+	background-color: #f90;
+	border: 2px solid #a60;
+	color: #444;
+	cursor: pointer;
+	font-size: 1.1em;
+	font-weight: bold;
+}

@@ -1,0 +1,234 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+PluginPackage pluginPackage = PluginPackageUtil.getPluginPackageByModuleId(moduleId, repositoryURL);
+%>
+
+<aui:input type="hidden" name="redirect" value="<%= currentURL %>" />
+<aui:input type="hidden" name="url" value="<%= pluginPackage.getDownloadURL() %>" />
+<aui:input type="hidden" name="deploymentContext" value="<%= pluginPackage.getContext() %>" />
+
+<liferay-ui:header
+	backURL="<%= redirect %>"
+	localizeTitle="<%= false %>"
+	title="<%= pluginPackage.getName() %>"
+/>
+
+<liferay-ui:success key="pluginDownloaded" message="the-plugin-was-downloaded-successfully-and-is-now-being-installed" />
+
+<liferay-ui:error key="invalidUrl" message="please-enter-a-valid-url" />
+<liferay-ui:error key="errorConnectingToUrl" message="an-unexpected-error-occurred-while-connecting-to-the-specified-url" />
+
+<table class="lfr-table">
+<tr>
+	<td>
+		<liferay-ui:message key="name" />:
+	</td>
+	<td>
+		<strong><aui:a href="<%= pluginPackage.getPageURL() %>" label="<%= pluginPackage.getName() %>" /></strong> (v<%= pluginPackage.getVersion() %>) <aui:a href="<%= pluginPackage.getDownloadURL() %>" label='<%= "[" + LanguageUtil.get(pageContext, "download") + "]" %>' />
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="author" />:
+	</td>
+	<td>
+		<%= pluginPackage.getAuthor() %>
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="types" />:
+	</td>
+	<td>
+
+		<%
+		Iterator itr = pluginPackage.getTypes().iterator();
+
+		while (itr.hasNext()) {
+			String type = (String)itr.next();
+		%>
+
+			<liferay-ui:message key="<%= type %>" /><c:if test="<%= itr.hasNext() %>">, </c:if>
+
+		<%
+		}
+		%>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="tags" />:
+	</td>
+	<td>
+
+		<%
+		itr = pluginPackage.getTags().iterator();
+
+		while (itr.hasNext()) {
+			String tag = (String)itr.next();
+		%>
+
+			<%= tag %><c:if test="<%= itr.hasNext() %>">, </c:if>
+
+		<%
+		}
+		%>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="licenses" />:
+	</td>
+	<td>
+
+		<%
+		itr = pluginPackage.getLicenses().iterator();
+
+		while (itr.hasNext()) {
+			License license = (License)itr.next();
+		%>
+
+			<c:if test="<%= Validator.isNotNull(license.getUrl()) %>">
+				<aui:a href="<%= license.getUrl() %>" label="<%= license.getName() %>" />
+			</c:if>
+
+			<c:if test="<%= license.isOsiApproved() %>">
+				(<liferay-ui:message key="open-source" />)
+			</c:if>
+
+			<c:if test="<%= itr.hasNext() %>">, </c:if>
+
+		<%
+		}
+		%>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="liferay-versions" />:
+	</td>
+	<td>
+
+		<%
+		Iterator itr3 = pluginPackage.getLiferayVersions().iterator();
+
+		while (itr3.hasNext()) {
+			String liferayVersion = (String)itr3.next();
+		%>
+
+			<%= liferayVersion %><c:if test="<%= itr3.hasNext() %>">, </c:if>
+
+		<%
+		}
+		%>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="repository" />:
+	</td>
+	<td>
+		<a href="<%= pluginPackage.getRepositoryURL() %>"><%= pluginPackage.getRepositoryURL() %></a>
+
+		<c:choose>
+			<c:when test="<%= PluginPackageUtil.isTrusted(pluginPackage.getRepositoryURL()) %>">
+				(<liferay-ui:message key="trusted" />)
+			</c:when>
+			<c:otherwise>
+				(<liferay-ui:message key="untrusted" />)
+			</c:otherwise>
+		</c:choose>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+		<br />
+	</td>
+</tr>
+<tr>
+	<td>
+		<liferay-ui:message key="short-description" />:
+	</td>
+	<td>
+		<%= pluginPackage.getShortDescription() %>
+	</td>
+</tr>
+
+<c:if test="<%= Validator.isNotNull(pluginPackage.getLongDescription()) %>">
+	<tr>
+		<td>
+			<liferay-ui:message key="long-description" />:
+		</td>
+		<td>
+			<%= pluginPackage.getLongDescription() %>
+		</td>
+	</tr>
+</c:if>
+
+<c:if test="<%= Validator.isNotNull(pluginPackage.getChangeLog()) %>">
+	<tr>
+		<td>
+			<liferay-ui:message key="change-log" />:
+		</td>
+		<td>
+			<%= pluginPackage.getChangeLog() %>
+		</td>
+	</tr>
+</c:if>
+
+<%
+List screenshots = pluginPackage.getScreenshots();
+%>
+
+<c:if test="<%= (screenshots != null) && !screenshots.isEmpty() %>">
+	<tr>
+		<td colspan="2">
+			<br />
+
+			<%
+			itr = screenshots.iterator();
+
+			while (itr.hasNext()) {
+				Screenshot screenshot = (Screenshot)itr.next();
+			%>
+
+				<aui:a href="<%= screenshot.getLargeImageURL() %>" target="_blank"><img alt="<liferay-ui:message key="thumbnail" />" src="<%= screenshot.getThumbnailURL() %>" /></aui:a>
+
+			<%
+			}
+			%>
+
+		</td>
+	</tr>
+</c:if>
+
+</table>
+
+<aui:button-row>
+	<aui:button onClick='<%= uploadProgressId + ".startProgress();" + renderResponse.getNamespace() + "installPluginPackage(" + StringPool.APOSTROPHE + "remoteDeploy" + StringPool.APOSTROPHE + ");" %>' value="install" />
+</aui:button-row>
+
+<liferay-ui:upload-progress
+	id="<%= uploadProgressId %>"
+	message="downloading"
+	redirect="<%= currentURL %>"
+/>

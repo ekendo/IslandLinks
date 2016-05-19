@@ -1,0 +1,14 @@
+.portlet-bookmarks {
+	.lfr-asset-url {
+		margin: 1em 0 0.3em;
+	}
+
+	.folder-search {
+		float: right;
+		margin: 0 0 0.5em 0.5em;
+	}
+
+	.lfr-panel-content {
+		overflow: auto;
+	}
+}

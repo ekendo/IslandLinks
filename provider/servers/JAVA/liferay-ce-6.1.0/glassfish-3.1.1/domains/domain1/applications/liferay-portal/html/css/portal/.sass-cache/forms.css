@@ -1,0 +1,86 @@
+.aui-field-wrapper {
+  clear: both;
+  overflow: hidden; }
+
+.aui-form-button.aui-input-disabled input, .aui-form-button.aui-input-disabled button {
+  background: #f5f5f5 url(../images/forms/button.png) repeat-x 0 0;
+  color: #ccc; }
+
+.aui-form-button.aui-input-disabled input:hover, .aui-form-button.aui-input-disabled button:hover {
+  background: #f5f5f5 url(../images/forms/button.png) repeat-x 0 0;
+  border-color: #DEDEDE #BFBFBF #BFBFBF #DEDEDE;
+  color: #ccc;
+  cursor: auto; }
+
+.aui-form-validator-error-container .aui-field-element {
+  display: inline-block; }
+
+.aui-form-validator-error-container {
+  color: #900; }
+
+.aui-form-validator-stack-error {
+  font-size: 0.9em; }
+
+.aui-form-validator-error-container .aui-field-element {
+  background: url(@theme_image_path@/messages/error.png) no-repeat scroll 100% 50%;
+  padding-right: 20px; }
+
+[class~="aui-form-validator-message"] {
+  background-color: #333;
+  clip: rect(0 0 0 0);
+  color: #fff;
+  display: block;
+  margin-top: 2px;
+  padding: 5px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 5; }
+
+.aui-field-focused .aui-form-validator-message, .aui-form-validator-error-container:hover .aui-form-validator-message {
+  clip: rect(auto auto auto auto); }
+
+.aui-field-element {
+  position: relative; }
+
+.ie6 .aui-form-validator-message {
+  color: #777; }
+
+.lfr-dynamic-form .aui-field-radio .aui-field {
+  display: block;
+  margin-left: 10px; }
+
+.lfr-dynamic-form .aui-field-text, .lfr-dynamic-form .aui-field-text .aui-field-element {
+  display: block; }
+
+.lfr-dynamic-form .aui-field-text .aui-field-input {
+  width: 100%; }
+
+.lfr-input-resource {
+  width: 350px; }
+
+.lfr-input-text, .aui-form .aui-fieldset .aui-field.lfr-input-text-container input {
+  max-width: 350px;
+  width: 100%; }
+
+.lfr-input-text.flexible, .lfr-input-text-container.flexible input {
+  width: auto; }
+
+.lfr-textarea, .aui-form .aui-fieldset .aui-field.lfr-textarea-container textarea {
+  height: 100px;
+  max-width: 500px;
+  width: 100%; }
+
+fieldset, .aui-form fieldset {
+  margin-bottom: 2em; }
+
+fieldset:last-child, .aui-form fieldset:last-child {
+  margin-bottom: 0; }
+
+.lfr-display-terms-search {
+  display: block; }
+
+.lfr-search-button input {
+  border-width: 0;
+  vertical-align: middle; }
+

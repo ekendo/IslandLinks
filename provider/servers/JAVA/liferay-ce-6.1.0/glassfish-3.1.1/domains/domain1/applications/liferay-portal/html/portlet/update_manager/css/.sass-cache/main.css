@@ -1,0 +1,9 @@
+.results-row .status-installation-in-process td, .results-row .status-installation-in-process.alt td, .results-row .status-update-ignored td, .results-row .status-update-ignored.alt td {
+  background-color: #9CF; }
+.results-row .status-up-to-date td, .results-row .status-up-to-date.alt td {
+  background-color: #CFC; }
+.results-row .status-unknown td, .results-row .status-unknown.alt td {
+  background-color: #FFC; }
+.results-row .status-update-available td, .results-row .status-update-available.alt td {
+  background-color: #F99; }
+
