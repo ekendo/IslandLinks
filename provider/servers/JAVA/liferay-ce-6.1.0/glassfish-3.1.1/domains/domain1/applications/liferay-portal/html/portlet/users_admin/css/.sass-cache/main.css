@@ -1,0 +1,143 @@
+.portlet-users-admin .aui-form fieldset {
+  border-width: 0;
+  padding: 0; }
+.portlet-users-admin .aui-form .aui-fieldset textarea {
+  width: 90%; }
+.portlet-users-admin .aui-form .aui-fieldset table.org-labor-table td .aui-field {
+  margin-bottom: 0;
+  padding: 3px 1px; }
+.portlet-users-admin .aui-form .aui-fieldset label, .portlet-users-admin .aui-form .aui-fieldset .label {
+  font-weight: bold; }
+  .portlet-users-admin .aui-form .aui-fieldset label input, .portlet-users-admin .aui-form .aui-fieldset .label input {
+    vertical-align: middle; }
+.portlet-users-admin .aui-form .aui-fieldset .aui-field {
+  margin-bottom: 10px; }
+  .portlet-users-admin .aui-form .aui-fieldset .aui-field.mailing-ctrl {
+    clear: both; }
+    .portlet-users-admin .aui-form .aui-fieldset .aui-field.mailing-ctrl span {
+      margin-right: 0.5em; }
+  .portlet-users-admin .aui-form .aui-fieldset .aui-field.localized-language-selector {
+    margin-bottom: 0; }
+  .portlet-users-admin .aui-form .aui-fieldset .aui-field.action-ctrl, .portlet-users-admin .aui-form .aui-fieldset .aui-field.mailing-ctrl, .portlet-users-admin .aui-form .aui-fieldset .aui-field.primary-ctrl {
+    margin: 1.8em 0; }
+.portlet-users-admin #header-bottom {
+  background-color: #F6F8FB;
+  height: 34px;
+  margin: 0 0 10px; }
+.portlet-users-admin #header-menu {
+  background-color: #F3F5F5;
+  font-size: 11px;
+  line-height: 34px;
+  margin: 0 0 10px;
+  padding: 0 10px;
+  text-align: right; }
+.portlet-users-admin #header-title {
+  background-color: #C1CABC;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  padding: 7px 10px; }
+.portlet-users-admin #details .avatar {
+  border: 1px solid #88C5D9;
+  clear: both;
+  margin: 0 auto;
+  width: 100px; }
+.portlet-users-admin .lfr-change-logo img {
+  border-width: 0;
+  display: block;
+  width: auto; }
+.portlet-users-admin .company-logo {
+  border: none;
+  width: 100px; }
+.portlet-users-admin .email-user-add .password-changed-notification {
+  display: none; }
+.portlet-users-admin .label-holder {
+  font-weight: 700;
+  padding: 15px 0 5px; }
+.portlet-users-admin .organization-information {
+  overflow: hidden; }
+.portlet-users-admin .organization-search {
+  float: right;
+  margin: 0 0 0.5em 0.5em; }
+.portlet-users-admin .section {
+  float: left;
+  margin-left: 10px;
+  width: 47%; }
+  .portlet-users-admin .section h3 {
+    background: url() no-repeat scroll 2px 50%;
+    border-bottom: 1px solid #CCC;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    padding-left: 25px; }
+  .portlet-users-admin .section li {
+    list-style: none;
+    margin: 0;
+    padding-left: 25px; }
+  .portlet-users-admin .section ul {
+    margin: 0; }
+.portlet-users-admin .entity-addresses .primary {
+  background-position: 3px 5px; }
+.portlet-users-admin .entity-addresses .mailing-name {
+  display: block;
+  font-style: italic; }
+.portlet-users-admin .entity-addresses h3 {
+  background-image: url(@theme_image_path@/dock/home.png); }
+.portlet-users-admin .entity-details {
+  clear: both; }
+.portlet-users-admin .entity-comments h3 {
+  background-image: url(@theme_image_path@/dock/welcome_message.png); }
+.portlet-users-admin .entity-email-addresses h3 {
+  background-image: url(@theme_image_path@/mail/unread.png); }
+.portlet-users-admin .entity-phones h3 {
+  background-image: url(@theme_image_path@/common/telephone.png); }
+.portlet-users-admin .entity-websites h3 {
+  background-image: url(@theme_image_path@/common/history.png); }
+.portlet-users-admin .radio-holder {
+  line-height: 12px; }
+.portlet-users-admin .form-navigator .user-info, .portlet-users-admin .form-navigator .organization-info, .portlet-users-admin .form-navigator .company-info {
+  font-weight: bold;
+  margin-bottom: 15px; }
+.portlet-users-admin .form-navigator .user-info .user-name, .portlet-users-admin .form-navigator .organization-info .organization-name, .portlet-users-admin .form-navigator .company-info .company-name {
+  color: #036;
+  display: block;
+  font-size: 14px; }
+.portlet-users-admin .form-navigator .user-info .user-logo, .portlet-users-admin .form-navigator .user-info .organization-logo, .portlet-users-admin .form-navigator .organization-info .user-logo, .portlet-users-admin .form-navigator .organization-info .organization-logo {
+  float: left;
+  margin-right: 10px;
+  padding: 0;
+  width: 35px; }
+.portlet-users-admin .instant-messenger, .portlet-users-admin .social-network {
+  clear: both;
+  overflow: hidden; }
+  .portlet-users-admin .instant-messenger img, .portlet-users-admin .social-network img {
+    margin-left: 1em;
+    margin-top: 1.8em; }
+  .portlet-users-admin .instant-messenger .aui-field, .portlet-users-admin .social-network .aui-field {
+    float: left; }
+.portlet-users-admin table.org-labor-table {
+  margin-bottom: 30px; }
+.portlet-users-admin .addresses .aui-field {
+  float: none;
+  width: auto; }
+.portlet-users-admin .permission-scopes {
+  display: block; }
+  .portlet-users-admin .permission-scopes.empty {
+    display: none; }
+.portlet-users-admin .permission-group {
+  margin: 10px 0 0 10px; }
+.portlet-users-admin .view-all-link {
+  color: #666;
+  font-weight: normal;
+  margin-left: 0.5em; }
+.portlet-users-admin .lfr-asset-column-details {
+  margin-top: 1em; }
+
+.lfr-floating-container .aui-field input, .lfr-floating-container .aui-field img {
+  vertical-align: top; }
+
+.ie .portlet-users-admin .permission-scopes {
+  height: 1%; }
+
+.ie6 .portlet-users-admin .organization-information {
+  height: 1%; }
+

@@ -1,0 +1,22 @@
+<dl>
+  #if $is_last
+  <a name="last_comment"></a>
+  #end if
+  <a name="$comment.id"></a>
+  <dt>
+    <label class="author">$postAuthor($comment.author, $comment.website)</label> <label class="date">$comment.getDate()</label>
+    #if $edit_mode
+      #if $comment.email
+      &middot;
+      <label class="date">$comment.email</label>
+      #end if
+      &middot;
+      #echo $btn_edit_comment % $comment.id
+      &middot;
+      #echo $btn_del_comment % $comment.id
+    #end if
+  </dt>
+  <dd>
+    $amiformat($comment.content, True)
+  </dd>
+</dl>

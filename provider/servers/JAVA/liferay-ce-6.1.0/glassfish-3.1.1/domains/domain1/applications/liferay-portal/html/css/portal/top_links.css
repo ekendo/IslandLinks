@@ -1,0 +1,22 @@
+.portlet-boundary .top-links-container {
+	clear: both;
+	overflow: hidden;
+}
+
+.portlet-boundary .top-links {
+	float: right;
+}
+
+.portlet-boundary .top-links .top-link {
+	border-right: 1px solid #bbb;
+	margin-right: 0.5em;
+	padding-right: 0.5em;
+}
+
+.portlet-boundary .top-links .top-link.last {
+	border-width: 0;
+}
+
+.portlet-boundary .top-links .top-links-navigation {
+	float: left;
+}

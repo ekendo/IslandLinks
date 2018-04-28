@@ -1,0 +1,10 @@
+.portlet-site-settings .staging-section {
+  margin-left: 1.5em; }
+.portlet-site-settings .staging-types .aui-field-choice label {
+  font-weight: normal; }
+
+.portlet-communities .organizations-msg-info {
+  background-color: #FEFEFE;
+  background-image: url(@theme_image_path@/common/organization_icon.png);
+  border-color: #BBB; }
+

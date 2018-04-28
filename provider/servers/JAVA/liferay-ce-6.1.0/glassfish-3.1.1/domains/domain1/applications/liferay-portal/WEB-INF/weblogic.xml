@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<weblogic-web-app
+	xmlns="http://www.bea.com/ns/weblogic/weblogic-web-app"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd"
+>
+	<jsp-descriptor>
+		<keepgenerated>true</keepgenerated>
+		<page-check-seconds>60</page-check-seconds>
+		<precompile>true</precompile>
+		<precompile-continue>true</precompile-continue>
+	</jsp-descriptor>
+	<container-descriptor>
+		<optimistic-serialization>true</optimistic-serialization>
+		<show-archived-real-path-enabled>true</show-archived-real-path-enabled>
+	</container-descriptor>
+	<context-root>/</context-root>
+</weblogic-web-app>

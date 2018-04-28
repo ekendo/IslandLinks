@@ -1,0 +1,62 @@
+##Premission Manager
+<script type="text/javascript">
+function changePremission(elm, pageid, /*optional*/ type, value) {
+  if(typeof(value) == "undefined") {
+    value = elm.value;
+    if(value != 'Every user' && value != 'admin') {
+      var arr = elm.value.split(/-\/\/-/);
+      type = arr[0];
+      value = arr[1];
+    }
+  }
+  //Check value again
+  if(typeof(value) != "undefined") {
+    if(typeof(type) == "undefined") {
+      //We have every user or admin
+      type = value;
+    }
+    //Send ajax request to change
+    var url = '$change_url';
+    var d = getRequest(url);
+    d.sendReq({'page_id': pageid, 'type': type, 'value': value});
+  }
+}
+</script>
+<select onchange="changePremission(this, $page_id)" class="pageid_$page_id">
+##Get page
+  #set $page_perm = $getPagePremission($page_id)
+  #set $page_prem_type = $page_perm[0]
+  #set $page_prem_value = $page_perm[1]
+  #if $page_prem_type == "Every user"
+    <option value="Every user" selected="selected">Every user</option>
+  #else
+    <option value="Every user">Every user</option>
+  #end if
+  #if $page_prem_type == "admin"
+    <option value="admin" selected="selected">admin</option>
+  #else
+    <option value="admin">admin</option>
+  #end if
+##USERS
+#if len($premissions_repr["Users"]) > 0
+  <option value="null">Users</option>
+  #for user in $premissions_repr["Users"]
+  #if $page_prem_type == "user" and $page_prem_value == $user
+    <option value="user-//-$user" selected="selected">&nbsp;&nbsp;&nbsp;$user</option>
+  #else
+    <option value="user-//-$user">&nbsp;&nbsp;&nbsp;$user</option>
+  #end if
+  #end for
+#end if
+##GROUPS
+#if len($premissions_repr["Groups"]) > 0
+  <option value="null">Groups</option>
+  #for group in $premissions_repr["Groups"]
+  #if $page_prem_type == "group" and $page_prem_value == $group
+    <option value="group-//-$group" selected="selected">&nbsp;&nbsp;&nbsp;$group</option>
+  #else
+    <option value="group-//-$group">&nbsp;&nbsp;&nbsp;$group</option>
+  #end if
+  #end for
+#end if
+</select>

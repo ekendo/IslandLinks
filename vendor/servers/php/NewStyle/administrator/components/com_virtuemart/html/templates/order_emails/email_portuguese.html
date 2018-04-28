@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>Your Order Confirmation</title>
+<style type="text/css">
+<!--
+.Stil1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.Stil2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="top"> 
+    <td width=53% align="left" class="Stil1">{phpShopVendorName}<br>
+    {phpShopVendorStreet1}<br>
+    {phpShopVendorStreet2}<br>
+    {phpShopVendorZip} {phpShopVendorCity}</td>
+    <td width="47%" align="right">{phpShopVendorImage}</td>
+  </tr>
+  <tr>
+      <td colspan="2" class="Stil1">
+      {phpShopOrderHeaderMsg}
+      </td>
+  </tr>    
+  <tr bgcolor="white"> 
+    <td colspan=2>
+      <h3 class="Stil2">{phpShopOrderHeader}</h3>
+    </td>
+  </tr>
+</table>
+ 
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+  <!-- begin customer information --> 
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2 class="Stil2"><b>Informa&ccedil;&otilde;es do pedido </b></td>
+  </tr>
+  <tr class="Stil1"> 
+    <td>Pedido N&uacute;mero :</td>
+    <td>{phpShopOrderNumber}</td>
+  </tr>
+   
+  <tr class="Stil1"> 
+    <td>Data do pedido :</td>
+    <td>{phpShopOrderDate}</td>
+  </tr>
+  <tr class="Stil1"> 
+    <td>Situa&ccedil;&atilde;o do pedido :</td>
+    <td>{phpShopOrderStatus}
+</td>
+  </tr>
+  <!-- end customer information --> 
+  <!-- begin 2 column bill-ship to --> 
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2><b class="Stil2">Informa&ccedil;&otilde;es do cliente </b></td>
+  </tr>
+  <tr valign=top> 
+    <td width=50%> <!-- begin billto -->  
+      <table width=100% cellspacing=0 cellpadding=2 border=0>
+        <tr class="Stil1"> 
+          <td colspan=2><b class="Stil1">Cobrar de </b></td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Empresa:</td>
+          <td>{phpShopBTCompany}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Nome completo  :</td>
+          <td>{phpShopBTName}</td>
+        </tr>
+        <tr valign=top class="Stil1"> 
+          <td>Endere&ccedil;o :</td>
+          <td><p>{phpShopBTStreet1}<br />{phpShopBTStreet2}<br>
+          </p>          </td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Paiz :</td>
+          <td>{phpShopBTCity}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Estado/Regi&atilde;o :</td>
+          <td>{phpShopBTState}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>CEP :</td>
+          <td>{phpShopBTZip}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Paiz :</td>
+          <td>{phpShopBTCountry}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Fone :</td>
+          <td>{phpShopBTPhone}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Fax :</td>
+          <td>{phpShopBTFax}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Email :</td>
+          <td>{phpShopBTEmail}</td>
+        </tr>
+      </table>
+      <!-- end billto --> 
+    </td>
+    <td width=50%> 
+    <!-- begin shipto -->  
+      <table width=100% border=0 cellpadding=2 cellspacing=0 class="Stil1">
+        <tr> 
+          <td colspan=2><b>Enviar para </b></td>
+        </tr>
+         <tr> 
+          <td>Empresa:</td>
+          <td>{phpShopSTCompany}</td>
+        </tr>
+        <tr> 
+          <td>Nome completo  :</td>
+          <td>{phpShopSTName}</td>
+        </tr>
+        <tr valign=top> 
+          <td>Endere&ccedil;o :</td>
+          <td>{phpShopSTStreet1}<br />
+          {phpShopSTStreet2}<br></td>
+        </tr>
+        <tr> 
+          <td>Cidade :</td>
+          <td>{phpShopSTCity}</td>
+        </tr>
+        <tr> 
+          <td>Estado/Regi&atilde;o :</td>
+          <td>{phpShopSTState}</td>
+        </tr>
+        <tr> 
+          <td>CEP :</td>
+          <td>{phpShopSTZip}</td>
+        </tr>
+        <tr> 
+          <td>Paiz :</td>
+          <td>{phpShopSTCountry}</td>
+        </tr>
+        <tr> 
+          <td>Fone :</td>
+          <td>{phpShopSTPhone}</td>
+        </tr>
+        <tr> 
+          <td>Fax :</td>
+          <td>{phpShopSTFax}</td>
+        </tr>
+      </table>
+      <!-- end shipto --> 
+      <!-- end customer information --> </td>
+  </tr>
+  <tr> 
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan=2> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="1">
+         
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <!-- begin order items information --> 
+  <tr bgcolor="#CCCCCC" class="Stil2"> 
+    <td colspan=2><b>&Iacute;tens pedidos: </b></td>
+  </tr>
+  <tr> 
+    <td colspan=2> 
+      <table width=100% cellspacing=0 cellpadding=2 border=0>
+        <tr align=left class="Stil1"> 
+          <th>Quant</th>
+          <th>Descr</th>
+          <th>SKU</th>
+          <th>Pre&ccedil;o</th>
+          <th>Total</th>
+        </tr>
+         <tr class="Stil1">
+        {phpShopOrderItems}
+ 
+        <tr class="Stil1"> 
+          <td colspan=4 align=right>&nbsp;&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td colspan=4 align=right>Subtotal :</td>
+          <td>{phpShopOrderSubtotal}</td>
+        </tr>{phpShopOrderDisc1}
+        <tr class="Stil1"> 
+          <td colspan=4 align=right>Transporte :</td>
+          <td>{phpShopOrderShipping}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td colspan=4 align=right>Total impostos  :</td>
+          <td>{phpShopOrderTax}</td>
+        </tr>
+        {phpShopOrderDisc2}
+        <tr class="Stil1"> 
+          <td colspan=4 align=right><b>Total:</b></td>
+          <td>{phpShopOrderTotal}</td>
+        </tr>{phpShopOrderDisc3}
+      </table>
+    </td>
+  </tr>
+  <!-- end order items information --> 
+  <!-- begin customer note -->
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader">
+    <td colspan=2><b class="Stil2">Anota&ccedil;&atilde;o do cliente:</b></td>
+  </tr>
+  <tr>
+    <td colspan=2>
+        {phpShopCustomerNote}
+    </td>
+  </tr>
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader">
+    <td><b class="Stil2">{PAYMENT_INFO_LBL}</b></td>
+    <td><b class="Stil2">{SHIPPING_INFO_LBL}</b></td>
+  </tr>
+  <tr>
+    <td>{PAYMENT_INFO_DETAILS}</td>
+    <td>{SHIPPING_INFO_DETAILS}</td>
+  </tr>
+</table>
+<br>
+<p class="Stil2"></p>
+<p class="Stil2">
+{phpShopOrderClosingMsg}
+</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#set post_link = $GENERIC_POST_LINK % $post.id
+#set label_link = $GENERIC_LABEL_LINK
+<div class="CMS_BlogEntry" id="BlogEntry_$post.id">
+  <h1>
+  #if $is_permanent
+    $post.title
+  #else
+    <a href="$post_link">$post.title</a>
+  #end if
+    $btn_edit $btn_delete $btn_published
+  </h1>
+
+  <div class="CMS_BlogEntryInfo">
+    Posted on $post.getDate()
+    &middot; <a href="$post_link#comments">Comments</a> [<span class="CMS_CmntLen">$len($comments)</span>]
+  </div>
+
+  <div class="CMS_BlogText">
+    $cmsRender($post.content)
+  </div>
+  #if len($post.getLabels()) > 0
+  <div class="CMS_BlogLabels">
+    <img src="static_plugin/blog/label_manage.png" alt="Labels:" /> Labels:
+      #for $label in $post.getLabels()
+      #set link = $label_link % $label.id
+      <a href="$link">$label.name</a>
+      #end for
+  </div>
+  #end if
+
+  #if $is_permanent
+<div class="CMS_BlogComments">
+
+  <a name="comments"></a>
+  #if len($comments) == 0
+  <div class="CMS_BlogTitle" id="CMS_noCmnt">No comments posted</div>
+  #else
+  <div class="CMS_BlogTitle"><span class="CMS_CmntLen">$len($comments)</span> comments so far</div>
+  #end if
+
+  <div class="CMS_BlogInner">
+    #for $comment in $comments
+      #set is_last = $comment == $comments[-1]
+      $renderComment($comment, $is_last, $edit_mode)
+    #end for
+  </div>
+</div>
+
+<div class="CMS_BlogPostComment">
+  <div class="CMS_BlogTitle">Post a comment</div>
+  <div class="CMS_BlogInner">
+    $post_comment_div
+  </div>
+</div>
+#end if
+</div>
+
+#if $edit_mode
+<script>
+AJS.$('BlogEntry_$post.id').is_permanent = '$is_permanent';
+</script>
+#end if

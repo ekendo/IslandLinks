@@ -1,0 +1,52 @@
+<html>
+<head>
+    <base href="$BASE_URL/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>$header_obj.title</title>
+#for $style_url in $header_obj.getStyles():
+    <link rel="stylesheet" type="text/css" href="$style_url" />
+#end for
+
+<script type="text/javascript">
+    var GB_P = parent.parent;
+</script>
+
+#if $header_obj.append_ajs
+    <script src="static_core/scripts/general/AJS.js" type="text/javascript"></script>
+    <script src="static_core/scripts/general/AJS_adapter.js" type="text/javascript"></script>
+#end if
+
+#for $script_url in $header_obj.getScripts():
+    <script src="$script_url" type="text/javascript"></script>
+#end for
+
+#for $script_data in $header_obj.script_datas:
+    $script_data['data']
+#end for
+
+##Reset - sicne we use on template object, we must clear it
+#silent $header_obj.clearScriptData()
+
+<script type="text/javascript">
+    function doLogout() {
+        d = getRequest("login/setLogout");
+        d.addCallback(function(){
+            parent.GB_hide();
+        });
+        d.sendReq();
+        return false;
+    }
+
+    //IE hack. I hate this browser
+    if(typeof(AJS) != 'undefined') {
+        if(AJS.isIe()) {
+            document.write('<style>.content, .section_content { width: 100%}</style>');
+            document.write('<style>.content, .section_content_list { width: 100%}</style>');
+        }
+        AJS.AEV(window, "load", AmiTooltip.init);
+    }
+</script>
+
+</head>
+<body>

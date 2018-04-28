@@ -1,0 +1,30 @@
+body { color: #222; }
+
+#top {
+  background-color: #f8ded4;
+  border-bottom: 3px solid #999;
+  padding: 9px;
+  font-size: 20px;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 9px;
+}
+#menu li {
+  display: inline;
+  margin-right: 10px;
+}
+
+#content { padding: 9px; }
+#bottom {
+  padding: 15px 9px 9px 9px;
+
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #999;
+}

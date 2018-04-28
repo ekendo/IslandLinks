@@ -1,0 +1,107 @@
+#silent $template.getHeader().appendEditorScripts()
+#def head
+<script>
+    var bmutex = 1;
+    function onSubmit() {
+        if(bmutex) {
+            bmutex = 0;
+            Indicator.append(AJS.\$('btn_submit'));
+            var form = AJS.\$('form');
+            var d = AJS.getRequest('blog/$action');
+            d.addCallback(function(ident) {
+                #if $action == 'add'
+                    GB_P.Blog.updateBlog(ident);
+                #else
+                    GB_P.Blog.updatePost(ident);
+                #end if
+            });
+            var data = AJS.formContents(form);
+
+            var selected_labels = AJS.\$bytc('a', 'label_on');
+            data['labels'] = '';
+            AJS.map(selected_labels, function(elm) {
+                data['labels'] += elm.id + ',';
+            });
+
+            d.sendReq(data);
+        }
+        return false;
+    }
+
+    function flipLabel(e) {
+        var elm = AJS.getEventElm(e);
+        elm.className = elm.className == 'label_off' ? 'label_on' : 'label_off';
+        return false;
+    }
+</script>
+
+<style type="text/css">
+    .labels {
+        margin-bottom: 15px;
+    }
+    .labels a {
+        color: black;
+        margin-right: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .label_off {
+        background-color: #ddd;
+    }
+
+    .label_on {
+        background-color: #77ff77;
+    }
+</style>
+#end def
+$template.getHeader().appendScriptData($head)
+$template.getHeader().renderText()
+<div id="container">
+    <center>
+    <div id="content" style="text-align: center;">
+        <form onsubmit="return onSubmit()" id="form">
+            <input type="hidden" name="ident" value="$ident" />
+            <dl class="dl_big">
+                <dd>
+                    <b>Title:</b> <input type="text" name="title" value="$title" class="big" />
+                </dd>
+
+                <dt style="text-align: left">
+                    <div id="toolbar"></div>
+                    <textarea name="content" rows="6" style="width: 100%; height: 325px;" id="cms_ta">$content</textarea>
+
+                    <script>
+                        AMIBAR.setToolbarContainer("toolbar");
+
+                        //Remove component_add button
+                        AMIBAR.removeButton(AMIBAR.buttons.length-1);
+
+                        AMIBAR.populateDiv();
+                    </script>
+                </dt>
+
+                <dd class="labels">
+                    <b>Labels:</b>
+                    #for $label in $labels
+                        #set $start_class = $hasLabel($label.id) and 'label_on' or 'label_off'
+                        <script>
+                            var span = AJS.A({'class': '$start_class', id: $label.id}, $label.getName());
+                            AJS.AEV(span, 'click', flipLabel);
+                            AJS.DI(span);
+                        </script>
+                    #end for
+                    #if len($labels) == 0
+                    No labels made.
+                    #end if
+                </dd>
+
+                <dt>
+                    <input type="submit" value="$submit_value" class="button" id="btn_submit" />
+                </dt>
+            </dl>
+        </form>
+    </div>
+    </center>
+</div>
+$template.getFooter().renderText()

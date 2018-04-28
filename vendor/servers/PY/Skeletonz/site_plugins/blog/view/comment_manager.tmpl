@@ -1,0 +1,91 @@
+#def commentMan
+<script type="text/javascript">
+var list_commander, action_bar;
+
+function initListCommander() {
+  action_bar = new ActionBar();
+
+  list_commander = new ListCommander({'host_table': 'list_items',
+                                      'action_bar': action_bar});
+  list_commander.ident = '$ident';
+  list_commander.select_able = true;
+
+  //Config the action bar
+  var view = function(e, i_cur_elm) {
+    var id = e.json.id;
+    GB_P.location = GB_P.getPageOracle().getBaseURL() + "/blog/viewComment?id=" + id;
+  };
+  var btn_view = new ActionButton(
+      {'text': 'View comment', 
+       'btn_class': 'CMS_link',
+       'image': 'static_core/images/diff.png',
+       'on_click_fn': view});
+
+  action_bar.addButtons('default', btn_view);
+
+  #for $label in $comments
+    list_commander.add( $label.toJSON()  );
+  #end for
+}
+
+function deleteSelected() {
+    var selected = \$bytc('tr', 'lc_selected');
+    var ids = [];
+    map(selected, function(tr) {
+        ids.push(tr.json.id);
+    });
+    var req = getRequest('blog/deleteComments');
+    req.addCallback(function() {
+        map(selected, function(elm) {
+            removeElement(elm);
+        });
+    });
+    req.sendReq({ids: serializeJSON(ids)});
+}
+
+function fetchMore() {
+    var last_id = getLast(\$bytc('tr', 'lc_item'));
+    if(last_id) {
+        last_id = last_id.json.id;
+
+        var req = loadJSONDoc('blog/fetchMore');
+        req.addCallback(function(items) {
+            if(items.length == 0)
+                hideElement($('fetch_more'));
+            else {
+                map(items, function(item) { 
+                    list_commander.appendElement(item);
+                });
+            }
+        });
+
+        req.sendReq({last_id: last_id, ident: '$ident'});
+    }
+}
+
+initListCommander();
+</script>
+<style>
+  .lc_list {
+    font-size: 12px;
+  }
+</style>
+#end def
+#silent $template.getHeader().appendScriptData($commentMan)
+$template.getHeader().renderText()
+<div id="container">
+  <div id="content">
+
+    <div class="section_content_list">
+      <table class="lc_list" id="list_items"></table>
+    </div>
+
+    <input type="button" value="Delete selected" onclick="deleteSelected()" style="color: red;" />
+
+    <input type="button" value="Fetch more" onclick="fetchMore()" id="fetch_more" style="margin-left: 20px" />
+  </div>
+</div>
+<script type="text/javascript">
+  list_commander.render();
+</script>
+$template.getFooter().renderText()

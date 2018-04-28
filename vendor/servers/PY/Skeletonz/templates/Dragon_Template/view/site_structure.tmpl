@@ -1,0 +1,14 @@
+#def current_site_style
+<style type="text/css">
+  /**
+    Set style on current selected menu item
+    **/
+  .CMS_ListMenu li#$template.getHeader().bodyclass a {
+    color: #333;
+   }
+</style>
+#end def
+#silent $template.getHeader().appendStyleData($current_site_style)
+$template.getHeader().renderText()
+$template.getContent().renderText()
+$template.getFooter().renderText()

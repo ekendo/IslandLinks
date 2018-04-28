@@ -1,0 +1,92 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+int total = assetEntryXmls.length;
+
+searchContainer.setTotal(total);
+
+List results = ListUtil.fromArray(assetEntryXmls);
+
+int end = (assetEntryXmls.length < searchContainer.getEnd()) ? assetEntryXmls.length : searchContainer.getEnd();
+
+results = results.subList(searchContainer.getStart(), end);
+
+searchContainer.setResults(results);
+
+request.setAttribute("view.jsp-results", results);
+
+for (int assetEntryIndex = 0; assetEntryIndex < results.size(); assetEntryIndex++) {
+	String assetEntryXml = (String)results.get(assetEntryIndex);
+
+	Document document = SAXReaderUtil.read(assetEntryXml);
+
+	Element rootElement = document.getRootElement();
+
+	String assetEntryUuid = rootElement.elementText("asset-entry-uuid");
+
+	AssetEntry assetEntry = null;
+
+	for (long groupId : groupIds) {
+		try {
+			assetEntry = AssetEntryLocalServiceUtil.getEntry(groupId, assetEntryUuid);
+
+			break;
+		}
+		catch (NoSuchEntryException nsee) {
+		}
+	}
+
+	if ((assetEntry == null) || !assetEntry.isVisible()) {
+		continue;
+	}
+
+	AssetRendererFactory assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(assetEntry.getClassName());
+
+	AssetRenderer assetRenderer = assetRendererFactory.getAssetRenderer(assetEntry.getClassPK());
+
+	if (!assetRenderer.isDisplayable()) {
+		continue;
+	}
+
+	String title = assetRenderer.getTitle(locale);
+
+	boolean show = true;
+	boolean print = false;
+
+	request.setAttribute("view.jsp-assetEntryIndex", new Integer(assetEntryIndex));
+
+	request.setAttribute("view.jsp-assetEntry", assetEntry);
+	request.setAttribute("view.jsp-assetRendererFactory", assetRendererFactory);
+	request.setAttribute("view.jsp-assetRenderer", assetRenderer);
+
+	request.setAttribute("view.jsp-title", title);
+
+	request.setAttribute("view.jsp-show", new Boolean(show));
+	request.setAttribute("view.jsp-print", new Boolean(print));
+
+	try {
+%>
+
+		<%@ include file="/html/portlet/asset_publisher/view_display.jspf" %>
+
+<%
+	}
+	catch (Exception e) {
+		_log.error(e.getMessage());
+	}
+}
+%>

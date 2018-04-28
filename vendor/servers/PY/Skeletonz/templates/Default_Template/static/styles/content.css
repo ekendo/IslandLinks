@@ -1,0 +1,82 @@
+#CMS_ContentText {
+  color: #333;
+  padding: 0 20px 20px 20px;
+}
+
+/***
+  Header tags
+***/
+h1 {
+  font-size: 17px;
+  margin: 0 0 7px 0;
+  padding: 10px 0 2px 0;
+}
+
+h2 {
+  font-size: 17px;
+  margin: 0 0 7px 0;
+  padding: 25px 0 2px 0;
+}
+
+h3 {
+  font-size: 14px;
+  margin: 0px;
+  padding: 18px 0 0 0;
+}
+
+h4 {
+  font-size: 13px;
+  margin: 0px;
+  padding: 15px 0 0 0;
+}
+
+p {
+  margin: 1em 0 1em 0;
+}
+
+pre {
+  color: #000;
+  margin-top: 5px;
+  padding: 4px;
+  background-color: #f4f4f4;
+  border: 1px solid #999;
+}
+
+/***
+  Lists
+***/
+#CMS_ContentText ol, ul {
+  margin: 10px 10px 0 10px;
+  padding: 0 20px 0 20px;
+  list-style: disc url(../static_tmpl/images/listarrow.gif) outside;
+}
+
+#CMS_ContentText li {
+  line-height: 1.1;
+  margin: 0;
+  padding: 0px 0 7px 0;
+  margin-left: 2px;
+}
+
+/* When an object isn't created */
+.not_created {
+  color: red;
+  text-decoration: underline;
+}
+
+span.hl {
+  background-color: #ffffcc;
+}
+
+table.list {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.list td, table.list th {
+  vertical-align: top;
+  padding: 2px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}

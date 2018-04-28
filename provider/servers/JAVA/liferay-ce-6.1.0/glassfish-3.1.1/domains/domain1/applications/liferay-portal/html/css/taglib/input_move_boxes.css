@@ -1,0 +1,37 @@
+.taglib-move-boxes {
+	margin-bottom: 1em;
+}
+
+.taglib-move-boxes .arrow-button img {
+	border: 0;
+	height: 16px;
+	width: 16px;
+}
+
+.taglib-move-boxes .choice-selector select {
+	min-width: 150px;
+}
+
+.ie .taglib-move-boxes .choice-selector select {
+	width: expression(this.currentStyle.getAttribute('minWidth') || 150 + 'px');
+}
+
+.taglib-move-boxes .choice-selector label {
+	background: #ebf1f9;
+	border-bottom: 1px solid #8db2f3;
+	display: block;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.taglib-move-boxes .choice-selector .aui-field-content {
+	margin-bottom: 0;
+}
+
+.taglib-move-boxes .move-arrow-buttons {
+	margin-top: 5em;
+}
+
+.taglib-move-boxes .move-arrow-buttons .arrow-button {
+	display: block;
+}

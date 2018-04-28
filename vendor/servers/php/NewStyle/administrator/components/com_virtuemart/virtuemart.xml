@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<mosinstall type="component">
+	<name>VirtueMart</name>
+	<creationDate>08.07.2006</creationDate>
+	<author>Soeren Eberhardt &amp; the VirtueMart dev team</author>
+	<copyright>released under GNU General Public License</copyright>
+	<authorEmail>soeren@virtuemart.net</authorEmail>
+	<authorUrl>www.virtuemart.net</authorUrl>
+	<version>1.0.6</version>
+	<description>Online-Shop / E-Commerce Component</description>
+  <files>
+      <filename>frontend_files.tar.gz</filename>
+  </files>
+  <install>
+      <queries>
+          
+      </queries>
+  </install>
+  <uninstall>
+    <queries>
+
+    </queries>
+  </uninstall>
+  <installfile>install.virtuemart.php</installfile>
+  <uninstallfile>uninstall.virtuemart.php</uninstallfile>
+	<administration>
+    <menu>VirtueMart</menu>
+      <files>
+        <filename>2checkout_notify.php</filename>
+        <filename>admin_files.tar.gz</filename>
+        <filename>admin.virtuemart.php</filename>
+        <filename>admin.styles.css</filename>
+        <filename>cart.gif</filename>
+        <filename>CHANGELOG.php</filename>
+        <filename>COPYRIGHT.php</filename>
+        <filename>global.php</filename>
+        <filename>header.php</filename>
+        <filename>index.html</filename>
+        <filename>install.css</filename>
+        <filename>install.copy.php</filename>
+        <filename>install.php</filename>
+        <filename>INSTALLATION.php</filename>
+        <filename>LICENSE.php</filename>
+        <filename>notify.php</filename>
+        <filename>PEAR.php</filename>
+        <filename>README.php</filename>
+        <filename>virtuemart.cfg-dist.php</filename>
+        <filename>Tar.php</filename>
+        <filename>TODO.php</filename>
+        <filename>toolbar.virtuemart.html.php</filename>
+        <filename>toolbar.virtuemart.php</filename>
+        <filename>version.php</filename>
+        <filename>worldpay_notify.php</filename>
+        <filename>x-click-but21.gif</filename>
+      </files>
+    </administration>
+</mosinstall>

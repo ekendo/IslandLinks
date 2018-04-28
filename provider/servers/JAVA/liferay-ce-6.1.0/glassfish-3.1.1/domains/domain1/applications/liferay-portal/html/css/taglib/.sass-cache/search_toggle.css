@@ -1,0 +1,24 @@
+.taglib-search-toggle .inline-control {
+  float: none; }
+
+.taglib-search-toggle .toggle-link {
+  clear: both; }
+
+.taglib-search-toggle-advanced .aui-fieldset {
+  margin-bottom: 0; }
+
+.taglib-search-toggle-advanced .aui-fieldset .aui-field {
+  display: inline-block;
+  width: 30%; }
+
+.taglib-search-toggle-advanced .aui-fieldset .aui-field-input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.taglib-search-toggle-advanced .aui-fieldset .aui-field-input, .taglib-search-toggle-advanced .aui-fieldset .aui-field-element, .taglib-search-toggle-advanced .aui-fieldset .aui-field-content {
+  width: 100%; }
+
+.ie6 .taglib-search-toggle-advanced .aui-fieldset .aui-field-input, .ie7 .taglib-search-toggle-advanced .aui-fieldset .aui-field-input {
+  width: 98%; }
+

@@ -1,18 +1,24 @@
  var IslandDataPoint;
  var subXhttp = new XMLHttpRequest();
 
+<<<<<<< HEAD
 function getURLParameter(name)
 {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 }
 
+=======
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
 function onMoreClick()
 {
      //alert(IslandDataPoint);
      var changeExampleVisibility = document.getElementById("home_item");
      var changeMoreLink = document.getElementById("moreLink");
+<<<<<<< HEAD
      var changeElementDetails = document.getElementById("home_item_elements");
 
+=======
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
      //alert();
 
       if(changeExampleVisibility.style.display=='none')
@@ -23,6 +29,7 @@ function onMoreClick()
                  //alert(subXhttp .readyState)
                  if (subXhttp.readyState == 4 && subXhttp.status == 200) 
                  {
+<<<<<<< HEAD
                          if(IslandDataPoint == 'Questions')
                          {
                              var IslandDataDetails = JSON.parse(subXhttp.responseText);
@@ -45,10 +52,13 @@ function onMoreClick()
                              changeElementDetails.style.display='block';
                          }
 
+=======
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                          if(IslandDataPoint == 'Ads')
                          {
                              var IslandDataDetails = JSON.parse(subXhttp.responseText);
                              var changeElementImage= document.getElementById("home_item_element_image");
+<<<<<<< HEAD
                              changeElementImage.innerHTML = IslandDataDetails.ads.answers[0].element;
                              var changeElementText= document.getElementById("home_item_element_text");
                              changeElementText.innerHTML =  IslandDataDetails.ads.answers[0].example;
@@ -65,12 +75,18 @@ function onMoreClick()
                              }
                              changeElementDetails.style.display='block';
                              
+=======
+                             changeElementImage.innerHTML = IslandDataDetails.ads.element;
+                             var changeElementText= document.getElementById("home_item_element_text");
+                             changeElementText.innerHTML =  IslandDataDetails.ads.example;
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                          }
 
                          if(IslandDataPoint == 'Products')
                          {
                              var IslandDataDetails = JSON.parse(subXhttp.responseText);
                              var changeElementImage= document.getElementById("home_item_element_image");
+<<<<<<< HEAD
                              changeElementImage.innerHTML = IslandDataDetails.products.answers[0].element;
                              var changeElementText= document.getElementById("home_item_element_text");
                              changeElementText.innerHTML =  IslandDataDetails.products.answers[0].example;
@@ -94,6 +110,11 @@ function onMoreClick()
                              }  
                              changeElementDetails.style.display='block';
                              
+=======
+                             changeElementImage.innerHTML = IslandDataDetails.products.element;
+                             var changeElementText= document.getElementById("home_item_element_text");
+                             changeElementText.innerHTML =  IslandDataDetails.products.example;
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                          }
 
                          changeExampleVisibility.style.display='block';
@@ -102,6 +123,7 @@ function onMoreClick()
                  }
           }
 
+<<<<<<< HEAD
           if(IslandDataPoint == 'Questions')
           {
                 subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb2.py/louvriEnfomasyon/English/Questions/Examples", true);
@@ -111,25 +133,39 @@ function onMoreClick()
           if(IslandDataPoint == 'Ads')
           {
                 subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb2.py/louvriEnfomasyon/English/Ads/Examples", true);
+=======
+          if(IslandDataPoint == 'Ads')
+          {
+                subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb.py/louvriEnfomasyon/English/Ads/Examples", true);
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                 subXhttp .send();
           }
 
           if(IslandDataPoint == 'Products')
           {
+<<<<<<< HEAD
                 
                 subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb2.py/louvriEnfomasyon/English/Products/Examples", true);
 
 
+=======
+                subXhttp .open("GET", "http://louvrienfomasyon.ekendotech.com/Data/py/bkdtakbdb.py/louvriEnfomasyon/English/Products/Examples", true);
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                 subXhttp .send();
           }
 
       }
       else
        {    //alert('block');
+<<<<<<< HEAD
           
          changeExampleVisibility.style.display='none';
          changeElementDetails.style.display='none'; 
          changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">more</a></h4>';
+=======
+          changeExampleVisibility.style.display='none';
+          changeMoreLink.innerHTML  = '<h4><a href="#More" id="More" class="more" onclick="onMoreClick();">more</a></h4>';
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
       }
 
      
@@ -284,6 +320,11 @@ $(function(){
   //alert('in function');
   var IslandDataObj;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
   // IslandData Item View
   // --------------
 
@@ -354,6 +395,7 @@ $(function(){
                        if (xhttp.readyState == 4 && xhttp.status == 200) 
                        {
                              IslandDataObj =  JSON.parse(xhttp.responseText);
+<<<<<<< HEAD
 
                              if( IslandDataObj.home!=null)
                              {
@@ -424,6 +466,35 @@ $(function(){
                                   onMoreClick();                        
 
                              }
+=======
+                             var changeText = document.getElementById("home_definition");
+                             changeText.innerHTML= IslandDataObj.home.definition;
+                             var changeQuestionText = document.getElementById("home_question");
+                             changeQuestionText.innerHTML = IslandDataObj.home.question;
+                             var changeBlogText = document.getElementById("home_blog");
+                             changeBlogText.innerHTML  = IslandDataObj.home.comment;
+                             var changeTagText = document.getElementById("home_tags");
+                             changeTagText.innerHTML = IslandDataObj.home.tag1;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag2;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag3;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag4;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag5;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag6;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag7;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag8;
+                             changeTagText.innerHTML += '&nbsp;&nbsp;'
+                             changeTagText.innerHTML += IslandDataObj.home.tag9;
+                             IslandDataPoint = 'Home';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                        }
                        //else {alert('loading');}
                 };
@@ -496,6 +567,7 @@ $(function(){
                              changeTagText.innerHTML += '&nbsp;&nbsp;'
                              changeTagText.innerHTML += IslandDataObj.questions.tag9;
                              var changeQuestionText = document.getElementById("home_question");
+<<<<<<< HEAD
                              changeQuestionText.innerHTML  = '<b>'+IslandDataObj.questions.question+'</b>';
                              IslandDataPoint = 'Questions';
                              var changeMoreLink = document.getElementById("moreLink");
@@ -509,6 +581,12 @@ $(function(){
                              var changeElementDetails = document.getElementById("home_item_elements");
                              changeElementDetails.innerHTML = '&nbsp;';
                              changeElementDetails.display='none';
+=======
+                             changeQuestionText.innerHTML  = IslandDataObj.questions.question;
+                             IslandDataPoint = 'Questions';
+                             var changeMoreLink = document.getElementById("moreLink");
+                             changeMoreLink.style.display='none';
+>>>>>>> 58cb562480b20b5d35b04cf844764218bdc792b8
                        }
                 };
   

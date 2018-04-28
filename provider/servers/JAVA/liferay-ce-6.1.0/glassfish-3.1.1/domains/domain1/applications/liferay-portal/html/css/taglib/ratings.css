@@ -1,0 +1,45 @@
+.taglib-ratings.stars {
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+.taglib-ratings.stars .liferay-rating-score {
+	padding-left: 15px;
+}
+
+.taglib-ratings .aui-rating-content {
+	display: block;
+}
+
+.taglib-ratings.stars .liferay-rating-vote, .taglib-ratings.stars .liferay-rating-score {
+	float: left;
+}
+
+.ie6 .taglib-ratings .aui-rating-content {
+	display: inline;
+}
+
+.ie6 .taglib-ratings.stars {
+	display: inline-block;
+}
+
+.taglib-ratings.score {
+	white-space: nowrap;
+}
+
+.taglib-ratings.thumbs .aui-thumbrating {
+	height: 20px;
+}
+
+.taglib-ratings.thumbs .aui-thumbrating .aui-rating-label-element {
+	padding: 0 5px;
+}
+
+.taglib-ratings.thumbs {
+	float: left;
+	margin: 0;
+}
+
+.js .taglib-ratings .liferay-rating-vote .aui-field {
+	display: none;
+}

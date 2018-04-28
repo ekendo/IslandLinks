@@ -1,0 +1,284 @@
+.portlet-dockbar, .portlet-staging-bar {
+}
+
+.portlet-dockbar {
+}
+
+.dockbar, .staging-bar {
+}
+
+.dockbar-ready .dockbar, .staging-ready .staging-bar, .live-view .staging-bar {
+}
+
+.dockbar-ready .portlet-dockbar, .staging-ready .portlet-staging-bar, .portal-popup .portlet-dockbar, .portal-popup .portlet-staging-bar {
+}
+
+.dockbar {
+}
+
+.dockbar:after {
+}
+
+.ie7 .dockbar {
+}
+
+.ie6 .dockbar, .ie6 .lfr-dockbar-pinned .dockbar {
+}
+
+.dockbar a {
+}
+
+.dockbar .menu-button-active {
+}
+
+.dockbar .menu-button-active a {
+}
+
+.dockbar .user-avatar .sign-out {
+}
+
+.dockbar ul {
+}
+
+.dockbar li li {
+}
+
+html > .lfr-dockbar-pinned {
+}
+
+.lfr-dockbar-pinned .dockbar {
+}
+
+.dockbar .pin-dockbar {
+}
+
+.ie6 .dockbar .pin-dockbar {
+}
+
+.pin-dockbar img {
+}
+
+.lfr-dockbar-pinned .pin-dockbar img {
+}
+
+.dockbar .user-portrait {
+}
+
+.dockbar .user-avatar img {
+}
+
+.dockbar .impersonating-user {
+}
+
+.dockbar .impersonating-user .user-links a {
+}
+
+/* ---------- Staging Dockbar ---------- */
+
+.variation-selector {
+}
+
+.layout-revision-container {
+
+	.current-version {	}
+
+	.current-version-pointer img {	}
+
+	.layout-variation-name {	}
+
+	.layout-revision-current {	}
+
+	.real-date {	}
+
+	.taglib-workflow-status .workflow-status {	}
+}
+
+.layout-revision-container-root {
+}
+
+.staging-details {
+}
+
+.staging .staging-details {
+}
+
+.live-view .staging-details {
+}
+
+.staging .staging-tabview-list {
+}
+
+.live-view .staging-tabview-list {
+}
+
+/* ---------- Menus ---------- */
+
+.aui-dockbarmenu-hidden {
+}
+
+.dockbar .aui-toolbar {
+}
+
+.dockbar .user-toolbar {
+}
+
+.aui-underlay .portal-add-content {
+}
+
+.aui-underlay .portal-add-content .portlet-dd-placeholder {
+}
+
+.add-application .yui3-widget-bd, .dockbar-messages .yui3-widget-bd {
+}
+
+.add-application {
+}
+
+.lfr-has-sidebar #main-content {
+}
+
+.manage-layouts {
+}
+
+.my-sites-menu {
+}
+
+.my-sites-menu ul {
+}
+
+.my-sites-menu ul, .my-sites-menu li {
+}
+
+.my-sites-menu a {
+}
+
+.my-sites-menu .control-panel a {
+}
+
+.my-sites-menu .current-site {
+}
+
+.my-sites-menu .current-site a {
+}
+
+.my-sites-menu .current-site .site-type {
+}
+
+.my-sites-menu .current-site a:hover, .my-sites-menu a:hover .site-type {
+}
+
+.my-sites-menu .site-name {
+}
+
+.my-sites-menu .site-type {
+}
+
+.ie7 .my-sites-menu .site-type {
+}
+
+.my-sites-menu a:hover .site-type {
+}
+
+.ie7 .my-sites-menu a {
+}
+
+.ie7 .my-sites-menu .site-name {
+}
+
+.ie7 .my-sites-menu .site-type {
+}
+
+.ie6 .my-sites-menu {
+}
+
+.ie6 .my-sites-menu a {
+}
+
+.dockbar .toggle-controls a {
+}
+
+.controls-hidden .toggle-controls a {
+}
+
+.toggle-controls a {
+}
+
+.dockbar .menu-button {
+}
+
+.dockbar .menu-button span {
+}
+
+.dockbar .add-content .menu-button span {
+}
+
+.dockbar .manage-content .menu-button span {
+}
+
+.dockbar .my-sites .menu-button span {
+}
+
+.dockbar-messages-container {
+}
+
+.dockbar-messages {
+}
+
+.showing-messages .dockbar-messages {
+}
+
+.multiple-messages .dockbar-message {
+}
+
+.multiple-messages .first {
+}
+
+.add-content-menu .add-page a {
+}
+
+.add-content-menu .add-application a {
+}
+
+.add-content-menu a.lfr-portlet-used {
+}
+
+.manage-content-menu li a, .manage-content-menu li .disabled {
+}
+
+.manage-content-menu .manage-page a {
+}
+
+.manage-content-menu .manage-site-content a {
+}
+
+.manage-content-menu .manage-site-memberships a {
+}
+
+.manage-content-menu .manage-page-customization a, .manage-content-menu .manage-page-customization .disabled {
+}
+
+.manage-content-menu .page-layout a {
+}
+
+.manage-content-menu .sitemap a {
+}
+
+.manage-content-menu .settings a {
+}
+
+/* ---------- Customization Bar ---------- */
+
+.page-customization-bar {
+}
+
+.controls-hidden .page-customization-bar {
+}
+
+.page-customization-bar .customized-icon {
+}
+
+.page-customization-bar .page-customization-actions {
+}
+
+.page-customization-bar .page-customization-actions a {
+}

@@ -1,0 +1,164 @@
+/* andreas05 - an open source xhtml/css website layout by Andreas Viklund - http: //andreasviklund.com/ . Free to use for any purpose as long as the proper credits are given for the original design work.
+Version:  2.0, July 15, 2006 */
+
+/* General tags */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #ccc url(../static_tmpl/images/bodybg.gif) repeat;
+  font: 76% verdana,tahoma,sans-serif;
+}
+
+a {
+  background-color: inherit;
+  color: #286ea0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+ul, ol {
+  margin: 0 0 16px 15px;
+  padding-left: 5px;
+}
+
+ul ul, ol ol {
+  margin: 3px 0 0 15px;
+}
+
+/* Headers */
+h1, h2 {
+  font-size: 17px;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 2px;
+}
+
+h3 {
+  font-size: 14px;
+  margin: 0px;
+  padding: 18px 0 0 0;
+}
+
+h4 {
+  font-size: 13px;
+  margin: 0px;
+  padding: 15px 0 0 0;
+}
+
+/* IDs */
+#title {
+  margin: 20px auto -9px; 
+  width: 700px;
+  color: #555;
+  font-size: 3.6em;
+  letter-spacing: -3px;
+  text-align: right;
+  font-weight: bold;
+}
+
+#container {
+  background: #fff url(../static_tmpl/images/front.png) bottom left no-repeat;
+  border: 20px solid #555;
+  color: #555;
+  margin: 0 auto 15px;
+  padding: 10px;
+  width: 850px;
+  line-height: 16px;
+}
+
+#sidebar { 
+  float: left;
+  padding-left: 175px;
+  width: 120px;
+}
+
+#sidebar p {
+  margin: 10px 0 5px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#main {
+  float: right;
+  width: 550px;
+}
+
+#footer {
+  clear: both;
+}
+
+/* Menu */
+.CMS_ListMenu {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.CMS_ListMenu a {
+  border: 1px solid #ffffff;
+  color: #286ea0;
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 110px;
+  padding: 4px 0 4px 0;
+}
+
+.CMS_ListMenu a:hover {
+  color: #286ea0;
+  text-decoration: underline;
+}
+
+/* Various classes */
+#credits {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+#credits a {
+  color: #888;
+}
+
+/* Css hacks */
+.prop {
+  height: 200px;
+  float: right;
+  width: 1px;
+}
+
+.clear {
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+pre {
+  color: #000;
+  margin-top: 5px;
+  padding: 4px;
+  background-color: #DCE3F1;
+  border: 1px solid #999;
+}
+
+.CMS_PageTabs {
+  margin: 0;
+  padding: 0;
+}

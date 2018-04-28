@@ -1,0 +1,111 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<input type="button" value="<liferay-ui:message key="add" />" onClick="location.href = '<portlet:renderURL><portlet:param name="struts_action" value="/admin/edit_instance" /><portlet:param name="redirect" value="<%= currentURL %>" /></portlet:renderURL>';" />
+
+<br /><br />
+
+<%
+List<String> headerNames = new ArrayList<String>();
+
+headerNames.add("instance-id");
+headerNames.add("web-id");
+headerNames.add("virtual-host");
+headerNames.add("mail-domain");
+
+if (showShardSelector) {
+	headerNames.add("shard");
+}
+
+headerNames.add("num-of-users");
+headerNames.add("max-num-of-users");
+headerNames.add("active");
+
+SearchContainer searchContainer = new SearchContainer(renderRequest, null, null, SearchContainer.DEFAULT_CUR_PARAM, SearchContainer.DEFAULT_DELTA, portletURL, headerNames, null);
+
+List<Company> companies = CompanyLocalServiceUtil.getCompanies(false);
+
+int total = companies.size();
+
+searchContainer.setTotal(total);
+
+List results = ListUtil.subList(companies, searchContainer.getStart(), searchContainer.getEnd());
+
+searchContainer.setResults(results);
+
+List resultRows = searchContainer.getResultRows();
+
+for (int i = 0; i < results.size(); i++) {
+	Company company2 = (Company)results.get(i);
+
+	ResultRow row = new ResultRow(company2, company2.getCompanyId(), i);
+
+	PortletURL rowURL = renderResponse.createRenderURL();
+
+	rowURL.setParameter("struts_action", "/admin/edit_instance");
+	rowURL.setParameter("redirect", currentURL);
+	rowURL.setParameter("companyId", String.valueOf(company2.getCompanyId()));
+
+	// Company ID
+
+	row.addText(String.valueOf(company2.getCompanyId()), rowURL);
+
+	// Web ID
+
+	row.addText(company2.getWebId(), rowURL);
+
+	// Virtual Host
+
+	row.addText(company2.getVirtualHostname(), rowURL);
+
+	// Mail Domain
+
+	row.addText(company2.getMx(), rowURL);
+
+	// Shard Name
+
+	if (showShardSelector) {
+		row.addText(LanguageUtil.get(pageContext, company2.getShardName()), rowURL);
+	}
+
+	// # of Users
+
+	int usersCount = UserLocalServiceUtil.searchCount(company2.getCompanyId(), null, WorkflowConstants.STATUS_ANY, null);
+
+	row.addText(String.valueOf(usersCount), rowURL);
+
+	// Max # of Users
+
+	int maxUsers = company2.getMaxUsers();
+
+	if (maxUsers > 0) {
+		row.addText(String.valueOf(maxUsers), rowURL);
+	}
+	else {
+		row.addText(LanguageUtil.get(pageContext, "unlimited"), rowURL);
+	}
+
+	// Active
+
+	row.addText(LanguageUtil.get(pageContext, company2.isActive() ? "yes" : "no"), rowURL);
+
+	// Add result row
+
+	resultRows.add(row);
+}
+%>
+
+<liferay-ui:search-iterator searchContainer="<%= searchContainer %>" />

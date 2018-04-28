@@ -1,0 +1,35 @@
+.aui-document-library-file-entry-cell-editor-hidden, .aui-fileupload-cell-editor-hidden, .aui-password-cell-editor-hidden {
+  display: none; }
+
+.portlet-dynamic-data-lists .lfr-spreadsheet-add-rows-buttons {
+  padding: 5px; }
+  .portlet-dynamic-data-lists .lfr-spreadsheet-add-rows-buttons .aui-field-label {
+    text-transform: lowercase; }
+
+.yui3-skin-sam .lfr-spreadsheet-container .yui3-datatable td {
+  border-color: #CCC;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  outline: 0; }
+.yui3-skin-sam .lfr-spreadsheet-container .yui3-datatable-liner {
+  min-height: 17px; }
+.yui3-skin-sam .lfr-spreadsheet-container .yui3-datatable-scrollable .yui3-datatable-bd {
+  background-color: #F2F2F2; }
+.yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-even td, .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-odd td {
+  background-color: #FFF; }
+  .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-even td.yui3-datatable-asc, .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-even td.yui3-datatable-desc, .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-odd td.yui3-datatable-asc, .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-odd td.yui3-datatable-desc {
+    background-color: #EDF5FF; }
+  .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-even td.aui-datatable-cell-selected, .yui3-skin-sam .lfr-spreadsheet-container tr.yui3-datatable-odd td.aui-datatable-cell-selected {
+    background-color: #68E; }
+
+.aui-basecelleditor {
+  z-index: 999 !important; }
+  .aui-basecelleditor .aui-buttonitem-content {
+    padding: 3px 3px 2px 1px; }
+  .aui-basecelleditor [class~="aui-form-validator-message"] {
+    clip: rect(auto auto auto auto);
+    width: auto; }
+
+.webkit .aui-basecelleditor .aui-buttonitem-label-only {
+  padding-bottom: 2px; }
+

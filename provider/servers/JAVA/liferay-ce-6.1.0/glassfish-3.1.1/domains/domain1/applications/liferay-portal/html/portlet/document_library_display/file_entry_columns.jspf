@@ -1,0 +1,122 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+for (int j = 0; j < fileEntryColumns.length; j++) {
+	String fileEntryColumn = fileEntryColumns[j];
+%>
+
+	<c:choose>
+		<c:when test='<%= fileEntryColumn.equals("action") %>'>
+
+			<%
+			String align = SearchEntry.DEFAULT_ALIGN;
+
+			if ((j + 1) == fileEntryColumns.length) {
+				align = "right";
+			}
+			%>
+
+			<liferay-ui:search-container-column-jsp
+				align="<%= align %>"
+				index="<%= j %>"
+				path="/html/portlet/document_library/file_entry_action.jsp"
+			/>
+
+		</c:when>
+		<c:when test='<%= fileEntryColumn.equals("downloads") %>'>
+			<liferay-ui:search-container-column-text
+				href="<%= rowHREF %>"
+				index="<%= j %>"
+				name="<%= fileEntryColumn %>"
+				value="<%= String.valueOf(fileEntry.getReadCount()) %>"
+			/>
+		</c:when>
+		<c:when test='<%= fileEntryColumn.equals("locked") %>'>
+
+			<%
+			boolean isCheckedOut = fileEntry.isCheckedOut();
+			%>
+
+			<liferay-ui:search-container-column-text
+				href="<%= rowHREF %>"
+				index="<%= j %>"
+				name="<%= fileEntryColumn %>"
+				value='<%= LanguageUtil.get(pageContext, isCheckedOut ? "yes" : "no") %>'
+			/>
+		</c:when>
+		<c:when test='<%= fileEntryColumn.equals("name") %>'>
+			<liferay-ui:search-container-column-text
+				href="<%= rowHREF %>"
+				index="<%= j %>"
+				name="<%= fileEntryColumn %>"
+			>
+
+				<%
+				String thumbnailSrc = DLUtil.getThumbnailSrc(fileEntry, fileShortcut, themeDisplay);
+				%>
+
+				<span class="entry-thumbnail">
+					<img class="thumbnail" src="<%= thumbnailSrc %>" />
+
+					<c:if test="<%= fileShortcut != null %>">
+						<img alt="<liferay-ui:message key="shortcut" />" class="shortcut-icon" src="<%= themeDisplay.getPathThemeImages() %>/file_system/large/overlay_link.png">
+					</c:if>
+				</span>
+
+				<span class="entry-title"><%= fileEntry.getTitle() %></span>
+
+				<c:if test="<%= fileEntry.getFileVersion().isPending() %>">
+					<div class="workflow-status-pending">
+						(<liferay-ui:message key="pending" />)
+					</div>
+				</c:if>
+
+				<c:if test="<%= Validator.isNotNull(fileEntry.getDescription()) %>">
+					<div class="file-entry-list-description">
+						<%= fileEntry.getDescription() %>
+					</div>
+				</c:if>
+			</liferay-ui:search-container-column-text>
+		</c:when>
+		<c:when test='<%= fileEntryColumn.equals("size") %>'>
+			<liferay-ui:search-container-column-text
+				href="<%= rowHREF %>"
+				index="<%= j %>"
+				name="<%= fileEntryColumn %>"
+				value='<%= TextFormatter.formatKB(fileEntry.getSize(), locale) + "k" %>'
+			/>
+		</c:when>
+		<c:when test='<%= fileEntryColumn.equals("tags") %>'>
+
+			<%
+			List<AssetTag> assetTags = AssetTagLocalServiceUtil.getTags(DLFileEntryConstants.getClassName(), fileEntry.getFileEntryId());
+
+			AssetUtil.addLayoutTags(request, assetTags);
+			%>
+
+			<liferay-ui:search-container-column-text
+				href="<%= rowHREF %>"
+				index="<%= j %>"
+				name="<%= fileEntryColumn %>"
+				value='<%= ListUtil.toString(assetTags, AssetTag.NAME_ACCESSOR, StringPool.COMMA_AND_SPACE) %>'
+			/>
+		</c:when>
+	</c:choose>
+
+<%
+}
+%>

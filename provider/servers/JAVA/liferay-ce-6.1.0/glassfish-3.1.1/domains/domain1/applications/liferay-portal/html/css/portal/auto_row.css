@@ -1,0 +1,56 @@
+.lfr-form-row {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+	padding: 5px;
+	padding-top: 1px;
+	position: relative;
+}
+
+.ie .lfr-form-row {
+	width: 100%;
+}
+
+.lfr-form-row:hover {
+	background-color: #DFFCCB;
+	border: solid #B2FF3A;
+	border-width: 1px 0;
+	padding-top: 0;
+}
+
+.lfr-form-row .aui-field {
+	clear: none;
+	float: left;
+}
+
+.lfr-form-row-inline .aui-field {
+	margin-right: 5px;
+}
+
+.lfr-form-row legend .field-label{
+	float:left;
+	margin-right: 10px;
+}
+
+.lfr-form-row .handle-sort-vertical {
+	background: url(@theme_image_path@/application/handle_sort_vertical.png) no-repeat 0 50%;
+	cursor: move;
+	padding-left: 20px;
+}
+
+.lfr-form-row fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lfr-autorow-controls.aui-toolbar {
+	padding: 1px;
+}
+
+.lfr-autorow-controls {
+	bottom: 5px;
+	position: absolute;
+	right: 5px;
+}

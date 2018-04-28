@@ -1,0 +1,51 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%@ page import="com.liferay.portal.kernel.search.Hits" %>
+<%@ page import="com.liferay.portal.kernel.search.Sort" %>
+<%@ page import="com.liferay.portal.kernel.search.SortFactoryUtil" %>
+<%@ page import="com.liferay.portlet.usersadmin.util.UsersAdminUtil" %>
+
+<%
+organizationParams.put("expandoAttributes", searchTerms.getKeywords());
+
+Sort sort = SortFactoryUtil.getSort(Organization.class, searchContainer.getOrderByCol(), searchContainer.getOrderByType());
+
+while (true) {
+	Hits hits = null;
+
+	if (searchTerms.isAdvancedSearch()) {
+		hits = OrganizationLocalServiceUtil.search(company.getCompanyId(), parentOrganizationId, searchTerms.getName(), searchTerms.getType(), searchTerms.getStreet(), searchTerms.getCity(), searchTerms.getZip(), searchTerms.getRegionName(), searchTerms.getCountryName(), organizationParams, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), sort);
+	}
+	else {
+		hits = OrganizationLocalServiceUtil.search(company.getCompanyId(), parentOrganizationId, searchTerms.getKeywords(), organizationParams, searchContainer.getStart(), searchContainer.getEnd(), sort);
+	}
+
+	Tuple tuple = UsersAdminUtil.getOrganizations(hits);
+
+	boolean corruptIndex = (Boolean)tuple.getObject(1);
+
+	if (!corruptIndex) {
+		results = (List<User>)tuple.getObject(0);
+		total = hits.getLength();
+
+		break;
+	}
+}
+
+pageContext.setAttribute("results", results);
+pageContext.setAttribute("total", total);
+%>
