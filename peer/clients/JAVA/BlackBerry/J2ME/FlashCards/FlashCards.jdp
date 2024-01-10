@@ -1,0 +1,47 @@
+## RIM Java Development Environment
+# RIM Project file
+AlwaysBuild=1
+[AlxImports
+]
+AutoRestart=0
+[ClassProtection
+]
+[CustomBuildFiles
+]
+[CustomBuildRules
+]
+[DefFiles
+]
+[DependsOn
+IslandLinks_HomeIsland
+]
+Description=21st Century Flashcards
+ExcludeFromBuildAll=0
+[Files
+CardAdminWizard.java
+CardViewer.java
+FlashCard.java
+FlashCardManager.java
+]
+HaveAlxImports=0
+HaveDefs=0
+HaveImports=0
+[Icons
+]
+[ImplicitRules
+]
+[Imports
+]
+Listing=0
+Options=-quiet
+OutputFileName=FlashCards
+[PackageProtection
+]
+RibbonPosition=0
+RunOnStartup=0
+StartupTier=7
+SystemModule=0
+Title=21C_Flashcards
+Type=0
+Vendor=EKenDo,LLC
+Version=0.0.0.1

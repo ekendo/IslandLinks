@@ -1,0 +1,79 @@
+8
+
+dir
+61
+svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/windows/Java/IslandLinks/homeIsland/nbproject
+svn://ekendotech.net/islandsoft
+
+
+
+2007-12-02T22:37:19.075860Z
+12
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+project.properties
+file
+
+
+
+
+2008-06-05T15:05:26.690977Z
+1a263b30df243f26d86f024c78d16c6e
+2007-12-02T22:37:19.075860Z
+12
+ekendo
+
+project.xml
+file
+
+
+
+
+2008-06-05T15:05:26.921308Z
+b28035676e288050e364190cee550d50
+2007-08-29T14:45:21.673664Z
+9
+ekendo
+
+genfiles.properties
+file
+
+
+
+
+2008-06-05T15:05:27.201712Z
+065f3737866cc598079efd90616929a5
+2007-08-29T14:45:21.673664Z
+9
+ekendo
+
+private
+dir
+
+build-impl.xml
+file
+
+
+
+
+2008-06-05T15:05:27.762518Z
+c9fb24ec1da4ff022ccc576964001733
+2007-08-29T14:45:21.673664Z
+9
+ekendo
+

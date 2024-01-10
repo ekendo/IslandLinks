@@ -1,0 +1,625 @@
+// BIT INTEGER CALCULATOR (RANGE: 1000 - 2999)
+            
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_ORIGIN), "BitInteger_1:0");
+            
+            // BitInteger TextBox - Rows 1 and 2
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[12.0]_1.8:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT_ORIGIN), "BitInteger[12.0]_0:0");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT_COLOR), "BitInteger[12.0]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GUI_PLACEMENT),"TextLabel[0.12]_0:0");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GUI_EVENT),"TextLabel[0.12]_Init:                0");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GUI_COLOR),"TextLabel[0.12]_Color:Black");
+
+            // Row 3 
+            //Mode Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[13.0]_3:2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[12.13]_0:1.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[12.13]_Width:Set[0]-1.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[12.13]_Height:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[12.13]_Init:Set[0]-0x00000D90");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[12.13]_Click:Run-ButtonPressed[37.13]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[12.13]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"ButtonPressed[37.13]_ARM:Execute-Function[1021.13]"); 
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1021.13]_Return:WriteBack[1022.13]"); 
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1022.13]_To-Address[1023.13]"); 
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1023.13]_CalcDisplay"); 
+            //Bin Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[14.0]_3:6"); 
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[8.14]_2.5:1.8"); 
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[8.14]_Width:Set[0]-.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[8.14]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Init:Set[0]-0x00000CB0");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Click:Run-Operation[BIN]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[8.14]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[BIN]_ARM:Execute-Function[1000]"); 
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1000]_Return:WriteBack[1001]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1001]_To-Address[1002]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1002]_CalcDisplay");
+            //Oct Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[8.14]_3.3:1.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[8.14]_Width:Set[1]-.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[8.14]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Init:Set[1]-0x00000CB4");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Click:Run-Operation[OCT]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[8.14]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[OCT]_ARM:Execute-Function[1003]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1003]_Return:WriteBack[1004]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1004]_To-Address[1005]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1005]_CalcDisplay");
+            //Dec Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[8.14]_4.1:1.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[8.14]_Width:Set[2]-.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[8.14]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Init:Set[2]-0x00000CB8");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Click:Run-Operation[DEC]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[8.14]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[DEC]_ARM:Execute-Function[1006]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1006]_Return:WriteBack[1007]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1007]_To-Address[1008]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1008]_CalcDisplay");
+            //Hex Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[8.14]_4.9:1.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[8.14]_Width:Set[3]-.8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[8.14]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[8.14]_Init:Set[3]-0x00000CBC");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.14]_Click:Run-Operation[HEX]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[8.14]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[HEX]_ARM:Execute-Function[1009]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1009]_Return:WriteBack[1010]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1010]_To-Address[1011]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1011]_CalcDisplay");
+            
+            //Fourth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[15.0]_4:6");
+            //( Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.15]_0:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.15]_Width:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.15]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.15]_Init:Set[0]-0x00000C0C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.15]_Click:Run-ButtonPressed[37]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"ButtonPressed[37]_ARM:Execute-Function[1012]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1012]_Return:WriteBack[1013]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1013]_To-Address[1014]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1014]_CalcDisplay");
+            // ) Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.15]_1:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.15]_Width:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.15]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.15]_Init:Set[1]-0x00000C10");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.15]_Click:Run-ButtonPressed[37]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"ButtonPressed[37]_ARM:Execute-Function[1015]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1015]_Return:WriteBack[1016]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1016]_To-Address[1017]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1017]_CalcDisplay");
+            // << Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.15]_2:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.15]_Width:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.15]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Init:Set[2]-0x00000C98");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Click:Run-Operation[<<]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[<<]_ARM:Execute-Function[1018]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1018]_Return:WriteBack[1019]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1019]_To-Address[1020]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1020]_CalcDisplay");
+            // >> Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.15]_3:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.15]_Width:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.15]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Init:Set[3]-0x00000C9C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Click:Run-Operation[>>]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[>>]_ARM:Execute-Function[1021]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1021]_Return:WriteBack[1023]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1023]_To-Address[1025]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1025]_CalcDisplay");
+            //x<<y Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.15]_4:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.15]_Width:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.15]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Init:Set[4]-0x00000CA0");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Click:Run-Operation[x<<y]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[x<<y]_ARM:Execute-Function[1026]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1026]_Return:WriteBack[1027]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1027]_To-Address[1028]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1028]_CalcDisplay");
+            // x>>y Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.15]_5:3");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.15]_Width:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.15]_Height:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Init:Set[5]-0x00000CA8");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.15]_Click:Run-Operation[x>>y]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.15]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[x>>y]_ARM:Execute-Function[1029]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1029]_Return:WriteBack[1030]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1030]_To-Address[1031]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1031]_CalcDisplay");
+
+            // Fifth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[16.0]_5:6");
+            //NOR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_0:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[0]-0x00000C78");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[34]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[34]_ARM:Execute-Function[1032]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1032]_Return:WriteBack[1033]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1033]_To-Address[1034]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1034]_CalcDisplay");
+            // XNOR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_1:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[1]-0x00000C7C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[XNOR]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[XNOR]_ARM:Execute-Function[1035]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1035]_Return:WriteBack[1036]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1036]_To-Address[1037]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1037]_CalcDisplay");
+            // OR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_2:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[2]-0x00000C84");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[33]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[33]_ARM:Execute-Function[1038]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1038]_Return:WriteBack[1039]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1039]_To-Address[1040]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1040]_CalcDisplay");
+            // XOR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_3:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[3]-0x00000C88");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[35]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[35]_ARM:Execute-Function[1041]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1041]_Return:WriteBack[1043]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1043]_To-Address[1045]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1045]_CalcDisplay");
+            // AND Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_4:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[4]-0x00000C8C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[31]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[31]_ARM:Execute-Function[1046]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1046]_Return:WriteBack[1047]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1047]_To-Address[1048]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1048]_CalcDisplay");
+            //NAND Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.16]_5:4");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.16]_Width:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.16]_Height:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Init:Set[5]-0x00000C90");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.16]_Click:Run-Operation[NAND]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.16]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[NAND]_ARM:Execute-Function[1049]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1049]_Return:WriteBack[1050]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1050]_To-Address[1051]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1051]_CalcDisplay");
+           
+            //Sixth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[17.0]_6:6");
+            //NOT Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.17]_0:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.17]_Width:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.17]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.17]_Init:Set[0]-0x00000C74");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.17]_Click:Run-Operation[NOT]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[NOT]_ARM:Execute-Function[1052]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1032]_Return:WriteBack[1053]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1053]_To-Address[1054]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1054]_CalcDisplay");
+            // Min Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[10.17]_1:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[10.17]_Width:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[10.17]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Init:Set[1]-0x00000B98");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Click:Run-Operation[175]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[10.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[175]_ARM:Execute-Function[1055]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1055]_Return:WriteBack[1056]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1056]_To-Address[1057]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1057]_CalcDisplay");
+            // M+ Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[10.17]_2:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[10.17]_Width:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[10.17]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Init:Set[2]-0x00000B9C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Click:Run-Operation[180]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[10.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[180]_ARM:Execute-Function[1058]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1058]_Return:WriteBack[1059]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1059]_To-Address[1060]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1060]_CalcDisplay");
+            // M- Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[10.17]_3:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[10.17]_Width:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[10.17]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Init:Set[3]-0x00000BA0");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Click:Run-Operation[185]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[10.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[185]_ARM:Execute-Function[1061]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1061]_Return:WriteBack[1063]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1063]_To-Address[1065]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1065]_CalcDisplay");
+            // MC Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[10.17]_4:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[10.17]_Width:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[10.17]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Init:Set[4]-0x00000BA4");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Click:Run-Operation[190]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[10.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[190]_ARM:Execute-Function[1066]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1066]_Return:WriteBack[1067]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1067]_To-Address[1068]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1068]_CalcDisplay");
+            // MR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[10.17]_5:5");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[10.17]_Width:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[10.17]_Height:Set[5]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Init:Set[5]-0x00000BA8");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[10.17]_Click:Run-Operation[195]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[10.17]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[195]_ARM:Execute-Function[1069]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1069]_Return:WriteBack[1070]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1070]_To-Address[1071]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1071]_CalcDisplay");
+
+            // Seventh Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[18.0]_7:6");
+            //D Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.18]_0:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.18]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.18]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Init:Set[0]-0x00000C4C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.18]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1072]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1072]_Return:WriteBack[1073]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1073]_To-Address[1074]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1074]_CalcDisplay");
+            // E Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.18]_1.2:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.18]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.18]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Init:Set[1]-0x00000C50");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.18]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1075]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1075]_Return:WriteBack[1076]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1076]_To-Address[1077]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1077]_CalcDisplay");
+            // F Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.18]_2.4:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.18]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.18]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Init:Set[2]-0x00000C54");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.18]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.18]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1078]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1078]_Return:WriteBack[1079]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1079]_To-Address[1080]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1080]_CalcDisplay");
+            // Clear Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[13.18]_3.6:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[13.18]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[13.18]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[13.18]_Init:Set[3]-0x00000B8C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[13.18]_Click:Run-Operation[215]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[13.18]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[215]_ARM:Execute-Function[1081]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1081]_Return:WriteBack[1083]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1083]_To-Address[1085]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1085]_CalcDisplay");
+            // AC Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[13.18]_4.8:6");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[13.18]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[13.18]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[13.18]_Init:Set[4]-0x00000B90");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[13.18]_Click:Run-Operation[220]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[13.18]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[220]_ARM:Execute-Function[1086]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1086]_Return:WriteBack[1087]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1087]_To-Address[1088]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1088]_CalcDisplay");
+
+            //Eight Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[19.0]_8:6");
+            // A Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.19]_0:7");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.19]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.19]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Init:Set[0]-0x00000C44");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.19]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1089]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1089]_Return:WriteBack[1090]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1090]_To-Address[1091]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1091]_CalcDisplay");
+            // B Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.19]_1.2:7");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.19]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.19]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Init:Set[1]-0x00000C48");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.19]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1092]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1092]_Return:WriteBack[1093]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1093]_To-Address[1094]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1094]_CalcDisplay");
+            // C Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.19]_2.4:7");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.19]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.19]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Init:Set[2]-0x00000B8C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.19]_Click:Run-Operation[41]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.19]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[41]_ARM:Execute-Function[1095]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1095]_Return:WriteBack[1096]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1096]_To-Address[1097]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1097]_CalcDisplay");
+            // Multiply Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.19]_3.6:7");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.19]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.19]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.19]_Init:Set[3]-0x00000B84");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.19]_Click:Run-Operation[240]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.19]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[240]_ARM:Execute-Function[1098]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1098]_Return:WriteBack[1099]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1099]_To-Address[1099]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1100]_CalcDisplay");
+            // Divide Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.19]_4.8:7");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.19]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.19]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.19]_Init:Set[4]-0x00000B88");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.19]_Click:Run-Operation[245]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.19]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[245]_ARM:Execute-Function[1101]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1101]_Return:WriteBack[1102]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1102]_To-Address[1103]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1103]_CalcDisplay");
+
+            // Ninth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[20.0]_9:6");
+            // 7 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.20]_0:8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.20]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.20]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Init:Set[0]-0x00000B68");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Click:Run-Operation[200]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.20]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[200]_ARM:Execute-Function[1104]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1104]_Return:WriteBack[1105]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1105]_To-Address[1106]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1106]_CalcDisplay");
+            // 8 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.20]_1.2:8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.20]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.20]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Init:Set[1]-0x00000B6C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Click:Run-Operation[205]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.20]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[205]_ARM:Execute-Function[1107]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1107]_Return:WriteBack[1108]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1108]_To-Address[1109]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1109]_CalcDisplay");
+            // 9 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.20]_2.4:8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.20]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.20]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Init:Set[2]-0x00000B70");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.20]_Click:Run-Operation[210]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.20]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[210]_ARM:Execute-Function[1110]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1110]_Return:WriteBack[1111]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1111]_To-Address[1112]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1112]_CalcDisplay");
+            // Add Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.20]_3.6:8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.20]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.20]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.20]_Init:Set[3]-0x00000B7C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.20]_Click:Run-Operation[275]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.20]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[275]_ARM:Execute-Function[1113]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1113]_Return:WriteBack[1114]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1114]_To-Address[1115]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1115]_CalcDisplay");
+            //Subtract Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[6.20]_4.8:8");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[6.20]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[6.20]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.20]_Init:Set[4]-0x00000B80");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[6.20]_Click:Run-Operation[280]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[6.20]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[280]_ARM:Execute-Function[1116]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1116]_Return:WriteBack[1117]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1117]_To-Address[1118]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1118]_CalcDisplay");
+
+            //Tenth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[21.0]_10:6");
+            // 4 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.21]_0:9");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.21]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.21]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Init:Set[0]-0x00000B5C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Click:Run-Operation[225]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.21]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[225]_ARM:Execute-Function[1119]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1119]_Return:WriteBack[1120]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1120]_To-Address[1121]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1121]_CalcDisplay");
+            // 5 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.21]_1.2:9");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.21]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.21]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Init:Set[1]-0x00000B60");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Click:Run-Operation[230]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.21]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[230]_ARM:Execute-Function[1122]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1122]_Return:WriteBack[1123]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1123]_To-Address[1124]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1124]_CalcDisplay");
+            // 6 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.21]_2.4:9");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.21]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.21]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Init:Set[2]-0x00000B64");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.21]_Click:Run-Operation[235]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.21]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[235]_ARM:Execute-Function[1125]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1125]_Return:WriteBack[1126]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1126]_To-Address[1127]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1127]_CalcDisplay");
+            // xRoLy Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.21]_3.6:9");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.21]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.21]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.21]_Init:Set[3]-0x00000C64");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.21]_Click:Run-Operation[xRoLy]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.21]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[xRoLy]_ARM:Execute-Function[1128]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1128]_Return:WriteBack[1129]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1129]_To-Address[1130]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1130]_CalcDisplay");
+            //xRoRy Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.21]_4.8:9");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.21]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.21]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.21]_Init:Set[4]-0x00000C6C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.21]_Click:Run-Operation[xRoRy]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.21]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[xRoRy]_ARM:Execute-Function[1131]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1131]_Return:WriteBack[1132]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1132]_To-Address[1133]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1133]_CalcDisplay");
+            
+            //Eleventh Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[22.0]_11:6");
+            // 1 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.22]_0:10");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.22]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.22]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Init:Set[0]-0x00000B50");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Click:Run-Operation[260]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.22]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[260]_ARM:Execute-Function[1134]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1134]_Return:WriteBack[1135]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1135]_To-Address[1136]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1136]_CalcDisplay");
+            // 2 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.22]_1.2:10");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.22]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.22]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Init:Set[1]-0x00000B52");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Click:Run-Operation[265]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.22]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[265]_ARM:Execute-Function[1137]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1137]_Return:WriteBack[1138]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1138]_To-Address[1139]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1139]_CalcDisplay");
+            // 3 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.22]_2.4:10");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.22]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.22]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Init:Set[2]-0x00000B58");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.22]_Click:Run-Operation[270]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.22]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[270]_ARM:Execute-Function[1140]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1140]_Return:WriteBack[1141]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1141]_To-Address[1142]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1142]_CalcDisplay");
+            // RoL Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.22]_3.6:10");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.22]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.22]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.22]_Init:Set[3]-0x00000C5C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.22]_Click:Run-Operation[RoL]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.22]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[RoL]_ARM:Execute-Function[1143]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1143]_Return:WriteBack[1144]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1144]_To-Address[1145]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1145]_CalcDisplay");
+            //RoR Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.22]_4.8:10");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.22]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.22]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.22]_Init:Set[4]-0x00000C60");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.22]_Click:Run-Operation[RoR]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.22]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[RoR]_ARM:Execute-Function[1146]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1146]_Return:WriteBack[1147]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1147]_To-Address[1148]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1148]_CalcDisplay");
+
+            // Twelfth Row
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRID_LAYOUT), "BitInteger[23.0]_12:6");
+            // 0 Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[5.23]_0:11");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[5.23]_Width:Set[0]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[5.23]_Height:Set[0]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.23]_Init:Set[0]-0x00000B44");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[5.23]_Click:Run-Operation[290]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[5.23]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[290]_ARM:Execute-Function[1149]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1149]_Return:WriteBack[1150]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1150]_To-Address[1151]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1151]_CalcDisplay");
+            // W <-> Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.23]_1.2:11");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.23]_Width:Set[1]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.23]_Height:Set[1]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Init:Set[1]-0x00000C34");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Click:Run-Operation[W<->]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.23]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[W<->]_ARM:Execute-Function[1152]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1152]_Return:WriteBack[1153]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1153]_To-Address[1154]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1154]_CalcDisplay");
+            // B <-> Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.23]_2.4:11");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.23]_Width:Set[2]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.23]_Height:Set[2]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Init:Set[2]-0x00000C3C");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Click:Run-Operation[B<->]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.23]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[B<->]_ARM:Execute-Function[1155]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1155]_Return:WriteBack[1156]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1156]_To-Address[1157]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1157]_CalcDisplay");
+            // Neg Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[11.23]_3.6:11");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.23]_Width:Set[3]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.23]_Height:Set[3]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Init:Set[3]-0x00000C58");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[11.23]_Click:Run-Operation[Neg]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[11.23]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[Neg]_ARM:Execute-Function[1158]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1158]_Return:WriteBack[1159]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1159]_To-Address[1160]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1160]_CalcDisplay");
+            //Equals Button
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_PLACEMENT),"GenericStatic[9.23]_4.8:11");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_WIDTH),"GenericStatic[11.23]_Width:Set[4]-1.2");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_HEIGHT),"GenericStatic[11.23]_Height:Set[4]-1");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[9.23]_Init:Set[4]-0x00000B78");
+            //applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_EVENT),"GenericStatic[9.23]_Click:Run-Operation[310]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.APP_GRAPHIC_COLOR),"GenericStatic[9.23]_Color:White");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_CPU),"Operation[310]_ARM:Execute-Function[1161]");
+            applicationOperationMapping.add(new Integer(islandProcessorEngine.PROCESSOR_STACK_EVENT),"Function[1161]_Return:WriteBack[1162]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_MEMORY),"WriteBack[1162]_To-Address[1163]");
+            applicationTranslationMapping.add(new Integer(islandSoftwareEngine.KERNEL_IO),"From-Address[1163]_CalcDisplay");

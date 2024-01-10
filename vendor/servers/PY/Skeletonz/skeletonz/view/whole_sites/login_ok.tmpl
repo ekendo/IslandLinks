@@ -1,0 +1,17 @@
+#def loginMan
+<script type="text/javascript">
+function swtichLocation() {
+  GB_P.location = "$BASE_URL/siteedit/$full_link";
+}
+setTimeout("swtichLocation()", 500);
+</script>
+#end def
+#silent $template.getHeader().appendScriptData($loginMan)
+$template.getHeader().renderText()
+<div id="container">
+  <div id="content" style="margin-top: 30px; text-align: center;">
+    You are now logged in! <br />
+    Closing window...
+  </div>
+</div>
+$template.getFooter().renderText()

@@ -1,0 +1,1207 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C3F0E28C10A2A3E30073D9F8 /* APTool */;
+		activeTarget = 8DD76F620486A84900D96B5E /* APTool */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* APTool */,
+		);
+		breakpoints = (
+			C3F0E2B310A3866E0073D9F8 /* main.cpp:836 */,
+			C3F0E2E610A758740073D9F8 /* main.cpp:836 */,
+			C3F0E31010A8D7F20073D9F8 /* main.cpp:836 */,
+			C3F0E33E10AB116A0073D9F8 /* main.cpp:1664 */,
+			C3F0E34A10AB12F90073D9F8 /* main.cpp:1777 */,
+			C3F0E34E10AB148D0073D9F8 /* main.cpp:1488 */,
+			C3F0E35310AB15310073D9F8 /* main.cpp:1782 */,
+			C3F0E35910AB155E0073D9F8 /* main.cpp:216 */,
+			C3F0E36C10AB23670073D9F8 /* main.cpp:1784 */,
+			C3F0E36E10AB237C0073D9F8 /* main.cpp:321 */,
+			C3F0E37310AB23D80073D9F8 /* main.cpp:445 */,
+			C3F0E37B10AB2D270073D9F8 /* main.cpp:577 */,
+		);
+		codeSenseManager = C3F0E29610A2A4030073D9F8 /* Code sense */;
+		executables = (
+			C3F0E28C10A2A3E30073D9F8 /* APTool */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					464,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					424,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 280195767;
+			PBXWorkspaceStateSaveDate = 280195767;
+		};
+		perUserProjectItems = {
+			C346311E10B372C7008C17B5 /* PBXTextBookmark */ = C346311E10B372C7008C17B5 /* PBXTextBookmark */;
+			C346311F10B372C7008C17B5 /* PBXTextBookmark */ = C346311F10B372C7008C17B5 /* PBXTextBookmark */;
+			C346313310B3CA95008C17B5 /* PBXTextBookmark */ = C346313310B3CA95008C17B5 /* PBXTextBookmark */;
+			C346313410B3CA95008C17B5 /* PBXTextBookmark */ = C346313410B3CA95008C17B5 /* PBXTextBookmark */;
+			C346313C10B3CB90008C17B5 /* PBXTextBookmark */ = C346313C10B3CB90008C17B5 /* PBXTextBookmark */;
+			C346313D10B3CB90008C17B5 /* PBXTextBookmark */ = C346313D10B3CB90008C17B5 /* PBXTextBookmark */;
+			C346314510B3D82B008C17B5 /* PBXTextBookmark */ = C346314510B3D82B008C17B5 /* PBXTextBookmark */;
+			C346314610B3D82B008C17B5 /* PBXTextBookmark */ = C346314610B3D82B008C17B5 /* PBXTextBookmark */;
+			C346314710B3D82B008C17B5 /* PBXTextBookmark */ = C346314710B3D82B008C17B5 /* PBXTextBookmark */;
+			C346314B10B3DAB3008C17B5 /* PBXTextBookmark */ = C346314B10B3DAB3008C17B5 /* PBXTextBookmark */;
+			C346314C10B3DAB3008C17B5 /* PBXTextBookmark */ = C346314C10B3DAB3008C17B5 /* PBXTextBookmark */;
+			C346314F10B3DBCE008C17B5 /* PBXTextBookmark */ = C346314F10B3DBCE008C17B5 /* PBXTextBookmark */;
+			C346315010B3DBCE008C17B5 /* PBXTextBookmark */ = C346315010B3DBCE008C17B5 /* PBXTextBookmark */;
+			C346315510B3DF6E008C17B5 /* PBXTextBookmark */ = C346315510B3DF6E008C17B5 /* PBXTextBookmark */;
+			C346315610B3DF6E008C17B5 /* PBXTextBookmark */ = C346315610B3DF6E008C17B5 /* PBXTextBookmark */;
+			C346315710B3DFC5008C17B5 /* PBXTextBookmark */ = C346315710B3DFC5008C17B5 /* PBXTextBookmark */;
+			C346315810B3DFC5008C17B5 /* PBXTextBookmark */ = C346315810B3DFC5008C17B5 /* PBXTextBookmark */;
+			C346315910B3E353008C17B5 /* PBXTextBookmark */ = C346315910B3E353008C17B5 /* PBXTextBookmark */;
+			C346315A10B3E353008C17B5 /* PBXTextBookmark */ = C346315A10B3E353008C17B5 /* PBXTextBookmark */;
+			C346316010B3E3CB008C17B5 /* PBXTextBookmark */ = C346316010B3E3CB008C17B5 /* PBXTextBookmark */;
+			C346316310B3E464008C17B5 /* PBXTextBookmark */ = C346316310B3E464008C17B5 /* PBXTextBookmark */;
+			C346316410B3E464008C17B5 /* PBXTextBookmark */ = C346316410B3E464008C17B5 /* PBXTextBookmark */;
+			C346316810B3E566008C17B5 /* PBXTextBookmark */ = C346316810B3E566008C17B5 /* PBXTextBookmark */;
+			C346316910B3E566008C17B5 /* PBXTextBookmark */ = C346316910B3E566008C17B5 /* PBXTextBookmark */;
+			C346317010B3F00A008C17B5 /* PBXTextBookmark */ = C346317010B3F00A008C17B5 /* PBXTextBookmark */;
+			C346317110B3F00A008C17B5 /* PBXTextBookmark */ = C346317110B3F00A008C17B5 /* PBXTextBookmark */;
+			C346317210B3F00A008C17B5 /* PBXTextBookmark */ = C346317210B3F00A008C17B5 /* PBXTextBookmark */;
+			C346317710B443E9008C17B5 /* PBXTextBookmark */ = C346317710B443E9008C17B5 /* PBXTextBookmark */;
+			C346317810B443E9008C17B5 /* PBXTextBookmark */ = C346317810B443E9008C17B5 /* PBXTextBookmark */;
+			C346317910B443E9008C17B5 /* PBXTextBookmark */ = C346317910B443E9008C17B5 /* PBXTextBookmark */;
+			C346318110B44F35008C17B5 /* PBXTextBookmark */ = C346318110B44F35008C17B5 /* PBXTextBookmark */;
+			C346318210B44F35008C17B5 /* PBXTextBookmark */ = C346318210B44F35008C17B5 /* PBXTextBookmark */;
+			C3F0E2AE10A2A8270073D9F8 = C3F0E2AE10A2A8270073D9F8 /* PBXBookmark */;
+			C3F0E2AF10A2A8640073D9F8 = C3F0E2AF10A2A8640073D9F8 /* PBXBookmark */;
+			C3F0E2B610A3874D0073D9F8 = C3F0E2B610A3874D0073D9F8 /* PBXTextBookmark */;
+			C3F0E2B910A3874D0073D9F8 = C3F0E2B910A3874D0073D9F8 /* PBXTextBookmark */;
+			C3F0E2D210A74C9F0073D9F8 = C3F0E2D210A74C9F0073D9F8 /* PBXTextBookmark */;
+			C3F0E2F610A766EE0073D9F8 = C3F0E2F610A766EE0073D9F8 /* PBXTextBookmark */;
+			C3F0E2FB10A76CF90073D9F8 = C3F0E2FB10A76CF90073D9F8 /* PBXTextBookmark */;
+			C3F0E2FC10A76CF90073D9F8 = C3F0E2FC10A76CF90073D9F8 /* PBXTextBookmark */;
+			C3F0E30D10A8D3A40073D9F8 = C3F0E30D10A8D3A40073D9F8 /* PBXTextBookmark */;
+			C3F0E31110A8D8010073D9F8 = C3F0E31110A8D8010073D9F8 /* PBXTextBookmark */;
+			C3F0E31210A8D8010073D9F8 = C3F0E31210A8D8010073D9F8 /* PBXTextBookmark */;
+			C3F0E31310A8DFFD0073D9F8 = C3F0E31310A8DFFD0073D9F8 /* PBXTextBookmark */;
+			C3F0E31410A8DFFD0073D9F8 = C3F0E31410A8DFFD0073D9F8 /* PBXTextBookmark */;
+			C3F0E33B10AA18E00073D9F8 = C3F0E33B10AA18E00073D9F8 /* PBXTextBookmark */;
+			C3F0E34310AB12640073D9F8 = C3F0E34310AB12640073D9F8 /* PBXTextBookmark */;
+			C3F0E34410AB12640073D9F8 = C3F0E34410AB12640073D9F8 /* PBXTextBookmark */;
+			C3F0E34B10AB12FD0073D9F8 = C3F0E34B10AB12FD0073D9F8 /* PBXTextBookmark */;
+			C3F0E34C10AB12FD0073D9F8 = C3F0E34C10AB12FD0073D9F8 /* PBXTextBookmark */;
+			C3F0E34F10AB14920073D9F8 = C3F0E34F10AB14920073D9F8 /* PBXTextBookmark */;
+			C3F0E35010AB14920073D9F8 = C3F0E35010AB14920073D9F8 /* PBXTextBookmark */;
+			C3F0E35110AB14920073D9F8 = C3F0E35110AB14920073D9F8 /* PBXTextBookmark */;
+			C3F0E35410AB15340073D9F8 = C3F0E35410AB15340073D9F8 /* PBXTextBookmark */;
+			C3F0E35510AB15340073D9F8 = C3F0E35510AB15340073D9F8 /* PBXTextBookmark */;
+			C3F0E35A10AB15670073D9F8 = C3F0E35A10AB15670073D9F8 /* PBXTextBookmark */;
+			C3F0E35B10AB15670073D9F8 = C3F0E35B10AB15670073D9F8 /* PBXTextBookmark */;
+			C3F0E35C10AB15670073D9F8 = C3F0E35C10AB15670073D9F8 /* PBXTextBookmark */;
+			C3F0E35D10AB16820073D9F8 = C3F0E35D10AB16820073D9F8 /* PBXTextBookmark */;
+			C3F0E35E10AB16820073D9F8 = C3F0E35E10AB16820073D9F8 /* PBXTextBookmark */;
+			C3F0E36710AB20170073D9F8 = C3F0E36710AB20170073D9F8 /* PBXTextBookmark */;
+			C3F0E36810AB20170073D9F8 = C3F0E36810AB20170073D9F8 /* PBXTextBookmark */;
+			C3F0E36910AB20170073D9F8 = C3F0E36910AB20170073D9F8 /* PBXTextBookmark */;
+			C3F0E36F10AB23860073D9F8 = C3F0E36F10AB23860073D9F8 /* PBXTextBookmark */;
+			C3F0E37010AB23860073D9F8 = C3F0E37010AB23860073D9F8 /* PBXTextBookmark */;
+			C3F0E37110AB23860073D9F8 = C3F0E37110AB23860073D9F8 /* PBXTextBookmark */;
+			C3F0E37410AB23DF0073D9F8 = C3F0E37410AB23DF0073D9F8 /* PBXTextBookmark */;
+			C3F0E37510AB23DF0073D9F8 = C3F0E37510AB23DF0073D9F8 /* PBXTextBookmark */;
+			C3F0E37810AB25FD0073D9F8 = C3F0E37810AB25FD0073D9F8 /* PBXTextBookmark */;
+			C3F0E37C10AB2D2A0073D9F8 = C3F0E37C10AB2D2A0073D9F8 /* PBXTextBookmark */;
+			C3F0E37D10AB2D2A0073D9F8 = C3F0E37D10AB2D2A0073D9F8 /* PBXTextBookmark */;
+			C3F0E38710AB60EB0073D9F8 = C3F0E38710AB60EB0073D9F8 /* PBXTextBookmark */;
+			C3F0E38B10AB64B10073D9F8 = C3F0E38B10AB64B10073D9F8 /* PBXTextBookmark */;
+			C3F0E38C10AB64B10073D9F8 = C3F0E38C10AB64B10073D9F8 /* PBXTextBookmark */;
+			C3F0E38F10AB6D480073D9F8 = C3F0E38F10AB6D480073D9F8 /* PBXTextBookmark */;
+			C3F0E39010AB6D480073D9F8 = C3F0E39010AB6D480073D9F8 /* PBXTextBookmark */;
+			C3F0E39210AB75740073D9F8 = C3F0E39210AB75740073D9F8 /* PBXTextBookmark */;
+			C3F0E39310AB75740073D9F8 = C3F0E39310AB75740073D9F8 /* PBXTextBookmark */;
+			C3F0E39810AB7E390073D9F8 = C3F0E39810AB7E390073D9F8 /* PBXTextBookmark */;
+			C3F0E39910AB7E390073D9F8 = C3F0E39910AB7E390073D9F8 /* PBXTextBookmark */;
+			C3F0E3A510ACD35A0073D9F8 = C3F0E3A510ACD35A0073D9F8 /* PBXTextBookmark */;
+			C3F0E3B410AD2DED0073D9F8 = C3F0E3B410AD2DED0073D9F8 /* PBXTextBookmark */;
+			C3F0E3B510AD2DED0073D9F8 = C3F0E3B510AD2DED0073D9F8 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C3F0E29510A2A4030073D9F8 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1422, 25718}}";
+			sepNavSelRange = "{6327, 0}";
+			sepNavVisRange = "{5753, 1287}";
+			sepNavWindowFrame = "{{495, 294}, {768, 633}}";
+		};
+	};
+	8DD76F620486A84900D96B5E /* APTool */ = {
+		activeExec = 0;
+		executables = (
+			C3F0E28C10A2A3E30073D9F8 /* APTool */,
+		);
+	};
+	C346311E10B372C7008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 364";
+		rLen = 0;
+		rLoc = 10947;
+		rType = 0;
+		vrLen = 1736;
+		vrLoc = 8144;
+	};
+	C346311F10B372C7008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 460";
+		rLen = 0;
+		rLoc = 7528;
+		rType = 0;
+		vrLen = 980;
+		vrLoc = 6458;
+	};
+	C346313310B3CA95008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1611";
+		rLen = 0;
+		rLoc = 52975;
+		rType = 0;
+		vrLen = 1030;
+		vrLoc = 48275;
+	};
+	C346313410B3CA95008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346313C10B3CB90008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1606";
+		rLen = 0;
+		rLoc = 52720;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 47854;
+	};
+	C346313D10B3CB90008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346314510B3D82B008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 244;
+		rType = 1;
+	};
+	C346314610B3D82B008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 280";
+		rLen = 0;
+		rLoc = 6228;
+		rType = 0;
+		vrLen = 1442;
+		vrLoc = 5404;
+	};
+	C346314710B3D82B008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346314B10B3DAB3008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 281";
+		rLen = 0;
+		rLoc = 6348;
+		rType = 0;
+		vrLen = 1432;
+		vrLoc = 5356;
+	};
+	C346314C10B3DAB3008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346314F10B3DBCE008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 281";
+		rLen = 0;
+		rLoc = 6348;
+		rType = 0;
+		vrLen = 1438;
+		vrLoc = 5356;
+	};
+	C346315010B3DBCE008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346315510B3DF6E008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 288";
+		rLen = 0;
+		rLoc = 6641;
+		rType = 0;
+		vrLen = 1445;
+		vrLoc = 5468;
+	};
+	C346315610B3DF6E008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346315710B3DFC5008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 274";
+		rLen = 0;
+		rLoc = 6041;
+		rType = 0;
+		vrLen = 1461;
+		vrLoc = 5356;
+	};
+	C346315810B3DFC5008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 468";
+		rLen = 0;
+		rLoc = 7611;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 6718;
+	};
+	C346315910B3E353008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1793";
+		rLen = 0;
+		rLoc = 52634;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 52201;
+	};
+	C346315A10B3E353008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 402";
+		rLen = 0;
+		rLoc = 5823;
+		rType = 0;
+		vrLen = 956;
+		vrLoc = 5385;
+	};
+	C346316010B3E3CB008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: a function-definition is not allowed here before '{' token";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 1303;
+		rType = 1;
+	};
+	C346316310B3E464008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 51";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 450;
+	};
+	C346316410B3E464008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1303";
+		rLen = 2;
+		rLoc = 42735;
+		rType = 0;
+		vrLen = 934;
+		vrLoc = 42955;
+	};
+	C346316810B3E566008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1793";
+		rLen = 0;
+		rLoc = 52624;
+		rType = 0;
+		vrLen = 1203;
+		vrLoc = 51967;
+	};
+	C346316910B3E566008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 51";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 882;
+		vrLoc = 382;
+	};
+	C346317010B3F00A008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 1209;
+		rType = 1;
+	};
+	C346317110B3F00A008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1312";
+		rLen = 0;
+		rLoc = 42945;
+		rType = 0;
+		vrLen = 988;
+		vrLoc = 42791;
+	};
+	C346317210B3F00A008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 60";
+		rLen = 0;
+		rLoc = 1284;
+		rType = 0;
+		vrLen = 449;
+		vrLoc = 1075;
+	};
+	C346317710B443E9008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 1209;
+		rType = 1;
+	};
+	C346317810B443E9008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1220";
+		rLen = 0;
+		rLoc = 41180;
+		rType = 0;
+		vrLen = 844;
+		vrLoc = 40632;
+	};
+	C346317910B443E9008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 60";
+		rLen = 0;
+		rLoc = 1284;
+		rType = 0;
+		vrLen = 449;
+		vrLoc = 1075;
+	};
+	C346318110B44F35008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 282";
+		rLen = 0;
+		rLoc = 6327;
+		rType = 0;
+		vrLen = 1287;
+		vrLoc = 5753;
+	};
+	C346318210B44F35008C17B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 60";
+		rLen = 0;
+		rLoc = 1284;
+		rType = 0;
+		vrLen = 449;
+		vrLoc = 1075;
+	};
+	C3F0E28C10A2A3E30073D9F8 /* APTool */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = APTool;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	C3F0E29510A2A4030073D9F8 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	C3F0E29610A2A4030073D9F8 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C3F0E29810A2A4830073D9F8 /* APTool.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 6552}}";
+			sepNavSelRange = "{1284, 0}";
+			sepNavVisRange = "{1075, 449}";
+			sepNavWindowFrame = "{{185, 116}, {768, 633}}";
+		};
+	};
+	C3F0E2AE10A2A8270073D9F8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+	};
+	C3F0E2AF10A2A8640073D9F8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+	};
+	C3F0E2B310A3866E0073D9F8 /* main.cpp:836 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::SetDebug(bool d)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 836;
+		location = APTool;
+		modificationTime = 279646699.294772;
+		state = 1;
+	};
+	C3F0E2B610A3874D0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 377";
+		rLen = 0;
+		rLoc = 5419;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 4154;
+	};
+	C3F0E2B910A3874D0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 193";
+		rLen = 0;
+		rLoc = 7001;
+		rType = 0;
+		vrLen = 658;
+		vrLoc = 3951;
+	};
+	C3F0E2D210A74C9F0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: expected ';' before 'private'";
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		rLen = 1;
+		rLoc = 420;
+		rType = 1;
+	};
+	C3F0E2E610A758740073D9F8 /* main.cpp:836 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 836;
+		modificationTime = 279646699.295598;
+		state = 2;
+	};
+	C3F0E2F610A766EE0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'e' was not declared in this scope";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 0;
+		rLoc = 835;
+		rType = 1;
+	};
+	C3F0E2FB10A76CF90073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 603";
+		rLen = 0;
+		rLoc = 52557;
+		rType = 0;
+		vrLen = 493;
+		vrLoc = 3927;
+	};
+	C3F0E2FC10A76CF90073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 381";
+		rLen = 0;
+		rLoc = 5349;
+		rType = 0;
+		vrLen = 1144;
+		vrLoc = 5021;
+	};
+	C3F0E30D10A8D3A40073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'itoa' was not declared in this scope";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 0;
+		rLoc = 835;
+		rType = 1;
+	};
+	C3F0E31010A8D7F20073D9F8 /* main.cpp:836 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::SetDebug(bool d)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 836;
+		modificationTime = 279646699.296406;
+		state = 2;
+	};
+	C3F0E31110A8D8010073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 234";
+		rLen = 0;
+		rLoc = 40654;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 4657;
+	};
+	C3F0E31210A8D8010073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 450";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 823;
+		vrLoc = 6629;
+	};
+	C3F0E31310A8DFFD0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 263";
+		rLen = 0;
+		rLoc = 35431;
+		rType = 0;
+		vrLen = 2304;
+		vrLoc = 4480;
+	};
+	C3F0E31410A8DFFD0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 450";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 823;
+		vrLoc = 6629;
+	};
+	C3F0E33B10AA18E00073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: base operand of '->' has non-pointer type 'boost::regex'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 0;
+		rLoc = 456;
+		rType = 1;
+	};
+	C3F0E33E10AB116A0073D9F8 /* main.cpp:1664 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 1664;
+		location = APTool;
+		modificationTime = 279646813.261027;
+		state = 1;
+	};
+	C3F0E34310AB12640073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1122";
+		rLen = 0;
+		rLoc = 50007;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 28895;
+	};
+	C3F0E34410AB12640073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 451";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 5705;
+	};
+	C3F0E34A10AB12F90073D9F8 /* main.cpp:1777 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 1777;
+		location = APTool;
+		modificationTime = 279646969.3390411;
+		state = 1;
+	};
+	C3F0E34B10AB12FD0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1235";
+		rLen = 0;
+		rLoc = 52140;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 30772;
+	};
+	C3F0E34C10AB12FD0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 451";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 5705;
+	};
+	C3F0E34E10AB148D0073D9F8 /* main.cpp:1488 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::CreateAppProfileConfig(std::string Emulator, std::string Simulator, std::string pkg_name, std::string app_name)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 1488;
+		location = APTool;
+		modificationTime = 279647373.244242;
+		state = 1;
+	};
+	C3F0E34F10AB14920073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 1485;
+		rType = 1;
+	};
+	C3F0E35010AB14920073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 944";
+		rLen = 125;
+		rLoc = 45886;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 25088;
+	};
+	C3F0E35110AB14920073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 451";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 5705;
+	};
+	C3F0E35310AB15310073D9F8 /* main.cpp:1782 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 1782;
+		location = APTool;
+		modificationTime = 279647537.681827;
+		state = 1;
+	};
+	C3F0E35410AB15340073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 944";
+		rLen = 125;
+		rLoc = 45886;
+		rType = 0;
+		vrLen = 1145;
+		vrLoc = 31023;
+	};
+	C3F0E35510AB15340073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 451";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 5705;
+	};
+	C3F0E35910AB155E0073D9F8 /* main.cpp:216 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::LoadAppROM(std::string file_loc, std::string start, std::string end, int off)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 216;
+		location = APTool;
+		modificationTime = 279647582.75307;
+		state = 1;
+	};
+	C3F0E35A10AB15670073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 203;
+		rType = 1;
+	};
+	C3F0E35B10AB15670073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 212";
+		rLen = 0;
+		rLoc = 4833;
+		rType = 0;
+		vrLen = 718;
+		vrLoc = 4126;
+	};
+	C3F0E35C10AB15670073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 451";
+		rLen = 0;
+		rLoc = 7036;
+		rType = 0;
+		vrLen = 898;
+		vrLoc = 5705;
+	};
+	C3F0E35D10AB16820073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1240";
+		rLen = 0;
+		rLoc = 52423;
+		rType = 0;
+		vrLen = 1245;
+		vrLoc = 30856;
+	};
+	C3F0E35E10AB16820073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 357";
+		rLen = 0;
+		rLoc = 4401;
+		rType = 0;
+		vrLen = 1056;
+		vrLoc = 4767;
+	};
+	C3F0E36710AB20170073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 211";
+		rLen = 0;
+		rLoc = 4822;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 4122;
+	};
+	C3F0E36810AB20170073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		rLen = 1;
+		rLoc = 396;
+		rType = 1;
+	};
+	C3F0E36910AB20170073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4985;
+	};
+	C3F0E36C10AB23670073D9F8 /* main.cpp:1784 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 1784;
+		location = APTool;
+		modificationTime = 279651175.294172;
+		state = 1;
+	};
+	C3F0E36E10AB237C0073D9F8 /* main.cpp:321 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::CreateInstructionProfile()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 321;
+		location = APTool;
+		modificationTime = 279651196.672802;
+		state = 1;
+	};
+	C3F0E36F10AB23860073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 305;
+		rType = 1;
+	};
+	C3F0E37010AB23860073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 239";
+		rLen = 40;
+		rLoc = 7002;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 4734;
+	};
+	C3F0E37110AB23860073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E37310AB23D80073D9F8 /* main.cpp:445 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::CreateInstructionProfile()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 445;
+		location = APTool;
+		modificationTime = 279651288.581368;
+		state = 1;
+	};
+	C3F0E37410AB23DF0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 314";
+		rLen = 0;
+		rLoc = 12192;
+		rType = 0;
+		vrLen = 1312;
+		vrLoc = 6348;
+	};
+	C3F0E37510AB23DF0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E37810AB25FD0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: expected `;' before 'while'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 328;
+		rType = 1;
+	};
+	C3F0E37B10AB2D270073D9F8 /* main.cpp:577 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "APTool::CreateInstructionProfile()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 577;
+		location = APTool;
+		modificationTime = 279653671.658928;
+		state = 1;
+	};
+	C3F0E37C10AB2D2A0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 408";
+		rLen = 0;
+		rLoc = 16543;
+		rType = 0;
+		vrLen = 1387;
+		vrLoc = 9067;
+	};
+	C3F0E37D10AB2D2A0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E38710AB60EB0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: no match for 'operator!=' in 'or_it != 0'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 0;
+		rLoc = 456;
+		rType = 1;
+	};
+	C3F0E38B10AB64B10073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 277";
+		rLen = 0;
+		rLoc = 8099;
+		rType = 0;
+		vrLen = 1289;
+		vrLoc = 5085;
+	};
+	C3F0E38C10AB64B10073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E38F10AB6D480073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 283";
+		rLen = 0;
+		rLoc = 8338;
+		rType = 0;
+		vrLen = 1293;
+		vrLoc = 5085;
+	};
+	C3F0E39010AB6D480073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E39210AB75740073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 285";
+		rLen = 0;
+		rLoc = 8356;
+		rType = 0;
+		vrLen = 1375;
+		vrLoc = 5436;
+	};
+	C3F0E39310AB75740073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E39810AB7E390073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 345";
+		rLen = 0;
+		rLoc = 12192;
+		rType = 0;
+		vrLen = 1240;
+		vrLoc = 7153;
+	};
+	C3F0E39910AB7E390073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 391";
+		rLen = 103;
+		rLoc = 5637;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 4898;
+	};
+	C3F0E3A510ACD35A0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'class APTool' has no member named 'm_ExcepInstructions'";
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		rLen = 1;
+		rLoc = 1185;
+		rType = 1;
+	};
+	C3F0E3B410AD2DED0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 364";
+		rLen = 0;
+		rLoc = 10947;
+		rType = 0;
+		vrLen = 1648;
+		vrLoc = 8182;
+	};
+	C3F0E3B510AD2DED0073D9F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3F0E29810A2A4830073D9F8 /* APTool.h */;
+		name = "APTool.h: 460";
+		rLen = 0;
+		rLoc = 7528;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 6458;
+	};
+}

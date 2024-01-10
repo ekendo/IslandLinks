@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<alc:ChartViewer 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:alcm="com.airliquide.alps.client.manager.*" 
+	xmlns:alc="com.airliquide.alps.client.*" 
+	layout="absolute" pageTitle="ALPS Charting" name="ALPS Chart Manager" styleName="plain" creationComplete="initVars()">
+</alc:ChartViewer>
+	

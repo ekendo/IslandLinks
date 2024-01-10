@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="HomeIslandManager">
+		<name >
+			HomeIslandManager
+		</name>
+		<description >
+			Client for Translater Engine, Key Set Generator, Yatta Communicator 
+		</description>
+		<version >
+			0.0.0.0
+		</version>
+		<vendor >
+			EKenDo,LLC
+		</vendor>
+		<copyright >
+			Copyright (c) 2009 EKenDo,LLC
+		</copyright>
+		<fileset Java="1.35">
+			<directory >
+				
+			</directory>
+			<files >
+				HomeIslandManager.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

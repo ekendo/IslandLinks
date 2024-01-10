@@ -1,0 +1,71 @@
+VERSION =	0.1
+DIFF_VERSION =	0.0.1
+
+INCLUDE =	-I.
+PREFIX =	./
+# .h files installed to $(PREFIX)/Include
+# static lib .a files installed to $(PREFIX)/lib
+
+CXX =		g++
+
+CFLAGS =	-Wall -g $(INCLUDE) -MD -D_VERSION='"$(VERSION)"'
+
+# turn off optimization if compiling with gcc 2.9.x:
+#CFLAGS +=	-O0
+CFLAGS +=	-O2
+
+# uncomment depending on your operating system
+CFLAGS +=	-DLINUX
+#CFLAGS +=	-DMACOSX 
+# solaris > 8
+#CFLAGS +=	-DSOLARIS
+# solaris 8
+#CFLAGS +=	-DSOLARIS8
+# windows and/or cygwin
+#CFLAGS +=	-D_WIN32
+# cygwin
+#CFLAGS +=	-D__CYGWIN__
+
+# if you want the library to use openssl, make sure the next line is uncommented
+CFLAGS += 	-DHAVE_OPENSSL
+
+# have to include crypto package for profile
+CFLAGS += 	-DCRYPTOPP_DLL_ONLY
+
+# if you want to use the SCTP protocol, uncomment the symbol USE_SCTP
+#CFLAGS +=	-DUSE_SCTP
+
+# Enable insane amounts of debug output to stdout/stderr:
+CFLAGS +=	-D_DEBUG
+
+# 
+CFLAGS +=	-D_CONSOLE
+
+CPPFLAGS =	$(CFLAGS) 
+
+all:		libHomeIslandManager.a HomeIslandManager
+
+HomeIslandManager:	HomeIslandManager.o
+		$(CXX) -o $@ $^
+
+OBJS =		algparam.o \
+		cryptlib.o \
+		homeIslandSocket.o \
+		fips140.o \
+		Ipv4Address.o \
+		IslandShell.o \
+		ISocketHandler.o \
+		profile.o \
+		
+
+libHomeIslandManager.a:	$(OBJS)
+		ar cru $@ $(OBJS)
+		ranlib $@
+
+
+clean:
+		rm -f *.o *~ slask *.d $(PROGS) *.a */*~
+
+
+
+

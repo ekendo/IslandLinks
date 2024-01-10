@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+ <configuration>
+  <!-- server settings -->
+  <server>
+    <debug value="true"/>
+    <queue_size value="20"/>
+    <readBufferMemory value="750000" />
+    <writeBufferMemory value="750000" />  
+    <bind value="127.0.0.1" />
+    <port value="32920" />
+    <serviceDefaultParameters>
+    	<spiderLevel value="0" />
+    	<spiderProtocol value="http"/>
+    	<spiderUrls value="images.google.com,finance.yahoo.com,ekendotech.com,google.com"/>
+    	<!--google.com,finance.yahoo.com,ekendotech.com-->
+    </serviceDefaultParameters>
+    <enableGnutella value="false"/>
+    <enableExosee value="false"/>
+    <enableJXTA value="false" />
+    <enablePeerCommands value="true" />
+    <serviceName value="KaptureKrawler" />
+    <welcomeMessage value="You have connected to the KaptureKrawler: to get features type 'usage' and hit enter. to end session type 'done' and hit enter." />
+    <usage value="[-u | -l] -u UrlList comma delimited | -l Levels to crawl"/>
+    <eventName value="KaptureReady" />
+    <serviceRoot value="C:\Earl\Consulting\Kapture\cpp\Server\Generic\Krawler\KaptureKrawler\Release" />
+  </server>
+  <!-- mime -->
+  <mime>
+    <filename value="mime.types"/>
+  </mime>
+</configuration> 

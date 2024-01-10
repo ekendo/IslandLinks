@@ -1,0 +1,22 @@
+<Resources>
+  <Icon Type="PNG">http://76.12.235.118/AppImages/1/1/Icon.png</Icon>
+  <BackgroundImage />
+  <Images Type="PNG">
+    <Image Type="PNG" Name="StatisticsStatic[1]" Height="12" Width="20">http://76.12.235.118/AppImages/1/1/0s2n.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[2]" Height="12" Width="26">http://76.12.235.118/AppImages/1/1/0s2n1.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[3]" Height="12" Width="20">http://76.12.235.118/AppImages/1/1/0sn.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[4]" Height="12" Width="26">http://76.12.235.118/AppImages/1/1/0sn1.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[5]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/01.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[6]" Height="8" Width="14">http://76.12.235.118/AppImages/1/1/02.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[7]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/03.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[8]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/04.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[9]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/05.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[10]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/06.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[11]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/07.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[12]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/08.png</Image>
+    <Image Type="PNG" Name="StatisticsStatic[13]" Height="8" Width="15">http://76.12.235.118/AppImages/1/1/09.png</Image>
+  </Images>
+  <Audio>
+  <Format Type="AIff" Name="ClickOption[14]">http://76.12.235.118/AppImages/1/1/tick.aiff</Format> 
+  </Audio>
+</Resources>

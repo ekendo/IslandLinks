@@ -1,0 +1,91 @@
+else if(fieldWithFocus instanceof RichTextField)
+                {
+                    try
+                    {
+                        RichTextField rtf = (RichTextField) fieldWithFocus;
+                        String buttonLabel = rtf.getLabel();
+                        ButtonOperation buttOp = new ButtonOperation(buttonLabel);
+                        if(_debug)
+                        {
+                            System.out.println("[BUTTON PRINT] - The RichTextField clicked was: " + buttonLabel);
+                        }
+                        
+                        RichTextField topBox = null;
+                        int boxSearch = 0;
+                        
+                        while(boxSearch < _componentsManager.getFieldCount())
+                        {
+                            if(_componentsManager.getField(boxSearch) instanceof RichTextField)
+                            {
+                                topBox = (RichTextField) _componentsManager.getField(boxSearch);
+                                if(topBox.getLabel() != "Textbox")
+                                    topBox = null;
+                                else
+                                    break;
+                            }
+                            boxSearch += 1;
+                        }
+                        
+                        if(topBox != null)
+                            topBox.setText(buttonLabel);
+                        
+                        
+                        /*
+                        if((IslandSoftwareState != islandSoftwareEngine.APP_ENGINE_STOPPED)&&
+                        (_applicationIsRunning))
+                        {
+                            
+                            if(_debug)
+                            {
+                                System.out.println("[INFO] island App is not null");
+                            }
+                    
+                            if(_islandApplicationManager!=null)
+                            {
+                                if(_debug)
+                                {
+                                    System.out.println("[AppEngine-INFO] navigation clicked");
+                                }
+                
+                                int likelyLocation = 0;
+                                if(rtf.getIndex() == 0)
+                                {
+                                    likelyLocation = rtf.getHeight();
+                                }
+                                else
+                                {
+                                    likelyLocation = rtf.getIndex() * rtf.getHeight(); 
+                                }
+                                
+                                
+                                for(int i=0; i< _componentsManager.getFieldCount();i++)
+                                {
+                                    try
+                                    {
+                                        // Get rid of the separators
+                                        if(_componentsManager.getField(i) instanceof SeparatorField)
+                                        {
+                                            SeparatorField b_sf = (SeparatorField) _componentsManager.getField(i);
+                                            _componentsManager.delete(b_sf);
+                                            _componentObjectStack.removeElement(b_sf);
+                                        }
+                                                    
+                                        if(_componentsManager.getField(i) instanceof RichTextField)
+                                        {
+                                            // for DEMO/PROTO remove blanks
+                                            RichTextField b_rtf = (RichTextField) _componentsManager.getField(i);
+                                            if(b_rtf.getText().equals(""))
+                                            {
+                                                _componentsManager.delete(b_rtf);
+                                                _componentObjectStack.removeElement(b_rtf);
+                                            }
+                                        }
+                                    }
+                                    catch(Exception ec)
+                                    {
+                                        if(_debug)
+                                        {
+                                            System.out.println("[ERROR] problems initializing component Screen:"+ec.toString());
+                                        }
+                                    }
+                                }

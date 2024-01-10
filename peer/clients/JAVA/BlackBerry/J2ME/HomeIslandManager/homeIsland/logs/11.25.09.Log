@@ -1,0 +1,116 @@
+[INFO] about to fire grid init events
+[INFO] the name for eth grid we're on is:CalcDisplay
+[INFO] the name for the screen we're on is:Scientific
+[INFO] the name for the layout we're on is:Scientific[0.0]
+[INFO] the name for the layout we're on is:Scientific[1.0]
+[INFO] the name for the graphic we're on is:GenericStatic[10.1]
+[INFO] the name for the layout we're on is:Scientific[2.0]
+[INFO] the name for the graphic we're on is:GenericStatic[8.2]
+[INFO]The layout color here is: Black
+[INFO] the name for the graphic we're on is:GenericStatic[8.2]
+[INFO] this is the current screen name:Scientific
+[INFO] this is the grid width:318
+[INFO] the name for the graphic we're on is:GenericStatic[8.2]
+[INFO] this is the grid height:240
+[INFO] this is the current layout name:Scientific[0.0]
+[INFO] the name for the graphic we're on is:GenericStatic[8.2]
+[INFO] this is the current layout details placementX&placementY:0.0&0.0
+[INFO] this is the layout height and wdth:40.0&318.0
+[INFO]The layout color here is: White
+[INFO] about to fire component init events
+[INFO] this is the current layout name:Scientific[1.0]
+[INFO] this is the current layout details placementX&placementY:0.0&40.0
+[INFO] about to fire graphic init events
+[INFO] this is the layout height and wdth:60.0&106.0
+[INFO]The layout color here is: Black
+[INFO] this is the current layout name:Scientific[2.0]
+[INFO] this is the current layout details placementX&placementY:106.0&40.0
+[INFO] this is the layout height and wdth:60.0&318.0
+[INFO]The layout color here is: Black
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:106.0&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:180.2&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:227.89999999999998&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:270.29999999999995&40.0
+[INFO]The layout color here is: Black
+[INFO] this is the current screen name:Scientific
+[INFO] this is the grid width:318
+[INFO] this is the grid height:240
+[INFO] this is the current layout name:Scientific[0.0]
+[INFO] this is the current layout details placementX&placementY:0.0&0.0
+[INFO] this is the layout height and wdth:40.0&318.0
+[INFO]The layout color here is: White
+[INFO] this is the current layout name:Scientific[1.0]
+[INFO] this is the current layout details placementX&placementY:0.0&40.0
+[INFO] this is the layout height and wdth:60.0&106.0
+[INFO]The layout color here is: Black
+[INFO] this is the current layout name:Scientific[2.0]
+[INFO] this is the current layout details placementX&placementY:106.0&40.0
+[INFO] this is the layout height and wdth:60.0&318.0
+[INFO]The layout color here is: Black
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:106.0&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:180.2&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:227.89999999999998&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:270.29999999999995&40.0
+[INFO] this is the current details name:TextLabel[0.0]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:0.0&0.0
+[INFO]The layout color here is: Black
+[INFO] this is the current screen name:Scientific
+[INFO] this is the grid width:318
+[INFO] this is the grid height:240
+[INFO] this is the current layout name:Scientific[0.0]
+[INFO] this is the current layout details placementX&placementY:0.0&0.0
+[INFO] this is the layout height and wdth:40.0&318.0
+[INFO]The layout color here is: White
+[INFO] this is the current layout name:Scientific[1.0]
+[INFO] this is the current layout details placementX&placementY:0.0&40.0
+[INFO] this is the layout height and wdth:60.0&106.0
+[INFO]The layout color here is: Black
+[INFO] this is the current layout name:Scientific[2.0]
+[INFO] this is the current layout details placementX&placementY:106.0&40.0
+[INFO] this is the layout height and wdth:60.0&318.0
+[INFO]The layout color here is: Black
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:106.0&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:180.2&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:227.89999999999998&40.0
+[INFO] this is the current details name:GenericStatic[8.2]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:270.29999999999995&40.0
+[INFO] this is the current details name:TextLabel[0.0]
+[INFO] this is the current details locationX&locationY:0.0&0.0
+[INFO] this is the current details placementX&placementY:0.0&0.0
+JVM: bklt @3140938: setTimer 22
+JVM: bklt @3143832: timer
+JVM: bklt @3143832: idle 22
+JVM: bklt @3143832: setTimer 22
+VM:CPUHs=UniApp
+JVM:Post WatchDog
+JVM: bklt @3146770: timer
+JVM: bklt @3146770: idle 23
+JVM: bklt @3147191: setTimer 22
+[INFO] inside the keyChar something was clicked!
+[AppEngine-INFO] key clicked
+Exit UniApp(140)
+Foreground net_rim_bb_ribbon_app(89)

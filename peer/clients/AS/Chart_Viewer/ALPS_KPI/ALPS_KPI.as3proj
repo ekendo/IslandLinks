@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <!-- Output SWF options -->
+  <output>
+    <movie disabled="False" />
+    <movie input="" />
+    <movie path="bin\ALPSKPI.swf" />
+    <movie fps="30" />
+    <movie width="800" />
+    <movie height="600" />
+    <movie version="9" />
+    <movie background="#FFFFFF" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="src" />
+    <class path="..\..\..\..\3rd_pty_sdk\datavisualization_sdk3.5\frameworks\libs" />
+    <class path="..\..\..\..\3rd_pty_sdk\open-flash-chart-2-Lug-Wyrm-Charmer\open-flash-chart" />
+    <class path="..\..\..\..\flex_sdk_3.5\frameworks\libs" />
+    <class path="..\..\..\..\3rd_pty_sdk\open_flex_sdk\frameworks\libs" />
+    <class path="..\..\..\..\3rd_pty_sdk\am-1.4.9.4\Build" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option accessible="False" />
+    <option allowSourcePathOverlap="False" />
+    <option benchmark="False" />
+    <option es="False" />
+    <option loadConfig="" />
+    <option optimize="True" />
+    <option showActionScriptWarnings="True" />
+    <option showBindingWarnings="True" />
+    <option showDeprecationWarnings="True" />
+    <option showUnusedTypeSelectorWarnings="True" />
+    <option strict="True" />
+    <option useNetwork="True" />
+    <option useResourceBundleMetadata="True" />
+    <option warnings="True" />
+    <option verboseStackTraces="True" />
+    <option linkReport="" />
+    <option loadExterns="" />
+    <option additional="" />
+    <option customSDK="" />
+  </build>
+  <!-- SWC Include Libraries -->
+  <includeLibraries>
+    <!-- example: <element path="..." /> -->
+  </includeLibraries>
+  <!-- SWC Libraries -->
+  <libraryPaths>
+    <element path="..\..\..\..\flex_sdk_3.5\frameworks\libs\flex.swc" />
+    <element path="..\..\..\..\flex_sdk_3.5\frameworks\libs\framework.swc" />
+    <element path="..\..\..\..\flex_sdk_3.5\frameworks\libs\rpc.swc" />
+    <element path="..\..\..\..\flex_sdk_3.5\frameworks\libs\utilities.swc" />
+    <element path="..\..\..\..\flex_sdk_3.5\frameworks\libs\player\9\playerglobal.swc" />
+    <element path="..\..\..\..\3rd_pty_sdk\datavisualization_sdk3.5\frameworks\libs\datavisualization.swc" />
+    <element path="..\..\..\..\3rd_pty_sdk\am-1.4.9.4\Build\amChartsFB3.swc" />
+  </libraryPaths>
+  <!-- External Libraries -->
+  <externalLibraryPaths>
+    <!-- example: <element path="..." /> -->
+  </externalLibraryPaths>
+  <!-- Runtime Shared Libraries -->
+  <rslPaths>
+    <!-- example: <element path="..." /> -->
+  </rslPaths>
+  <!-- Intrinsic Libraries -->
+  <intrinsics>
+    <!-- example: <element path="..." /> -->
+  </intrinsics>
+  <!-- Assets to embed into the output SWF -->
+  <library>
+    <asset path="..\..\..\..\3rd_pty_sdk\open-flash-chart-2-Lug-Wyrm-Charmer\open-flash-chart\open-flash-chart.swf" />
+    <asset path="..\..\..\..\3rd_pty_sdk\am\amcolumn_1.6.4.1\amcolumn\amcolumn.swf" />
+    <asset path="..\..\..\..\3rd_pty_sdk\am\amline_1.6.4.1\amline\amline.swf" />
+    <asset path="..\..\..\..\3rd_pty_sdk\astra-flash-1.4\Source\yahoo-astra-flash-1.4\bin\yahooastraflash14.swf" />
+    <asset path="..\..\..\..\3rd_pty_sdk\am\ampie_1.6.4.1\ampie\ampie.swf" />
+    <asset path="..\..\..\..\3rd_pty_sdk\am\amxy_1.6.4.1\amxy\amxy.swf" />
+  </library>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\ChartApplication.mxml" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <!-- example: <hidden path="..." /> -->
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand />
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False" />
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Default" />
+  </options>
+</project>

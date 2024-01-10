@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include
+END
+HttpPostSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpPostSocket.h
+END
+EventTime.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/EventTime.h
+END
+HttpdCookies.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpdCookies.h
+END
+UdpSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/UdpSocket.h
+END
+MinionSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/MinionSocket.h
+END
+CTcpSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/CTcpSocket.h
+END
+Utility.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Utility.h
+END
+ListenSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/ListenSocket.h
+END
+Thread.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Thread.h
+END
+SocketThreadPool_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/SocketThreadPool_old.h
+END
+Parse.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Parse.h
+END
+ICrypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/ICrypt.h
+END
+SocketThreadPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/SocketThreadPool.h
+END
+MinderHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/MinderHandler.h
+END
+MemFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/MemFile.h
+END
+iconv.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/iconv.h
+END
+File.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/File.h
+END
+EventHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/EventHandler.h
+END
+SocketThread.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/SocketThread.h
+END
+Uid.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Uid.h
+END
+HttpPutSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpPutSocket.h
+END
+Event.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Event.h
+END
+SctpSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/SctpSocket.h
+END
+PoolSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/PoolSocket.h
+END
+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Base64.h
+END
+HttpClientSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpClientSocket.h
+END
+Socket.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Socket.h
+END
+HTTPSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HTTPSocket.h
+END
+IEventHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/IEventHandler.h
+END
+IFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/IFile.h
+END
+Ipv4Address.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Ipv4Address.h
+END
+Ipv6Address.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Ipv6Address.h
+END
+socket_include.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/socket_include.h
+END
+NullCrypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/NullCrypt.h
+END
+HttpdSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpdSocket.h
+END
+StdLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/StdLog.h
+END
+CircularBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/CircularBuffer.h
+END
+SocketAddress.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/SocketAddress.h
+END
+ISocketHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/ISocketHandler.h
+END
+HttpDebugSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpDebugSocket.h
+END
+TcpSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/TcpSocket.h
+END
+ResolvServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/ResolvServer.h
+END
+Mutex.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Mutex.h
+END
+IEventOwner.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/IEventOwner.h
+END
+HttpdForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpdForm.h
+END
+ResolvSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/ResolvSocket.h
+END
+StdoutLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/StdoutLog.h
+END
+sockethandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/sockethandler.h
+END
+MinderSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/MinderSocket.h
+END
+Lock.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/Lock.h
+END
+HttpGetSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/kapture/!svn/ver/2614/cpp/Server/Generic/Krawler/KaptureKrawler/Include/HttpGetSocket.h
+END

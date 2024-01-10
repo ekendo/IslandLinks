@@ -1,0 +1,20 @@
+## RIM Java Development Environment
+# RIM Workspace file
+[BuildConfigurations
+Debug
+Release
+]
+DependenciesInWorkspace=0
+[ImplicitRules
+]
+[Imports
+]
+[Projects
+Assessment.jdp
+FlashCards.jdp
+IslandLinks_HomeIsland.jdp
+]
+[ReleaseActiveProjects
+Assessment.jdp
+IslandLinks_HomeIsland.jdp
+]

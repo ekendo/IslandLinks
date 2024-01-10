@@ -1,0 +1,23 @@
+/*
+ * ButtonOperation.java
+ *
+ * © <your company here>, 2003-2005
+ * Confidential and proprietary.
+ */
+
+package com.ekendotech.homeIsland.gui;
+
+
+
+
+
+/**
+ * 
+ */
+public class ButtonOperation 
+{
+    public ButtonOperation(String ButtonName) 
+    {    
+        System.out.println("[Button Operation] - The button that was clicked is: " + ButtonName);
+    }
+} 

@@ -1,0 +1,503 @@
+if(_islandApplicationManager != null)
+                            {
+                                
+                                if(_islandApplicationManager.ApplicationEngine!=null)
+                                {
+                                
+                                    if(_islandApplicationManager.ApplicationEngine.HasComponents()&&
+                                        (_islandApplicationManager.ApplicationEngine.GetComponentObjects()!=null))
+                                    {
+                                        
+                                        if(!_islandApplicationManager.currentGrid.equals(""))
+                                        {
+                                            if(_layoutObjectStack == null)
+                                            {
+                                                islandSoftwareEngine.GridScreenDetails appGridDetails = (islandSoftwareEngine.GridScreenDetails) _islandApplicationManager.ApplicationEngine.GetDisplayGridFromName(_islandApplicationManager.currentGrid);
+                                                
+                                                // Get Loaded Layouts for Screen
+                                                Enumeration appLayouts = appGridDetails.GetScreenLayouts(appGridDetails.ScreenName);
+                                                
+                                                for(Enumeration en = appLayouts; en.hasMoreElements();)
+                                                {
+                                                    islandSoftwareEngine.DisplayLayoutDetails appLayoutDetails = (islandSoftwareEngine.DisplayLayoutDetails) en.nextElement();
+                                                
+                                                    // enumerate object container (GuiGraphicDetails)
+                                                    for(Enumeration e = appLayoutDetails.GetLayoutComponents().elements(); e.hasMoreElements();)
+                                                    {
+                                                        // paint components
+                                                        islandSoftwareEngine.GraphicGuiDetails appComponentDetails = (islandSoftwareEngine.GraphicGuiDetails) e.nextElement();
+                                                        
+                                                        if(appComponentDetails !=null)
+                                                        {
+                                                            
+                                                            Double dcPx = new Double(appComponentDetails.PlacementX());
+                                                            Double dcPy = new Double(appComponentDetails.PlacementY());
+                                                            Double dcLx = new Double(appComponentDetails.LocationX());
+                                                            Double dcLy = new Double(appComponentDetails.LocationY());
+                                                                
+                                                            if(_debug)
+                                                            {
+                                                                System.out.println("[INFO] this is the current details name:"+appComponentDetails.Name);
+                                                                        
+                                                                if(appComponentDetails.Location!=null)
+                                                                {
+                                                                    System.out.println("[INFO] this is the current details locationX&locationY:"+appComponentDetails.LocationX()+"&"+appComponentDetails.LocationY());
+                                                                }
+                                                                        
+                                                                if(appComponentDetails.Placement!=null)
+                                                                {
+                                                                    System.out.println("[INFO] this is the current details placementX&placementY:"+appComponentDetails.PlacementX()+"&"+appComponentDetails.PlacementY());
+                                                                }
+                                                            }    
+                                                                                
+                                                            if(appComponentDetails.ComponentsObject instanceof BasicEditField)
+                                                            {
+                                                                
+                                                                
+                                                                BasicEditField bef = (BasicEditField) appComponentDetails.ComponentsObject;
+                                                                SeparatorField sf = new SeparatorField();
+                                                                
+                                                                if(_debug)
+                                                                {
+                                                                    if(appComponentDetails.ObjectColor == Color.BLACK)
+                                                                    {
+                                                                        System.out.println("[INFO] component color is BLACK");
+                                                                    }
+                                                                    
+                                                                    if(appComponentDetails.ObjectColor == Color.WHITE)
+                                                                    {
+                                                                        System.out.println("[INFO] component color is WHITE");
+                                                                    }
+                                                                }
+                                                                            
+                                                                if(appComponentDetails.ObjectColor!=Color.BLACK)
+                                                                {
+                                                                    // Set the color
+                                                                    //graphics.setColor(appComponentDetails.ObjectColor);
+                                                                }
+                                                                
+                                                                if(appComponentDetails.Event == null)
+                                                                {
+                                                                    appComponentDetails.Event = "";
+                                                                }
+                                                                            
+                                                                if(!appComponentDetails.Event.equals("Removal"))
+                                                                {
+                                                                    if(appComponentDetails.Events == null)
+                                                                    {
+                                                                        appComponentDetails.Events = new Stack();
+                                                                    }
+                                                                    
+                                                                    if((!appComponentDetails.Events.contains("Draw_Precise"))&&
+                                                                        (!appComponentDetails.Events.contains("Draw:Precise")))
+                                                                    { 
+                                                                        if(!_componentObjectStack.contains(bef))
+                                                                        {
+                                                                            //if(!bef.getText().equals(""))
+                                                                            {
+                                                                                _componentObjectStack.addElement(bef);
+                                                                                ///add(bef);    
+                                                                                
+                                                                                _componentObjectStack.addElement(sf);
+                                                                                ///add(sf);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        if(_componentObjectStack.contains(bef))
+                                                                        {
+                                                                            //if(!bef.getText().equals(""))
+                                                                            {
+                                                                                _componentObjectStack.removeElement(bef);
+                                                                                delete(bef);
+                                                                                
+                                                                                _componentObjectStack.removeElement(sf);
+                                                                                delete(sf);
+                                                                        
+                                                                            }
+                                                                    }
+                                                                        
+                                                                        //graphics.drawText(bef.getText(),dcPx.intValue(),dcPy.intValue());
+                                                                    }
+                                                                }
+                                                                
+                                                                if(appComponentDetails.Event.equals("Removal"))
+                                                                {
+                                                                    if(_componentObjectStack.contains(bef))
+                                                                    {
+                                                                        if(!bef.getText().equals(""))
+                                                                        {
+                                                                            //_componentObjectStack.removeElement(bef);
+                                                                            //_componentObjectStack.removeElement(sf);
+                                                                    
+                                                                            //delete(bef);
+                                                                            //delete(sf);
+                                                                            bef.setText("");
+                                                                        }
+                                                                    }
+                                                                }
+                                                            
+                                                                if(_debug)
+                                                                {
+                                                                    //System.out.println("[INFO] this is the current details name:"+appComponentDetails.Name);
+                                                                    //System.out.println("[INFO] this is the current details placement:"+appComponentDetails.Placement);
+                                                                    //System.out.println("[INFO] this is the current details location:"+appComponentDetails.Location);
+                                                                    //System.out.println("[INFO] this is the current details color:"+appComponentDetails.ObjectColor);
+                                                                }
+                                                            }
+                                                            
+                                                            if(appComponentDetails.ComponentsObject instanceof RichTextField)
+                                                            {
+                                                                RichTextField rtf = (RichTextField) appComponentDetails.ComponentsObject;
+                                                                SeparatorField sf = new SeparatorField();
+                                                                
+                                                                if(_debug)
+                                                                {
+                                                                    if(appComponentDetails.ObjectColor == Color.BLACK)
+                                                                    {
+                                                                        System.out.println("[INFO] component color is BLACK");
+                                                                    }
+                                                                    
+                                                                    if(appComponentDetails.ObjectColor == Color.WHITE)
+                                                                    {
+                                                                        System.out.println("[INFO] component color is WHITE");
+                                                                    }
+                                                                }
+                                                                        
+                                                                if(appComponentDetails.ObjectColor!=Color.BLACK)
+                                                                {
+                                                                    // Set the color
+                                                                    ///graphics.setColor(appComponentDetails.ObjectColor);
+                                                                }
+                                                                
+                                                                if(appComponentDetails.Event == null)
+                                                                {
+                                                                    appComponentDetails.Event = "";
+                                                                }
+                                                                            
+                                                                if(!appComponentDetails.Event.equals("Removal"))
+                                                                {
+                                                                    if(appComponentDetails.Events == null)
+                                                                    {
+                                                                        appComponentDetails.Events = new Stack();
+                                                                    }
+                                                                    
+                                                                    if((!appComponentDetails.Events.contains("Draw_Precise"))&&
+                                                                        (!appComponentDetails.Events.contains("Draw:Precise")))
+                                                                    {    
+                                                                        if(!_componentObjectStack.contains(rtf))
+                                                                        {
+                                                                            //if(rtf.getText().equals(""))
+                                                                            {
+                                                                                _componentObjectStack.addElement(rtf);
+                                                                                //add(rtf);    
+                                                                                ///insert(rtf,1);
+                                                                                
+                                                                                if(!rtf.getText().equals(""))
+                                                                                {
+                                                                                    _componentObjectStack.addElement(sf);
+                                                                                    ///insert(sf,2);
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        if(_componentObjectStack.contains(rtf))
+                                                                        {
+                                                                            //if(rtf.getText().equals(""))
+                                                                            {
+                                                                                _componentObjectStack.removeElement(rtf);
+                                                                                //_componentObjectStack.removeElement(sf);
+                                                                        
+                                                                                delete(rtf);
+                                                                                //delete(sf);
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        //graphics.drawText(rtf.getText(),dcPx.intValue(),dcPy.intValue());
+                                                                    }
+                                                                }  
+                                                                
+                                                                if(appComponentDetails.Event.equals("Removal"))
+                                                                {
+                                                                    if(_componentObjectStack.contains(rtf))
+                                                                    {
+                                                                        if(!rtf.getText().equals(""))
+                                                                        {
+                                                                            
+                                                                            //delete(sf);
+                                                                            rtf.setText("");
+                                                                            //_componentObjectStack.removeElement(rtf);
+                                                                            //delete(rtf);
+                                                                            
+                                                                            //_componentObjectStack.removeElement(sf);
+                                                                            //delete(sf);
+                                                                        }
+                                                                    }
+                                                                }
+                                                                
+                                                                if(_debug)
+                                                                {
+                                                                    //System.out.println("[INFO] this is the current details name:"+appComponentDetails.Name);
+                                                                    //System.out.println("[INFO] this is the current details placement:"+appComponentDetails.Placement);
+                                                                    //System.out.println("[INFO] this is the current details location:"+appComponentDetails.Location);
+                                                                    //System.out.println("[INFO] this is the current details color:"+appComponentDetails.ObjectColor);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                /*
+                                                if(_debug)
+                                                {
+                                                    System.out.println("[INFO] in the component manager about to add overlay business");
+                                                }
+                                                
+                                                // dump component manager and stack
+                                                if(_componentObjectStack !=null)
+                                                {
+                                                   if(_componentObjectStack.size() >0)
+                                                   {
+                                                        _componentObjectStack.removeAllElements();
+                                                        
+                                                        _componentsManager.deleteAll();
+                                                   } 
+                                                }
+                                                */
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // get Loaded Components
+                                            Vector appComponents = _islandApplicationManager.ApplicationEngine.GetComponentObjects();
+                                            
+                                            // enumerate object container (GuiGraphicDetails)
+                                            for(Enumeration e = appComponents.elements(); e.hasMoreElements();)
+                                            {
+                                                // paint graphics
+                                                islandSoftwareEngine.GraphicGuiDetails appComponentDetails = (islandSoftwareEngine.GraphicGuiDetails) e.nextElement();
+                                                
+                                                if(appComponentDetails !=null)
+                                                {
+                                                    
+                                                    Double dcPx = new Double(appComponentDetails.PlacementX());
+                                                    Double dcPy = new Double(appComponentDetails.PlacementY());
+                                                    Double dcLx = new Double(appComponentDetails.LocationX());
+                                                    Double dcLy = new Double(appComponentDetails.LocationY());
+                                                                            
+                                                    if(appComponentDetails.ComponentsObject instanceof BasicEditField)
+                                                    {
+                                                        
+                                                        BasicEditField bef = (BasicEditField) appComponentDetails.ComponentsObject;
+                                                        SeparatorField sf = new SeparatorField();
+                                                        
+                                                        if(_debug)
+                                                        {
+                                                            if(appComponentDetails.ObjectColor == Color.BLACK)
+                                                            {
+                                                                System.out.println("[INFO] component color is BLACK");
+                                                            }
+                                                            
+                                                            if(appComponentDetails.ObjectColor == Color.WHITE)
+                                                            {
+                                                                System.out.println("[INFO] component color is WHITE");
+                                                            }
+                                                        }
+                                                                    
+                                                        if(appComponentDetails.ObjectColor!=Color.BLACK)
+                                                        {
+                                                            // Set the color
+                                                            graphics.setColor(appComponentDetails.ObjectColor);
+                                                        }
+                                                        
+                                                        if((appComponentDetails.height>0)||(appComponentDetails.width>0))
+                                                        {
+                                                            //if(appComponentDetails.height>0)
+                                                            {
+                                                                //bef.
+                                                                //net.rim.device.api.ui.Field f = (Field)bef;
+                                                                //graphics.setExtent(appComponentDetails.width, appComponentDetails.height);
+                                                            }
+                                                        }
+    
+                                                        if(appComponentDetails.Event == null)
+                                                        {
+                                                            appComponentDetails.Event = "";
+                                                        }
+                                                                    
+                                                        if(!appComponentDetails.Event.equals("Removal"))
+                                                        {
+                                                            if(appComponentDetails.Events == null)
+                                                            {
+                                                                appComponentDetails.Events = new Stack();
+                                                            }
+                                                            
+                                                            if((!appComponentDetails.Events.contains("Draw_Precise"))&&
+                                                                (!appComponentDetails.Events.contains("Draw:Precise")))
+                                                            { 
+                                                                if(!_componentObjectStack.contains(bef))
+                                                                {
+                                                                    //if(!bef.getText().equals(""))
+                                                                    {
+                                                                        _componentObjectStack.addElement(bef);
+                                                                        add(bef);    
+                                                                        
+                                                                        _componentObjectStack.addElement(sf);
+                                                                        add(sf);
+                                                                    }
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                if(_componentObjectStack.contains(bef))
+                                                                {
+                                                                    //if(!bef.getText().equals(""))
+                                                                    {
+                                                                        _componentObjectStack.removeElement(bef);
+                                                                        delete(bef);
+                                                                        
+                                                                        _componentObjectStack.removeElement(sf);
+                                                                        delete(sf);
+                                                                
+                                                                    }
+                                                            }
+                                                                
+                                                                graphics.drawText(bef.getText(),dcPx.intValue(),dcPy.intValue());
+                                                            }
+                                                        }
+                                                        
+                                                        if(appComponentDetails.Event.equals("Removal"))
+                                                        {
+                                                            if(_componentObjectStack.contains(bef))
+                                                            {
+                                                                if(!bef.getText().equals(""))
+                                                                {
+                                                                    //_componentObjectStack.removeElement(bef);
+                                                                    //_componentObjectStack.removeElement(sf);
+                                                            
+                                                                    //delete(bef);
+                                                                    //delete(sf);
+                                                                    bef.setText("");
+                                                                }
+                                                            }
+                                                        }
+                                                    
+                                                        if(_debug)
+                                                        {
+                                                            //System.out.println("[INFO] this is the current details name:"+appComponentDetails.Name);
+                                                            //System.out.println("[INFO] this is the current details placement:"+appComponentDetails.Placement);
+                                                            //System.out.println("[INFO] this is the current details location:"+appComponentDetails.Location);
+                                                            //System.out.println("[INFO] this is the current details color:"+appComponentDetails.ObjectColor);
+                                                        }
+                                                    }
+                                                    
+                                                    if(appComponentDetails.ComponentsObject instanceof RichTextField)
+                                                    {
+                                                        RichTextField rtf = (RichTextField) appComponentDetails.ComponentsObject;
+                                                        SeparatorField sf = new SeparatorField();
+                                                        
+                                                        if(_debug)
+                                                        {
+                                                            if(appComponentDetails.ObjectColor == Color.BLACK)
+                                                            {
+                                                                System.out.println("[INFO] component color is BLACK");
+                                                            }
+                                                            
+                                                            if(appComponentDetails.ObjectColor == Color.WHITE)
+                                                            {
+                                                                System.out.println("[INFO] component color is WHITE");
+                                                            }
+                                                        }
+                                                        
+                                                        if(appComponentDetails.ObjectColor!=Color.BLACK)
+                                                        {
+                                                            // Set the color
+                                                            graphics.setColor(appComponentDetails.ObjectColor);
+                                                        }
+                                                        
+                                                        if(appComponentDetails.Event == null)
+                                                        {
+                                                            appComponentDetails.Event = "";
+                                                        }
+                                                                    
+                                                        if(!appComponentDetails.Event.equals("Removal"))
+                                                        {
+                                                            if(appComponentDetails.Events == null)
+                                                            {
+                                                                appComponentDetails.Events = new Stack();
+                                                            }
+                                                            
+                                                            if((!appComponentDetails.Events.contains("Draw_Precise"))&&
+                                                                (!appComponentDetails.Events.contains("Draw:Precise")))
+                                                            {    
+                                                                if(!_componentObjectStack.contains(rtf))
+                                                                {
+                                                                    //if(rtf.getText().equals(""))
+                                                                    {
+                                                                        _componentObjectStack.addElement(rtf);
+                                                                        //add(rtf);    
+                                                                        insert(rtf,1);
+                                                                        
+                                                                        if(!rtf.getText().equals(""))
+                                                                        {
+                                                                            _componentObjectStack.addElement(sf);
+                                                                            insert(sf,2);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                if(_componentObjectStack.contains(rtf))
+                                                                {
+                                                                    //if(rtf.getText().equals(""))
+                                                                    {
+                                                                        _componentObjectStack.removeElement(rtf);
+                                                                        //_componentObjectStack.removeElement(sf);
+                                                                
+                                                                        delete(rtf);
+                                                                        //delete(sf);
+                                                                    }
+                                                                }
+                                                                
+                                                                graphics.drawText(rtf.getText(),dcPx.intValue(),dcPy.intValue());
+                                                            }
+                                                        }  
+                                                        
+                                                        if(appComponentDetails.Event.equals("Removal"))
+                                                        {
+                                                            if(_componentObjectStack.contains(rtf))
+                                                            {
+                                                                if(!rtf.getText().equals(""))
+                                                                {
+                                                                    
+                                                                    //delete(sf);
+                                                                    rtf.setText("");
+                                                                    //_componentObjectStack.removeElement(rtf);
+                                                                    //delete(rtf);
+                                                                    
+                                                                    //_componentObjectStack.removeElement(sf);
+                                                                    //delete(sf);
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        if(_debug)
+                                                        {
+                                                            //System.out.println("[INFO] this is the current details name:"+appComponentDetails.Name);
+                                                            //System.out.println("[INFO] this is the current details placement:"+appComponentDetails.Placement);
+                                                            //System.out.println("[INFO] this is the current details location:"+appComponentDetails.Location);
+                                                            //System.out.println("[INFO] this is the current details color:"+appComponentDetails.ObjectColor);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }

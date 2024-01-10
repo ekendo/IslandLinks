@@ -1,0 +1,541 @@
+select name, super_name from dm_type
+TYPE QR 0000000000000000
+ NULL 
+2
+  name  STRING S 27
+  super_name  STRING S 40
+OBJ QR 2
+A 7 dm_type
+A 0 
+0OBJ QR 2
+A 9 dmi_index
+A 0 
+0OBJ QR 2
+A 13 dmi_type_info
+A 0 
+0OBJ QR 2
+A 10 dmi_vstamp
+A 0 
+0OBJ QR 2
+A 12 dmi_sequence
+A 0 
+0OBJ QR 2
+A 12 dm_blobstore
+A 8 dm_store
+0OBJ QR 2
+A 15 dm_extern_store
+A 8 dm_store
+0OBJ QR 2
+A 14 dm_extern_file
+A 15 dm_extern_store
+0OBJ QR 2
+A 13 dm_extern_url
+A 15 dm_extern_store
+0OBJ QR 2
+A 14 dm_extern_free
+A 15 dm_extern_store
+0OBJ QR 2
+A 11 dmr_content
+A 0 
+0OBJ QR 2
+A 15 dm_outputdevice
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_method
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_router
+A 12 dm_sysobject
+0OBJ QR 2
+A 13 dm_federation
+A 12 dm_sysobject
+0OBJ QR 2
+A 12 dm_alias_set
+A 0 
+0OBJ QR 2
+A 11 dm_ca_store
+A 8 dm_store
+0OBJ QR 2
+A 9 dm_format
+A 0 
+0OBJ QR 2
+A 17 dm_fulltext_index
+A 0 
+0OBJ QR 2
+A 14 dm_dump_record
+A 0 
+0OBJ QR 2
+A 22 dmi_dump_object_record
+A 0 
+0OBJ QR 2
+A 14 dm_load_record
+A 0 
+0OBJ QR 2
+A 22 dmi_load_object_record
+A 0 
+0OBJ QR 2
+A 14 dmi_queue_item
+A 0 
+0OBJ QR 2
+A 11 dm_activity
+A 12 dm_sysobject
+0OBJ QR 2
+A 10 dm_process
+A 12 dm_sysobject
+0OBJ QR 2
+A 11 dmi_package
+A 0 
+0OBJ QR 2
+A 11 dm_workflow
+A 0 
+0OBJ QR 2
+A 13 dm_audittrail
+A 0 
+0OBJ QR 2
+A 20 dmi_audittrail_attrs
+A 0 
+0OBJ QR 2
+A 17 dm_audittrail_acl
+A 13 dm_audittrail
+0OBJ QR 2
+A 19 dm_audittrail_group
+A 13 dm_audittrail
+0OBJ QR 2
+A 8 dm_query
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_script
+A 12 dm_sysobject
+0OBJ QR 2
+A 13 dm_smart_list
+A 12 dm_sysobject
+0OBJ QR 2
+A 12 dm_procedure
+A 12 dm_sysobject
+0OBJ QR 2
+A 6 dm_job
+A 12 dm_sysobject
+0OBJ QR 2
+A 15 dm_cache_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 17 dmi_change_record
+A 0 
+0OBJ QR 2
+A 15 dm_migrate_rule
+A 6 dm_job
+0OBJ QR 2
+A 13 dm_shmeconfig
+A 0 
+0OBJ QR 2
+A 14 dm_ldap_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 13 dm_ssa_policy
+A 12 dm_sysobject
+0OBJ QR 2
+A 22 dm_relation_ssa_policy
+A 11 dm_relation
+0OBJ QR 2
+A 17 dm_category_class
+A 12 dm_sysobject
+0OBJ QR 2
+A 11 dm_category
+A 9 dm_folder
+0OBJ QR 2
+A 11 dm_taxonomy
+A 11 dm_category
+0OBJ QR 2
+A 18 dm_category_assign
+A 11 dm_relation
+0OBJ QR 2
+A 9 dm_docset
+A 11 dm_document
+0OBJ QR 2
+A 13 dm_docset_run
+A 11 dm_document
+0OBJ QR 2
+A 12 dm_ci_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 21 dm_sync_list_relation
+A 11 dm_relation
+0OBJ QR 2
+A 11 kapture_doc
+A 11 dm_document
+0OBJ QR 2
+A 18 dm_state_extension
+A 11 dm_relation
+0OBJ QR 2
+A 15 dm_job_sequence
+A 12 dm_sysobject
+0OBJ QR 2
+A 13 dm_state_type
+A 0 
+0OBJ QR 2
+A 10 dm_locator
+A 12 dm_sysobject
+0OBJ QR 2
+A 14 dm_job_request
+A 12 dm_sysobject
+0OBJ QR 2
+A 12 dm_qual_comp
+A 12 dm_sysobject
+0OBJ QR 2
+A 12 dm_component
+A 12 dm_sysobject
+0OBJ QR 2
+A 14 dm_application
+A 12 dm_sysobject
+0OBJ QR 2
+A 10 dm_app_ref
+A 12 dm_sysobject
+0OBJ QR 2
+A 7 dm_java
+A 11 dm_document
+0OBJ QR 2
+A 20 dm_cryptographic_key
+A 12 dm_sysobject
+0OBJ QR 2
+A 25 dm_public_key_certificate
+A 12 dm_sysobject
+0OBJ QR 2
+A 23 dm_network_location_map
+A 12 dm_sysobject
+0OBJ QR 2
+A 13 dm_acs_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 18 dm_message_archive
+A 11 dm_document
+0OBJ QR 2
+A 16 dm_message_route
+A 0 
+0OBJ QR 2
+A 18 dm_message_address
+A 0 
+0OBJ QR 2
+A 20 dm_message_user_data
+A 0 
+0OBJ QR 2
+A 21 dm_message_attachment
+A 0 
+0OBJ QR 2
+A 16 dm_email_message
+A 11 dm_document
+0OBJ QR 2
+A 16 dm_media_profile
+A 12 dm_sysobject
+0OBJ QR 2
+A 12 dmc_richtext
+A 12 dm_sysobject
+0OBJ QR 2
+A 11 dmc_comment
+A 12 dmc_richtext
+0OBJ QR 2
+A 9 dmc_topic
+A 9 dm_folder
+0OBJ QR 2
+A 15 dmc_readcomment
+A 0 
+0OBJ QR 2
+A 12 dmc_notepage
+A 11 dm_document
+0OBJ QR 2
+A 8 dmc_room
+A 9 dm_folder
+0OBJ QR 2
+A 11 dm_retainer
+A 12 dm_sysobject
+0OBJ QR 2
+A 17 dm_esign_template
+A 11 dm_document
+0OBJ QR 2
+A 21 dm_format_preferences
+A 11 dm_document
+0OBJ QR 2
+A 14 dm_menu_system
+A 11 dm_document
+0OBJ QR 2
+A 10 dmc_module
+A 9 dm_folder
+0OBJ QR 2
+A 7 dmc_jar
+A 11 dm_document
+0OBJ QR 2
+A 16 dmc_java_library
+A 9 dm_folder
+0OBJ QR 2
+A 15 dmc_aspect_type
+A 10 dmc_module
+0OBJ QR 2
+A 19 dmc_aspect_relation
+A 0 
+0OBJ QR 2
+A 21 dmc_validation_module
+A 10 dmc_module
+0OBJ QR 2
+A 23 dmc_validation_relation
+A 11 dm_relation
+0OBJ QR 2
+A 14 dm_webc_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 14 dm_webc_target
+A 12 dm_sysobject
+0OBJ QR 2
+A 22 dmc_workqueue_category
+A 9 dm_folder
+0OBJ QR 2
+A 13 dmc_workqueue
+A 0 
+0OBJ QR 2
+A 20 dmc_workqueue_policy
+A 0 
+0OBJ QR 2
+A 25 dmc_workqueue_doc_profile
+A 0 
+0OBJ QR 2
+A 26 dmc_workqueue_user_profile
+A 0 
+0OBJ QR 2
+A 17 dmi_wf_attachment
+A 0 
+0OBJ QR 2
+A 22 dmc_completed_workflow
+A 0 
+0OBJ QR 2
+A 22 dmc_completed_workitem
+A 0 
+0OBJ QR 2
+A 24 dmc_transition_condition
+A 0 
+0OBJ QR 2
+A 23 dmc_composite_predicate
+A 0 
+0OBJ QR 2
+A 21 dmc_wf_package_schema
+A 11 dm_relation
+0OBJ QR 2
+A 12 dmi_wf_timer
+A 0 
+0OBJ QR 2
+A 17 dmc_module_config
+A 0 
+0OBJ QR 2
+A 25 dmc_tcf_activity_template
+A 11 dm_document
+0OBJ QR 2
+A 16 dmc_tcf_activity
+A 11 dm_document
+0OBJ QR 2
+A 20 dmc_wf_package_skill
+A 11 dm_relation
+0OBJ QR 2
+A 23 dmc_routecase_condition
+A 0 
+0OBJ QR 2
+A 13 dm_xml_config
+A 11 dm_document
+0OBJ QR 2
+A 18 dm_xml_style_sheet
+A 11 dm_document
+0OBJ QR 2
+A 11 dm_xml_zone
+A 11 dm_document
+0OBJ QR 2
+A 18 dm_xml_custom_code
+A 11 dm_document
+0OBJ QR 2
+A 11 dmi_session
+A 0 
+0OBJ QR 2
+A 18 dmi_transactionlog
+A 0 
+0OBJ QR 2
+A 12 dmi_recovery
+A 0 
+0OBJ QR 2
+A 16 dm_docbaseid_map
+A 0 
+0OBJ QR 2
+A 11 dm_assembly
+A 0 
+0OBJ QR 2
+A 18 dm_ftengine_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 23 dm_ftindex_agent_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 18 dm_xml_application
+A 9 dm_folder
+0OBJ QR 2
+A 14 dmi_subcontent
+A 0 
+0OBJ QR 2
+A 6 dm_acl
+A 0 
+0OBJ QR 2
+A 7 dm_user
+A 0 
+0OBJ QR 2
+A 8 dm_group
+A 0 
+0OBJ QR 2
+A 12 dm_sysobject
+A 0 
+0OBJ QR 2
+A 15 dmr_containment
+A 0 
+0OBJ QR 2
+A 13 dmi_expr_code
+A 12 dm_sysobject
+0OBJ QR 2
+A 6 dm_key
+A 0 
+0OBJ QR 2
+A 15 dm_value_assist
+A 0 
+0OBJ QR 2
+A 13 dm_value_list
+A 15 dm_value_assist
+0OBJ QR 2
+A 14 dm_value_query
+A 15 dm_value_assist
+0OBJ QR 2
+A 13 dm_value_func
+A 15 dm_value_assist
+0OBJ QR 2
+A 13 dm_expression
+A 0 
+0OBJ QR 2
+A 15 dm_literal_expr
+A 13 dm_expression
+0OBJ QR 2
+A 15 dm_builtin_expr
+A 13 dm_expression
+0OBJ QR 2
+A 12 dm_func_expr
+A 13 dm_expression
+0OBJ QR 2
+A 12 dm_cond_expr
+A 12 dm_func_expr
+0OBJ QR 2
+A 15 dm_cond_id_expr
+A 12 dm_cond_expr
+0OBJ QR 2
+A 10 dm_dd_info
+A 0 
+0OBJ QR 2
+A 15 dm_scope_config
+A 0 
+0OBJ QR 2
+A 17 dm_display_config
+A 0 
+0OBJ QR 2
+A 14 dm_nls_dd_info
+A 0 
+0OBJ QR 2
+A 9 dm_domain
+A 0 
+0OBJ QR 2
+A 14 dm_aggr_domain
+A 9 dm_domain
+0OBJ QR 2
+A 14 dm_mount_point
+A 12 dm_sysobject
+0OBJ QR 2
+A 11 dm_location
+A 12 dm_sysobject
+0OBJ QR 2
+A 17 dm_docbase_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 16 dm_server_config
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_policy
+A 12 dm_sysobject
+0OBJ QR 2
+A 18 dmi_dd_common_info
+A 0 
+0OBJ QR 2
+A 16 dmi_dd_attr_info
+A 18 dmi_dd_common_info
+0OBJ QR 2
+A 16 dmi_dd_type_info
+A 18 dmi_dd_common_info
+0OBJ QR 2
+A 11 dm_relation
+A 0 
+0OBJ QR 2
+A 16 dm_relation_type
+A 0 
+0OBJ QR 2
+A 14 dm_foreign_key
+A 16 dm_relation_type
+0OBJ QR 2
+A 12 dmi_registry
+A 0 
+0OBJ QR 2
+A 13 dm_registered
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_folder
+A 12 dm_sysobject
+0OBJ QR 2
+A 10 dm_cabinet
+A 9 dm_folder
+0OBJ QR 2
+A 11 dm_document
+A 12 dm_sysobject
+0OBJ QR 2
+A 9 dm_staged
+A 11 dm_document
+0OBJ QR 2
+A 9 dm_plugin
+A 11 dm_document
+0OBJ QR 2
+A 7 dm_note
+A 12 dm_sysobject
+0OBJ QR 2
+A 8 dm_store
+A 0 
+0OBJ QR 2
+A 12 dm_filestore
+A 8 dm_store
+0OBJ QR 2
+A 13 dmi_otherfile
+A 0 
+0OBJ QR 2
+A 15 dm_opticalstore
+A 12 dm_filestore
+0OBJ QR 2
+A 14 dm_linkedstore
+A 8 dm_store
+0OBJ QR 2
+A 14 dmi_linkrecord
+A 0 
+0OBJ QR 2
+A 19 dm_distributedstore
+A 8 dm_store
+0OBJ QR 2
+A 18 dmi_replica_record
+A 0 
+0OBJ QR 2
+A 20 dmi_dist_comp_record
+A 0 
+0OBJ QR 2
+A 12 dm_reference
+A 0 
+0OBJ QR 2
+A 12 dmi_workitem
+A 0 
+0OBJ QR 2
+A 15 dm_business_pro
+A 12 dm_sysobject
+0OBJ QR 2
+A 11 dm_decision
+A 12 dm_sysobject
+0

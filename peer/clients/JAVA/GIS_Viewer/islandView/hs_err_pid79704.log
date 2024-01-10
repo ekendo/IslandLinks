@@ -1,0 +1,213 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d09032e, pid=79704, tid=77132
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_03-b07 mixed mode)
+# Problematic frame:
+# C  [awt.dll+0x2032e]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x4930dd58):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=77132]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x02a811ec
+
+Registers:
+EAX=0x02a811ea, EBX=0x00000000, ECX=0x00000000, EDX=0x02a80fbc
+ESP=0x4c26ef90, EBP=0x00000051, ESI=0x17571732, EDI=0x07bfff74
+EIP=0x6d09032e, EFLAGS=0x00010246
+
+Top of Stack: (sp=0x4c26ef90)
+0x4c26ef90:   407a7681 00000015 4c26f184 00000104
+0x4c26efa0:   6d0723f6 02d1c384 00000bb8 00000051
+0x4c26efb0:   00000003 17571732 8e370818 407a7681
+0x4c26efc0:   494c4c10 00000015 000008b0 4c26f090
+0x4c26efd0:   6d18e778 4c26f084 4930dd58 431c8440
+0x4c26efe0:   431c8440 407a7681 44eabc08 494c4c10
+0x4c26eff0:   00000104 ffffffff 6d18e778 48f1aeb8
+0x4c26f000:   4931ee48 000003e8 17571732 3ff5d424 
+
+Instructions: (pc=0x6d09032e)
+0x6d09031e:   8b c6 d3 f8 33 db 83 c7 04 8d 0c 42 03 c1 33 c9
+0x6d09032e:   8a 48 02 8a 58 01 81 c9 00 ff ff ff c1 e1 08 0b 
+
+
+Stack: [0x4c230000,0x4c270000),  sp=0x4c26ef90,  free space=251k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [awt.dll+0x2032e]
+
+[error occurred during error reporting, step 120, id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.java2d.loops.ScaledBlit.Scale(Lsun/java2d/SurfaceData;Lsun/java2d/SurfaceData;Ljava/awt/Composite;Lsun/java2d/pipe/Region;IIIIDDDD)V+0
+j  sun.java2d.pipe.DrawImage.scaleSurfaceData(Lsun/java2d/SunGraphics2D;Lsun/java2d/pipe/Region;Lsun/java2d/SurfaceData;Lsun/java2d/SurfaceData;Lsun/java2d/loops/SurfaceType;Lsun/java2d/loops/SurfaceType;IIIIDDDD)Z+72
+j  sun.java2d.pipe.DrawImage.renderImageScale(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;Ljava/awt/Color;IIIIIDDDD)Z+95
+j  sun.java2d.pipe.DrawImage.tryCopyOrScale(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;IIIILjava/awt/Color;I[D)Z+176
+j  sun.java2d.pipe.DrawImage.transformImage(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;IILjava/awt/geom/AffineTransform;I)V+281
+j  sun.java2d.pipe.DrawImage.transformImage(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;Ljava/awt/geom/AffineTransform;Ljava/awt/image/ImageObserver;)Z+17
+j  sun.java2d.pipe.ValidatePipe.transformImage(Lsun/java2d/SunGraphics2D;Ljava/awt/Image;Ljava/awt/geom/AffineTransform;Ljava/awt/image/ImageObserver;)Z+17
+j  sun.java2d.SunGraphics2D.drawImage(Ljava/awt/Image;Ljava/awt/geom/AffineTransform;Ljava/awt/image/ImageObserver;)Z+35
+j  sun.java2d.SunGraphics2D.drawRenderedImage(Ljava/awt/image/RenderedImage;Ljava/awt/geom/AffineTransform;)V+291
+j  org.geotools.renderer.lite.gridcoverage2d.GridCoverageRenderer.paint(Ljava/awt/Graphics2D;Lorg/geotools/coverage/grid/GridCoverage2D;Lorg/geotools/styling/RasterSymbolizer;)V+1823
+j  org.geotools.renderer.lite.StreamingRenderer.renderRaster(Ljava/awt/Graphics2D;Lorg/geotools/feature/Feature;Lorg/geotools/styling/RasterSymbolizer;Lorg/opengis/referencing/crs/CoordinateReferenceSystem;Ljavax/media/jai/util/Range;)V+105
+j  org.geotools.renderer.lite.StreamingRenderer.processSymbolizers(Ljava/awt/Graphics2D;Lorg/geotools/feature/Feature;[Lorg/geotools/styling/Symbolizer;Ljavax/media/jai/util/Range;Ljava/awt/geom/AffineTransform;Lorg/opengis/referencing/crs/CoordinateReferenceSystem;)V+41
+j  org.geotools.renderer.lite.StreamingRenderer.process(Lorg/geotools/feature/Feature;Lorg/geotools/renderer/lite/LiteFeatureTypeStyle;Ljavax/media/jai/util/Range;Ljava/awt/geom/AffineTransform;Lorg/opengis/referencing/crs/CoordinateReferenceSystem;)V+91
+j  org.geotools.renderer.lite.StreamingRenderer.processStylers(Ljava/awt/Graphics2D;Lorg/geotools/map/MapLayer;Ljava/awt/geom/AffineTransform;Lorg/opengis/referencing/crs/CoordinateReferenceSystem;Lcom/vividsolutions/jts/geom/Envelope;Ljava/awt/Rectangle;)V+292
+j  org.geotools.renderer.lite.StreamingRenderer.paint(Ljava/awt/Graphics2D;Ljava/awt/Rectangle;Lcom/vividsolutions/jts/geom/Envelope;Ljava/awt/geom/AffineTransform;)V+346
+j  org.geotools.renderer.lite.StreamingRenderer.paint(Ljava/awt/Graphics2D;Ljava/awt/Rectangle;Lcom/vividsolutions/jts/geom/Envelope;)V+26
+j  org.geotools.gui.swing.JMapPane.paintComponent(Ljava/awt/Graphics;)V+391
+j  javax.swing.JComponent.paint(Ljava/awt/Graphics;)V+260
+j  javax.swing.JComponent.paintWithOffscreenBuffer(Ljavax/swing/JComponent;Ljava/awt/Graphics;IIIILjava/awt/Image;)V+174
+j  javax.swing.JComponent.paintDoubleBuffered(Ljavax/swing/JComponent;Ljava/awt/Component;Ljava/awt/Graphics;IIII)Z+131
+j  javax.swing.JComponent._paintImmediately(IIII)V+739
+j  javax.swing.JComponent.paintImmediately(IIII)V+83
+j  javax.swing.RepaintManager.paintDirtyRegions()V+314
+j  javax.swing.SystemEventQueueUtilities$ComponentWorkRequest.run()V+32
+j  java.awt.event.InvocationEvent.dispatch()V+47
+j  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V+26
+j  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z+233
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00036bd8 JavaThread "DestroyJavaVM" [_thread_blocked, id=79728]
+=>0x4930dd58 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=77132]
+  0x492a8978 JavaThread "AWT-Shutdown" [_thread_blocked, id=76060]
+  0x4927cbf0 JavaThread "AWT-Windows" daemon [_thread_in_native, id=79756]
+  0x48e4c558 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=79792]
+  0x49210e08 JavaThread "Timer-0" daemon [_thread_blocked, id=79824]
+  0x4920de18 JavaThread "WeakCollectionCleaner" daemon [_thread_blocked, id=76232]
+  0x00a92748 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=76184]
+  0x00a913c0 JavaThread "CompilerThread0" daemon [_thread_blocked, id=77984]
+  0x00a906f0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=77284]
+  0x00a87788 JavaThread "Finalizer" daemon [_thread_blocked, id=79848]
+  0x00a862f8 JavaThread "Reference Handler" daemon [_thread_blocked, id=79784]
+
+Other Threads:
+  0x00a83928 VMThread [id=79776]
+  0x00a90550 WatcherThread [id=76252]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 72576K, used 14423K [0x02ad0000, 0x07990000, 0x07990000)
+  eden space 64512K,  22% used [0x02ad0000, 0x038e5de8, 0x069d0000)
+  from space 8064K,   0% used [0x071b0000, 0x071b0000, 0x07990000)
+  to   space 8064K,   0% used [0x069d0000, 0x069d0000, 0x071b0000)
+ tenured generation   total 967936K, used 7608K [0x07990000, 0x42ad0000, 0x42ad0000)
+   the space 967936K,   0% used [0x07990000, 0x080fe2f8, 0x080fe400, 0x42ad0000)
+ compacting perm gen  total 16896K, used 16664K [0x42ad0000, 0x43b50000, 0x46ad0000)
+   the space 16896K,  98% used [0x42ad0000, 0x43b16078, 0x43b16200, 0x43b50000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x0040c000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\java.exe
+0x7c900000 - 0x7c9b0000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f5000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e70000 - 0x77f01000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77c10000 - 0x77c68000 	C:\WINDOWS\system32\MSVCRT.dll
+0x6d6b0000 - 0x6d836000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\client\jvm.dll
+0x7e410000 - 0x7e4a0000 	C:\WINDOWS\system32\USER32.dll
+0x77f10000 - 0x77f57000 	C:\WINDOWS\system32\GDI32.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x76390000 - 0x763ad000 	C:\WINDOWS\system32\IMM32.DLL
+0x6d2f0000 - 0x6d2f8000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\hpi.dll
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d680000 - 0x6d68c000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\verify.dll
+0x6d370000 - 0x6d38d000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\java.dll
+0x6d6a0000 - 0x6d6af000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\zip.dll
+0x6d070000 - 0x6d1d7000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\awt.dll
+0x73000000 - 0x73026000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x774e0000 - 0x7761d000 	C:\WINDOWS\system32\ole32.dll
+0x6d3e0000 - 0x6d3ed000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\JdbcOdbc.dll
+0x74320000 - 0x7435d000 	C:\WINDOWS\system32\ODBC32.dll
+0x5d090000 - 0x5d12a000 	C:\WINDOWS\system32\COMCTL32.dll
+0x7c9c0000 - 0x7d1d5000 	C:\WINDOWS\system32\SHELL32.dll
+0x77f60000 - 0x77fd6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x763b0000 - 0x763f9000 	C:\WINDOWS\system32\comdlg32.dll
+0x773d0000 - 0x774d3000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2982_x-ww_ac3f9c03\comctl32.dll
+0x49bc0000 - 0x49bd7000 	C:\WINDOWS\system32\odbcint.dll
+0x4dd40000 - 0x4dd84000 	C:\WINDOWS\System32\odbcjt32.dll
+0x49be0000 - 0x49d50000 	C:\WINDOWS\System32\msjet40.dll
+0x49d50000 - 0x49de5000 	C:\WINDOWS\System32\mswstr10.dll
+0x77120000 - 0x771ac000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x5d130000 - 0x5d13e000 	C:\WINDOWS\System32\odbcji32.dll
+0x4a200000 - 0x4a20d000 	C:\WINDOWS\System32\msjter40.dll
+0x4a210000 - 0x4a236000 	C:\WINDOWS\System32\MSJINT40.DLL
+0x77fe0000 - 0x77ff1000 	C:\WINDOWS\system32\Secur32.dll
+0x4ac80000 - 0x4accc000 	C:\WINDOWS\System32\msrd3x40.dll
+0x76fd0000 - 0x7704f000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77050000 - 0x77115000 	C:\WINDOWS\system32\COMRes.dll
+0x77c00000 - 0x77c08000 	C:\WINDOWS\system32\VERSION.dll
+0x4b190000 - 0x4b1ca000 	C:\WINDOWS\System32\msjtes40.dll
+0x4b5e0000 - 0x4b5eb000 	C:\WINDOWS\system32\VBAJET32.DLL
+0x4ba00000 - 0x4ba62000 	C:\WINDOWS\system32\expsrv.dll
+0x5ad70000 - 0x5ada8000 	C:\WINDOWS\system32\uxtheme.dll
+0x73760000 - 0x737a9000 	C:\WINDOWS\system32\ddraw.dll
+0x73bc0000 - 0x73bc6000 	C:\WINDOWS\system32\DCIMAN32.dll
+0x73940000 - 0x73a10000 	C:\WINDOWS\system32\D3DIM700.DLL
+0x6d2b0000 - 0x6d2ed000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\fontmanager.dll
+0x74720000 - 0x7476b000 	C:\WINDOWS\system32\MSCTF.dll
+0x755c0000 - 0x755ee000 	C:\WINDOWS\system32\msctfime.ime
+0x6d530000 - 0x6d543000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\net.dll
+0x71ab0000 - 0x71ac7000 	C:\WINDOWS\system32\WS2_32.dll
+0x71aa0000 - 0x71aa8000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d550000 - 0x6d559000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\nio.dll
+0x4c270000 - 0x4c30a000 	C:\PROGRA~1\NEWDOT~1\NEWDOT~2.DLL
+0x4c310000 - 0x4c434000 	C:\WINDOWS\system32\urlmon.dll
+0x4c440000 - 0x4c485000 	C:\WINDOWS\system32\iertutil.dll
+0x4c490000 - 0x4c55f000 	C:\WINDOWS\system32\WININET.dll
+0x4c560000 - 0x4c569000 	C:\WINDOWS\system32\Normaliz.dll
+0x77a80000 - 0x77b14000 	C:\WINDOWS\system32\CRYPT32.dll
+0x77b20000 - 0x77b32000 	C:\WINDOWS\system32\MSASN1.dll
+0x77920000 - 0x77a13000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x71b20000 - 0x71b32000 	C:\WINDOWS\system32\MPR.dll
+0x76c30000 - 0x76c5e000 	C:\WINDOWS\system32\WINTRUST.dll
+0x76c90000 - 0x76cb8000 	C:\WINDOWS\system32\IMAGEHLP.dll
+0x4c7e0000 - 0x4caa5000 	C:\WINDOWS\system32\xpsp2res.dll
+0x6d200000 - 0x6d22f000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\cmm.dll
+0x6d430000 - 0x6d44f000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\jpeg.dll
+0x4cd00000 - 0x4cd28000 	C:\WINDOWS\system32\rsaenh.dll
+0x769c0000 - 0x76a73000 	C:\WINDOWS\system32\USERENV.dll
+0x5b860000 - 0x5b8b4000 	C:\WINDOWS\system32\netapi32.dll
+0x71a50000 - 0x71a8f000 	C:\WINDOWS\System32\mswsock.dll
+0x76f20000 - 0x76f47000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76fb0000 - 0x76fb8000 	C:\WINDOWS\System32\winrnr.dll
+0x76f60000 - 0x76f8c000 	C:\WINDOWS\system32\WLDAP32.dll
+0x76fc0000 - 0x76fc6000 	C:\WINDOWS\system32\rasadhlp.dll
+0x6d230000 - 0x6d253000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\dcpr.dll
+0x4cd30000 - 0x4d13e000 	C:\Program Files\Java\jdk1.5.0_03\jre\bin\mlib_jai_mmx.dll
+
+VM Arguments:
+jvm_args: -Xms1024m -Xmx1024m
+java_command: com.campaignlocal.targetIQ.main.ViewerManager
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_01\
+CLASSPATH=.;.;C:\PROGRA~1\JMF21~1.1E\lib\sound.jar;C:\PROGRA~1\JMF21~1.1E\lib\jmf.jar;C:\PROGRA~1\JMF21~1.1E\lib;
+PATH=C:\Program Files\Java\jdk1.6.0_01\jre\bin;C:\Perl\bin\;C:\Oracle\product\10.1.0\Client_2\bin;C:\Oracle\product\09.2.0\Client\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\Oracle\product\10.1.0\Client_1\bin;C:\Oracle\product\10.1.0\Client_1\jre\1.4.2\bin\client;C:\Oracle\product\10.1.0\Client_1\jre\1.4.2\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\cvsnt;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\MySQL\MySQL Server 5.0\bin;C:\Program Files\maven-2.0.5\bin;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 15 Model 2 Stepping 7, GenuineIntel
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 2
+
+CPU:total 1 family 15, cmov, cx8, fxsr, mmx, sse, sse2, ht
+
+Memory: 4k page, physical 1046868k(180844k free), swap 3155292k(310812k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_03-b07) for windows-x86, built on Apr 13 2005 02:07:01 by "java_re" with MS VC++ 6.0
+

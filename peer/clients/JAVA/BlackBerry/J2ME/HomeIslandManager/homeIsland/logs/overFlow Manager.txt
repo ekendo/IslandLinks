@@ -1,0 +1,183 @@
+_overFlow = new FlowFieldManager(FlowFieldManager.USE_ALL_HEIGHT|FlowFieldManager.USE_ALL_WIDTH)
+            {
+                public void paint(Graphics graphics)
+                {
+                    if(_applicationIsRunning)
+                    {
+                        try
+                        {
+                            if(buttonLabels != null && !buttonLabels.isEmpty() && !_loadedLabels)
+                            {
+                                //We need to draw labels over our buttons - to do so, we need to create a series of managers to handle our layout:
+                                RichTextField buttonField;
+                                String theseValues;
+                                double xCoord;
+                                double yCoord;
+                                double thisWidth;
+                                double SixButtonWidth = super.getWidth() / 6;
+                                int testWidth = super.getWidth();
+                                int testHeight = super.getVisibleHeight();
+                                double firstRowHeight = (super.getVisibleHeight() / 12) * 2;  //For Row 2
+                                String buttonSpaces = "";
+                                Font newFont;
+                                int fontWidth;
+                                Font fonts[] = new Font[1];
+                                fonts[0] = Font.getDefault().derive(Font.PLAIN,((int) ((this.getHeight() / 2) + 0.5F)));
+                                
+                                //We need to create a manager to take up the top two rows:
+                                fontWidth = Font.getDefault().getAdvance(' ');
+                                fontWidth = ((int) ((this.getWidth()/ (fontWidth * 2)) + 0.5F)) - 2;
+                                if(_debug)
+                                {
+                                    System.out.println("[LABEL PRINT] The textFiller button label should be " + fontWidth + " spaces long");
+                                }
+                                buttonSpaces = "";
+                                while(fontWidth >= 0)
+                                {
+                                    buttonSpaces += " ";
+                                    fontWidth -= 1;
+                                }
+                                buttonField = new RichTextField(buttonSpaces,null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                HorizontalFieldManager textFiller = new HorizontalFieldManager(HorizontalFieldManager.USE_ALL_WIDTH);
+                                textFiller.add(buttonField);
+                                buttonField = new RichTextField(buttonSpaces,null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                textFiller.add(buttonField);
+                                _overFlow.add(textFiller);
+                                
+                                FlowFieldManager modeManager = new FlowFieldManager(FlowFieldManager.FIELD_LEFT);
+                                FlowFieldManager topButtons = new FlowFieldManager(FlowFieldManager.FIELD_RIGHT);
+                                FlowFieldManager sixButtons = new FlowFieldManager(FlowFieldManager.USE_ALL_WIDTH);
+                                FlowFieldManager fiveButtons = new FlowFieldManager(FlowFieldManager.USE_ALL_WIDTH);
+                                
+                                for(Enumeration e = buttonLabels.elements(); e.hasMoreElements();)
+                                {
+                                    theseValues = (String) e.nextElement();
+                                    if(_debug)
+                                    {
+                                        System.out.println("[LABEL PRINT] Printing the values: " + theseValues);
+                                    }
+                                    xCoord = Double.parseDouble(theseValues.substring(0,theseValues.indexOf("|")));
+                                    theseValues = theseValues.substring(theseValues.indexOf('|') + 1);
+                                    yCoord = Double.parseDouble(theseValues.substring(0,theseValues.indexOf("|")));
+                                    thisWidth =  Double.parseDouble(theseValues.substring(theseValues.indexOf('|') + 1));
+                                    if(_debug)
+                                    {
+                                        System.out.println("[LABEL PRINT] X: " + xCoord);
+                                        System.out.println("[LABEL PRINT] Y: " + yCoord);
+                                        System.out.println("[LABEL PRINT] Width: " + thisWidth);
+                                    }
+                                    
+                                    //Now we set our spaces correctly:
+                                    fontWidth = Font.getDefault().getAdvance(' ');
+                                    fontWidth = ((int) ((thisWidth / (fontWidth * 2)) +  + 0.5F));
+                                    if(_debug)
+                                    {
+                                        System.out.println("[LABEL PRINT] The button label should be " + fontWidth + " spaces long");
+                                    }
+                                    buttonSpaces = "|";
+                                    fontWidth -= 2;
+                                    while(fontWidth >= 0)
+                                    {
+                                        buttonSpaces += "X";
+                                        fontWidth -= 1;
+                                    }
+                                    buttonSpaces += "|";
+                                    
+                                    if(_debug)
+                                    {
+                                        System.out.println("[LABEL PRINT] Button Space: |" + buttonSpaces + "|");
+                                    }
+                                    
+                                    //Next we create the field
+                                    //buttonField = new RichTextField(buttonSpaces,null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                    
+                                    //Now we place our textbox in the correct manager:
+                                    if(yCoord <= firstRowHeight && yCoord > 0.0)
+                                    {
+                                        //This is a top row button:
+                                        if(xCoord == 0.0)
+                                        {
+                                            //This is the Mode button
+                                            if(_debug)
+                                            {
+                                                System.out.println("[LABEL PRINT] Adding in the Mode button");
+                                            }
+                                            //Next we create the field
+                                            buttonField = new RichTextField(buttonSpaces.replace('X','M'),null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                            modeManager.add(buttonField);
+                                        }
+                                        else
+                                        {
+                                            //This is a top row button
+                                            if(_debug)
+                                            {
+                                                System.out.println("[LABEL PRINT] Adding a Top Row button");
+                                            }
+                                            //Next we create the field
+                                            buttonField = new RichTextField(buttonSpaces.replace('X','T'),null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                            topButtons.add(buttonField);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if(thisWidth > SixButtonWidth)
+                                        {
+                                            //This is a 5 button row addition
+                                            if(_debug)
+                                            {
+                                                System.out.println("[LABEL PRINT] Adding to the 5 Button Row");
+                                            }
+                                            //Next we create the field
+                                            buttonField = new RichTextField(buttonSpaces.replace('X','5'),null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                            fiveButtons.add(buttonField);
+                                        }
+                                        else
+                                            {
+                                            //This is a 6 button row addition
+                                            if(_debug)
+                                            {
+                                                System.out.println("[LABEL PRINT] Adding to the 6 Button Row");
+                                            }
+                                            //Next we create the field
+                                            buttonField = new RichTextField(buttonSpaces.replace('X','6'),null,null,fonts,RichTextField.FOCUSABLE|RichTextField.READONLY|RichTextField.FIELD_VCENTER|RichTextField.FIELD_HCENTER);
+                                            sixButtons.add(buttonField);
+                                        }
+                                    }
+                                }
+                                //Now that all of the button labels have been added, we add the managers to the overall layout
+                                //NOTE: The order determines placement...
+                                if(_debug)
+                                {
+                                    System.out.println("[LABEL PRINT] modeManager has " + modeManager.getFieldCount());
+                                    System.out.println("[LABEL PRINT] Top Button has " + topButtons.getFieldCount());
+                                    System.out.println("[LABEL PRINT] Six Buttons has " + sixButtons.getFieldCount());
+                                    System.out.println("[LABEL PRINT] Five Button has " + fiveButtons.getFieldCount());
+                                }
+                                _overFlow.add(modeManager);
+                                _overFlow.add(topButtons);
+                                _overFlow.add(sixButtons);
+                                _overFlow.add(fiveButtons);
+                                _loadedLabels = true;
+                            }
+                        }
+                        catch(Exception ex)
+                        {
+                            if(_debug)
+                            {
+                                System.out.println("[ERROR] problems painting using the _overFlow manager:"+ex.toString());
+                                ex.printStackTrace();
+                            }
+                        }
+                    }
+                    if(_overFlow != null)
+                        super.paint(graphics);
+                }
+                
+                public void navigationClick()
+                {
+                    if(_debug)
+                    {
+                        System.out.println("[INFO] overFlow screen nav clicked");
+                    }
+                }
+            };

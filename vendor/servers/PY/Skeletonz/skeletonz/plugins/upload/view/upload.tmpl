@@ -1,0 +1,57 @@
+#def indicator
+<script type="text/javascript">
+  function checkFile() {
+    Indicator.append(AJS.\$('status'));
+    if(AJS.\$('file').value == "") {
+    alert("You must select a file");
+    Indicator.remove(AJS.\$('status'));
+    return false;
+    }
+    return true;
+  }
+</script>
+#end def
+#silent $site.header.appendScriptData($indicator)
+$site.header.renderText()
+
+<div id="container">
+
+  <div id="content" style="margin-top: 20px; text-align: center;">
+#if $file == None
+  <form onsubmit="return checkFile()" action="$site.handler/uploadFile" method="post" enctype="multipart/form-data" onsubmit="showIndicator()" id="thaform">
+  <dl class="dl_big">
+    <input type="hidden" name="linkonly" value="$linkonly" /> 
+    <input type="hidden" name="ftype" value="$ftype" /> 
+
+    <dt>Identifier</dt>
+    <dd><input type="text" id="ident" name="ident" value="" readonly="readonly" /></dd>
+    <script>
+      document.getElementById('ident').value = GB_P.EC_Upload_Current.ident;
+    </script>
+
+    <dt>Choose file</dt>
+    <dd>
+      <span id="status"><input type="file" name="file" id="file" onchange="AJS.\$('thaform').submit()" /></span>
+    </dd>
+  </form>
+#else
+  <form onsubmit="return checkFile()" action="$site.handler/uploadFile" method="post" enctype="multipart/form-data" onsubmit="showIndicator()" id="thaform">
+  <dl class="dl_big">
+    <input type="hidden" name="linkonly" value="$linkonly" /> 
+    <input type="hidden" name="ftype" value="$ftype" /> 
+    <input type="hidden" name="id" value="$file.id" /> 
+    <dt>Identifier</dt>
+    <dd><input type="text" name="ident" value="$file.ident" readonly="readonly" /></dd>
+
+    <dt>Choose file</dt>
+    <dd>
+      <input type="file" name="file" id="file" onchange="AJS.\$('thaform').submit()" />
+    </dd> 
+    <dd style="padding: 20px 0 0 0">
+      <span class="explain">Current file: $file.filename</span>
+    </dd>
+  </form>
+#end if
+  </div>
+</div>
+$site.footer.renderText()

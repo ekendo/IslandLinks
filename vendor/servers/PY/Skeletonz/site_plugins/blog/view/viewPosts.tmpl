@@ -1,0 +1,20 @@
+<div>
+  <div class="CMS_BlogTitle">$title</div>
+  #set posts_len = 0
+  <ul class="post_list">
+  #for post in $posts
+    #if $post.published
+      #set posts_len += 1
+      <li>
+        #set link = $GENERIC_POST_LINK % $post.id
+        #set labels = " &middot; ".join([label.name for label in $post.getLabels()])
+        <a href="$link">$post.title</a><br />
+        <span class="CMS_BlogEntryInfo">$post.getDate() under $labels</span>
+      </li>
+    #end if
+  #end for
+  </ul>
+  #if $posts_len == 0
+  No posts posted.
+  #end if
+</div>

@@ -1,0 +1,52 @@
+<Resources>
+	<Icon Type="Png">
+		http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/Icon.png
+	</Icon>
+	<BackgroundImage/>
+	<Images Type="Png">
+		<Image Type="Png" Name="StatisticsStatic[1]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/0s2n.png
+		</Image>
+		<Image Type="Png" Name="StatisticsStatic[2]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/0s2n1.png
+		</Image>
+		<Image Type="Png" Name="StatisticsStatic[3]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/0sn.png
+		</Image>
+		<Image Type="Png" Name="StatisticsStatic[4]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/0sn1.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[5]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/01.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[6]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/02.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[7]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/03.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[8]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/04.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[9]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/05.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[10]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/06.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[11]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/07.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[12]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/08.png
+		</Image>
+		<Image Type="Png" Name="GenericStatic[13]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/09.png
+		</Image>
+	</Images>
+	<Audio>
+		<Format Type="AIff" Name="ClickOption[14]">
+			http://www.ekendotech.net/Downloads/UniApp/TouchCalc_Res/tick.aiff
+		</Format>
+	</Audio>
+</Resources>

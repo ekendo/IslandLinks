@@ -1,0 +1,15 @@
+#for $item in $menu_obj.getAllItems()
+  #if $item.type == 'external'
+    <li><a href="$item.url">$item.name</a></li>
+  #elif $item.getPage() != None and $item.getPage().hidden == 0 or $logged_in
+    #try
+      #if $item.getPage().name
+        #set name = $item.getPage().name
+      #else
+        #set name = $item.getPage().title
+      #end if
+        <li id="$item.getClass()"><a href="$item.getPage().getFullLink()">$item.name</a></li>
+    #except
+    #end try
+  #end if
+#end for

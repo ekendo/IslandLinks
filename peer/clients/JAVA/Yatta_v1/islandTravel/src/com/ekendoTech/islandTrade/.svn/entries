@@ -1,0 +1,52 @@
+8
+
+dir
+83
+svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/windows/Java/IslandLinks/islandTravel/src/com/ekendoTech/islandTrade
+svn://ekendotech.net/islandsoft
+
+
+
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+724664bd-8571-49c4-a1b7-4ebd78a94cdb
+
+getFromIslander.java
+file
+
+
+
+
+2008-06-06T04:13:23.811824Z
+b92b6ddb8095e50ffc17e653b659732c
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+
+sendToIslander.java
+file
+
+
+
+
+2008-06-06T04:13:23.962040Z
+48bc470d06437aed40565e17902f05b3
+2007-08-09T03:30:17.193079Z
+8
+ekendo
+

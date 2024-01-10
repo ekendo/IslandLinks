@@ -1,0 +1,558 @@
+_graphicsManager = new VerticalFieldManager(Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR )
+            {            
+                public void paint(Graphics graphics)
+                {
+                    if(_debug)
+                        System.out.println("[GRAPHICS] - Painting the Graphics Manager");
+                        
+                    PaintGrid(graphics);
+                    // paint components etc
+                    super.paint(graphics);                           
+                }            
+            };
+            
+            _dialogManager = new DialogFieldManager(Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
+
+            
+            //_componentsManager.add(new SeparatorField());
+
+            _componentsManager.add(_rtf);
+            
+            //_graphicsManager.add(_dialogManager);
+            _graphicsManager.add(_componentsManager);
+            
+            add(_graphicsManager);
+                
+        }
+        
+        public void AddButtonToOverflow(double ButtonWidth, int ButtonHeight, int SpaceWidth, String ButtonName,Font TextFont)
+        {
+            if(_debug)
+            {
+                System.out.println("[LABEL PRINT] The Button Name is: " + ButtonName);
+                System.out.println("[LABEL PRINT] The Button Width is: " + String.valueOf(ButtonWidth));
+                System.out.println("[LABEL PRINT] The Button Height is: " + String.valueOf(ButtonHeight));
+                System.out.println("[LABEL PRINT] The Space Width is: " + String.valueOf(SpaceWidth));
+            }
+            
+            int fontWidth = ((int) ((ButtonWidth / SpaceWidth) + 0.5F));;
+            
+            if(_debug)
+            {
+                System.out.println("[LABEL PRINT] This button label should be " + fontWidth + " spaces long");
+            }
+    
+            String buttonSpaces = "";
+            while(fontWidth >= 0)
+            {
+                buttonSpaces += " ";
+                fontWidth -= 1;
+            }
+            int innerWidth = ((int) (ButtonWidth + 0.5F));
+            YattaButton yButt = new YattaButton(innerWidth,ButtonName,ButtonHeight,TextFont,buttonSpaces,_debug);
+            
+            //Now we place our textbox - order determines layout position...
+            labelVector.addElement(yButt);
+        }
+        
+        private void CreateLayoutVectors()
+        {
+            int tmpColor;
+            boolean drewBackground = false;
+            boolean drewTextbox = false;
+            double currentX = 0;
+            double currentY = 0;
+            String oldButtonName = "";
+            boolean addedTextbox = false;
+            ButtonOperation myRectangle;
+            
+            //Next we need to add our graphics objects into our vectors:
+            if(!labelVector.isEmpty())
+                labelVector.removeAllElements();
+            if(!buttonVector.isEmpty())
+                labelVector.removeAllElements();
+
+            try
+            {
+                if(_islandApplicationManager != null)
+                {
+                    if(_islandApplicationManager.ApplicationEngine!=null)
+                    {
+                        if(_islandApplicationManager.ApplicationEngine.HasGraphics()&&
+                            (_islandApplicationManager.ApplicationEngine.GetGraphicObjects()!=null)&&
+                            (_islandApplicationManager.ApplicationEngine.GetEngineState() == islandSoftwareEngine.APP_ENGINE_STARTED))
+                        {
+                            if(!_islandApplicationManager.currentGrid.equals(""))
+                            {
+                                //We need to add in our background:
+                                myRectangle = new ButtonOperation();
+                                //Set the grid color
+                                islandSoftwareEngine.GridScreenDetails appGridDetails = (islandSoftwareEngine.GridScreenDetails) _islandApplicationManager.ApplicationEngine.GetDisplayGridFromName(_islandApplicationManager.currentGrid);
+                                
+                                if(appGridDetails.GridColor ==Color.BLACK)
+                                {
+                                    myRectangle.ThisColor = "Black";
+                                    if(_debug)
+                                    {
+                                        System.out.println("[INFO]The layout color here is: Black");
+                                    }
+                                }
+                                    
+                                if(appGridDetails.GridColor == Color.WHITE)
+                                {
+                                    myRectangle.ThisColor = "White";
+                                    if(_debug)
+                                    {
+                                        System.out.println("[INFO]The layout color here is: White");
+                                    }
+                                }
+                                
+                                // Add in the background
+                                if(_debug)
+                                    System.out.println("[VECTOR] Adding the background to the buttonVector collection");
+                                myRectangle.XCoord = appGridDetails.GetGridOriginX();
+                                myRectangle.YCoord = appGridDetails.GetGridOriginY();
+                                myRectangle.ImageWidth = appGridDetails.GetGridWidth();
+                                myRectangle.ImageHeight = appGridDetails.GetGridHeight();
+                                buttonVector.addElement(myRectangle);
+                                
+                                if(_debug)
+                                {
+                                    System.out.println("[INFO] this is the current screen name:"+appGridDetails.ScreenName);
+                                    System.out.println("[INFO] this is the grid width:"+appGridDetails.GetGridWidth());
+                                    System.out.println("[INFO] this is the grid height:"+appGridDetails.GetGridHeight());
+                                    
+                                }  
+                                
+                                // Get Loaded Layouts for Screen
+                                Enumeration appLayouts = appGridDetails.GetScreenLayouts(appGridDetails.ScreenName);
+                                
+                                for(Enumeration en = appLayouts; en.hasMoreElements();)
+                                {
+                                    //Vector appGraphics = _islandApplicationManager.ApplicationEngine.GetGraphicObjects();
+                                    islandSoftwareEngine.DisplayLayoutDetails appLayoutDetails = (islandSoftwareEngine.DisplayLayoutDetails) en.nextElement();
+                                    
+                                    if(_debug)
+                                    {
+                                        System.out.println("[INFO] this is the current layout name:"+appLayoutDetails.Name);
+                                    
+                                        System.out.println("[INFO] this is the current layout details placementX&placementY:"+appLayoutDetails.GetPlacementX()+"&"+appLayoutDetails.GetPlacementY());
+                                    
+                                        System.out.println("[INFO] this is the layout height and wdth:"+appLayoutDetails.LayoutHeight+"&"+appLayoutDetails.LayoutWidth);
+                                    }                
+
+                                    // Layout value conversion
+                                    Double dLPx = new Double(appLayoutDetails.GetPlacementX());
+                                    Double dLPy = new Double(appLayoutDetails.GetPlacementY());
+                                    Double dLPw = new Double(appLayoutDetails.LayoutWidth);
+                                    Double dLPh = new Double(appLayoutDetails.LayoutHeight);
+                                
+                                    if(!addedTextbox)
+                                    {
+                                        //Now we add in the TextBox:
+                                        if(_debug)
+                                            System.out.println("[VECTOR] Adding the textbox to the buttonVector collection");
+                                        myRectangle = new ButtonOperation();
+                                        myRectangle.ThisColor = "White";
+                                        myRectangle.XCoord = dLPx.intValue();
+                                        myRectangle.YCoord = dLPy.intValue();
+                                        myRectangle.ImageWidth = dLPw.intValue();
+                                        myRectangle.ImageHeight = dLPh.intValue();
+                                        buttonVector.addElement(myRectangle);
+                                        addedTextbox = true;
+                                    }
+
+                                    // get Loaded Graphics
+                                    Vector appGraphics = appLayoutDetails.GetLayoutGraphics();
+                                    
+                                    // enumerate object container (GuiGraphicDetails)
+                                    for(Enumeration e = appGraphics.elements(); e.hasMoreElements();)
+                                    {
+                                        // paint graphics
+                                        islandSoftwareEngine.GraphicGuiDetails appGraphicDetails = (islandSoftwareEngine.GraphicGuiDetails) e.nextElement();
+                                        
+                                        if(appGraphicDetails !=null)
+                                        {
+                                            
+                                            // Graphic value conversion
+                                            Double dPx = new Double(appGraphicDetails.PlacementX());
+                                            Double dPy = new Double(appGraphicDetails.PlacementY());
+                                            Double dLx = new Double(appGraphicDetails.LocationX());
+                                            Double dLy = new Double(appGraphicDetails.LocationY());
+                                            
+                                            if(appGraphicDetails.GraphicsObject instanceof Bitmap)
+                                            {
+                                                Bitmap bmp = (Bitmap) appGraphicDetails.GraphicsObject;
+                                                
+                                                
+                                                if(bmp!=null)
+                                                {
+                                                    if(_debug)
+                                                    {
+                                                        System.out.println("[INFO] this is the current details name:"+appGraphicDetails.Name);
+                                                        
+                                                        if(appGraphicDetails.Location!=null)
+                                                        {
+                                                            System.out.println("[INFO] this is the current details locationX&locationY:"+appGraphicDetails.LocationX()+"&"+appGraphicDetails.LocationY());
+                                                        }
+                                                        
+                                                        if(appGraphicDetails.Placement!=null)
+                                                        {
+                                                            System.out.println("[INFO] this is the current details placementX&placementY:"+appGraphicDetails.PlacementX()+"&"+appGraphicDetails.PlacementY());
+                                                        }
+                                                    }
+                                                        
+                                                    if(appGraphicDetails.Name.equals("Background_Image"))
+                                                    {   
+                                                        if(_debug)
+                                                        {
+                                                            System.out.println("[ERROR] Trying to Draw a Background Image!!!");
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        // Not a Background Image
+                                                        if((appGraphicDetails.Location!=null)&&(appGraphicDetails.Placement!=null))
+                                                        {
+                                                            if(appGraphicDetails.Event == null)
+                                                            {
+                                                                appGraphicDetails.Event = "";
+                                                            }
+                                                            
+                                                            if(!appGraphicDetails.Event.equals("Removal"))
+                                                            {
+                                                                if(_debug)
+                                                                {
+                                                                    System.out.println("[INFO] img width and height:"+bmp.getWidth()+"&"+ bmp.getHeight());
+                                                                    System.out.println("[INFO] appGraphicDetails width and height:"+appGraphicDetails.width+"&"+ appGraphicDetails.height);
+                                                                }
+                                                                
+                                                                //Now we add the bitmap to our vector:
+                                                                ButtonOperation newButton = new ButtonOperation();
+                                                                newButton.ImageWidth = ((int) (appGraphicDetails.width + 0.5F)) - 2;
+                                                                newButton.ImageHeight = ((int) (appGraphicDetails.height + 0.5F)) - 2;
+                                                                newButton.TextHCenter = ((int) (( newButton.ImageWidth / 2) +  + 0.5F)) + dPx.intValue();
+                                                                newButton.TextVCenter = ((int) ((newButton.ImageHeight / 2) + 0.5F)) + dPy.intValue();
+                                                                newButton.XCoord = dPx.intValue();
+                                                                newButton.YCoord = dPy.intValue();
+                                                                newButton.EndX = dLx.intValue();
+                                                                newButton.EndY = dLy.intValue();
+                                                                String buttonName = appGraphicDetails.Name;
+                                                                    
+                                                                //Before drawing the bitmap, we need to create a new sized image to match our placement box:
+                                                                newButton.ThisImage = islandSoftwareEngine.resizeBitmap(bmp,newButton.ImageWidth, newButton.ImageHeight);
+                                                                
+                                                                //Next we add text if warranted:
+                                                                if(appGraphicDetails.HasText)
+                                                                {
+                                                                    String thisText =  appGraphicDetails.ObjectText.replace('\n',' ').trim();
+                                                                    
+                                                                    if(_debug)
+                                                                    {
+                                                                        System.out.println("[TOLA] The Graphic Text is: " + thisText);
+                                                                        System.out.println("[TOLA] The X,Y for this button is: " + String.valueOf(dPx) + "," + String.valueOf(dPy));
+                                                                        if(appGraphicDetails.ObjectColor==Color.BLACK)
+                                                                        {
+                                                                            System.out.println("[INFO] Current Graphic Object Color is: BLACK");
+                                                                        }
+                                                                        
+                                                                        if(appGraphicDetails.ObjectColor==Color.WHITE)
+                                                                        {
+                                                                            System.out.println("[INFO] Current Graphic Object Color is: WHITE");
+                                                                        } 
+                                                                    }
+                                                                    
+                                                                    if(thisText.indexOf("\\u") > -1)
+                                                                    {
+                                                                        try
+                                                                        {
+                                                                            if(_debug)
+                                                                            {
+                                                                                System.out.println("Base Value to be converted: "+ thisText);
+                                                                            }
+                                                                            
+                                                                            String newValue = "";
+                                                                            String convertValue = thisText.substring(thisText.indexOf("\\u")+2,thisText.indexOf(";"));
+                                                                            //We need to convert the value to unicode
+                                                                            short valueAsShort = Short.parseShort(convertValue.trim(),16);
+                                                                            newValue = String.valueOf((char)valueAsShort);
+                                                                            
+                                                                            while(thisText.length() > thisText.indexOf(";")+1)
+                                                                            {
+                                                                                thisText = thisText.substring(thisText.indexOf(";") + 1);
+                                                                                convertValue = thisText.substring(thisText.indexOf("\\u")+2,thisText.indexOf(";"));
+                                                                                //We need to convert the value to unicode
+                                                                                valueAsShort = Short.parseShort(convertValue.trim(),16);
+                                                                                newValue += String.valueOf((char)valueAsShort);
+                                                                            }
+                                                                            
+                                                                            buttonName = newValue;
+                                                                            
+                                                                            if(_debug)
+                                                                            {
+                                                                                System.out.println("Converted Value: "+ newValue);
+                                                                            }
+                                                                        }
+                                                                        catch(Exception exU)
+                                                                        {
+                                                                            if(_debug)
+                                                                            {
+                                                                                System.out.println("[ERROR] Converting to Unicode failed: "+exU.toString());
+                                                                                exU.printStackTrace();
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {                             
+                                                                        buttonName = thisText;
+                                                                    }
+                                                                    if(_debug)
+                                                                    {
+                                                                        System.out.println("[INFO] Text Coordinates (X,Y): " + newButton.TextHCenter + "," + newButton.TextVCenter);
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    if(_debug)
+                                                                    {
+                                                                        System.out.println("[INFO] Graphic Has No Text");
+                                                                        
+                                                                    }
+                                                                }
+                                                                
+                                                                newButton.ImageText = buttonName;
+                                                                buttonVector.addElement(newButton);
+                                                                
+                                                                //Finally we add our labels
+                                                                int useThisWidth = newButton.ImageWidth + 2;
+                                                                int useThisHeight = newButton.ImageHeight + 2;
+                                                                    
+                                                                Font textFont = Font.getDefault().derive(Font.PLAIN,((int) ((_mainScreen.getVisibleHeight() / 12) + 0.5F)));
+                                                                int spaceWidth = textFont.getAdvance(' ');
+
+                                                                if(labelVector.isEmpty())
+                                                                {
+                                                                    int spacerHeight = _mainScreen.getVisibleHeight() / 6;  //2 rows...
+                                                                    
+                                                                    //We need to create a manager to take up the top two rows:
+                                                                    if(_debug)
+                                                                    {
+                                                                        System.out.println("[LABEL PRINT] Adding textFiller button label");
+                                                                    }
+                                                                    AddButtonToOverflow(_mainScreen.getVisibleWidth() - 2,spacerHeight,spaceWidth,"Textbox",textFont);
+                                                                }
+                                                                
+                                                                //Next we need to determine what to add into our flow manager:
+                                                                if(currentX != dPx.doubleValue() && currentY == dPy.doubleValue() && oldButtonName != "")
+                                                                {
+                                                                    //There are spaces - anything less than a space who cares?
+                                                                    if(dPx.doubleValue() - currentX > 1)
+                                                                    {
+                                                                        if(dPx.doubleValue() - currentX < 2)
+                                                                        {
+                                                                            //In this case, we just assign the space to the old button:
+                                                                            AddButtonToOverflow(dPx.doubleValue() - currentX,useThisHeight,spaceWidth,oldButtonName,textFont);
+                                                                            //We also need to add in the new button label:
+                                                                            AddButtonToOverflow(useThisWidth,useThisHeight,spaceWidth,buttonName,textFont);
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            //We split the difference:
+                                                                            double halfzies = (dPx.doubleValue() - currentX) / 2;
+                                                                            //First the old button:
+                                                                            AddButtonToOverflow(halfzies,useThisHeight,spaceWidth,oldButtonName,textFont);
+                                                                            //We also need to add in the new button label:
+                                                                            AddButtonToOverflow(useThisWidth + halfzies,useThisHeight,spaceWidth,buttonName,textFont);
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        //We add the button like normal:
+                                                                        AddButtonToOverflow(useThisWidth,useThisHeight,spaceWidth,buttonName,textFont);
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    //We add the button like normal:
+                                                                    AddButtonToOverflow(useThisWidth,useThisHeight,spaceWidth,buttonName,textFont);
+                                                                }
+                                                                //Now we update our information accordingly:
+                                                                oldButtonName = buttonName;
+                                                                currentX = dPx.doubleValue() + useThisWidth + 1;
+                                                                currentY = dPy.doubleValue();
+                                                                
+                                                                bmp = null;
+                                                            }
+
+                                                            
+                                                            if(_componentsManager !=null)
+                                                            {
+                                                                //_componentsManager.invalidate();
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                if(_debug)
+                {
+                    System.out.println("[ERROR] Problems populating the New Screen Vectors:"+e.toString());
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        private void PaintGrid(Graphics graphics)
+        {
+            if(!buttonVector.isEmpty())
+            {
+                if(_debug)
+                    System.out.println("[GRID] - We are using the Grid!");
+                
+                //We are using the grid - we need to add in our objects:
+                int elementCount = 0;
+                ButtonOperation newButton;
+                Font newFont = null;
+                                
+                while(elementCount < buttonVector.size())
+                {
+                    newButton = (ButtonOperation) buttonVector.elementAt(elementCount);
+                    if(_debug)
+                    {
+                        System.out.println("[GRID] - Painting out Bitmap #: " + String.valueOf(elementCount));
+                        System.out.println("[GRID] - X: " + String.valueOf(newButton.XCoord));
+                        System.out.println("[GRID] - Y: " + String.valueOf(newButton.YCoord));
+                        System.out.println("[GRID] - End X: " + String.valueOf(newButton.EndX));
+                        System.out.println("[GRID] - End Y: " + String.valueOf(newButton.EndY));
+                        System.out.println("[GRID] - Width: " + String.valueOf(newButton.ImageWidth));
+                        System.out.println("[GRID] - Height: " + String.valueOf(newButton.ImageHeight));
+                        System.out.println("[GRID] - Text Label: " + String.valueOf(newButton.ImageText));
+                        System.out.println("[GRID] - Text Color: " + String.valueOf(newButton.ThisColor));
+                        System.out.println("[GRID] - Text V Center: " + String.valueOf(newButton.TextVCenter));
+                        System.out.println("[GRID] - Text H Center: " + String.valueOf(newButton.TextHCenter));
+                    }
+                    if(newButton.ThisImage != null)
+                    {
+                        if(_debug)
+                            System.out.println("[GRID] - Printing a button");
+                        if(newFont == null)
+                        {
+                            newFont = Font.getDefault().derive(Font.BOLD,((int) ((newButton.ImageHeight / 2) + 0.5F)));
+                            graphics.setColor(Color.WHITE);
+                            graphics.setFont(newFont);
+                        }
+                        graphics.drawBitmap(newButton.XCoord,newButton.YCoord,newButton.ImageWidth,newButton.ImageHeight,newButton.ThisImage, newButton.EndX,newButton.EndY);
+                        if(newButton.ImageText != "")
+                            graphics.drawText(newButton.ImageText, newButton.XCoord,newButton.TextVCenter,DrawStyle.HCENTER | DrawStyle.VCENTER, newButton.ImageWidth);
+                    }
+                    else if(newButton.ThisColor != "")
+                    {
+                        //We are drawing a rectangle:
+                        if(_debug)
+                            System.out.println("[GRID] - Printing a rectangle");
+                            
+                        if(newButton.ThisColor == "White")
+                            graphics.setColor(Color.WHITE);
+                        else
+                            graphics.setColor(Color.BLACK);
+
+                        graphics.fillRect(newButton.XCoord, newButton.YCoord, newButton.ImageWidth,newButton.ImageHeight);
+                    }
+                    elementCount += 1;
+                    System.out.println("---------------------------------------------------------------------");
+                }
+                
+                if(!labelVector.isEmpty())
+                {
+                    //We also need to add in our labels - via a FlowFieldManager:
+                   YattaButton yButt = (YattaButton) labelVector.elementAt(elementCount);
+                    
+                    if(yButt.getManager() != null)
+                    {
+                        //We have already added these fields to our manager:
+                        if(_debug)
+                            System.out.println("[GRID] - Already added labels to the manager");
+                    }
+                    else
+                    {
+                        if(_debug)
+                            System.out.println("[GRID] - Printing out the labels!");
+                        FlowFieldManager overFlow = new FlowFieldManager(FlowFieldManager.USE_ALL_HEIGHT|FlowFieldManager.USE_ALL_WIDTH);
+                        elementCount = 1;
+                        
+                        while(elementCount < labelVector.size())
+                        {
+                            yButt = (YattaButton) labelVector.elementAt(elementCount);
+                            
+                            if(yButt.getManager() == null)
+                            {
+                                if(_debug)
+                                {
+                                    System.out.println("Adding Label #: " + String.valueOf(elementCount));
+                                    System.out.println("The Button Text is: " + yButt.getButtonName());
+                                }
+                                overFlow.add(yButt);
+                            }
+                            
+                            elementCount += 1;
+                        }
+                        _graphicsManager.add(overFlow);
+                    }
+                }
+            }
+        }
+        
+        /**
+         * Creates this screen's menu, which consists of the default main
+         * screen menu as well as added items.
+         * 
+         * @see net.rim.device.api.ui.Screen#makeMenu(Menu,int)
+         */
+        protected void makeMenu( Menu menu, int instance ) 
+        {
+            super.makeMenu( menu, instance );
+            
+            //menu.add( _getServicesList );
+            //menu.add( _loadSubscriptions );
+            //menu.add( _loadProfile );
+            
+            
+            if((IslandSoftwareState != islandSoftwareEngine.APP_ENGINE_STARTED))
+            {
+                menu.add( _getNewApps );
+            }
+        
+            if((IslandSoftwareState == islandSoftwareEngine.APP_ENGINE_STARTED)&&(!_islandApplicationManager.preferencesLoaded))
+            {
+                if(this._islandApplicationManager!=null)
+                {
+                    if(!_islandApplicationManager.currentGrid.equals(""))
+                    {
+                        islandSoftwareEngine.GridScreenDetails appGridDetails = (islandSoftwareEngine.GridScreenDetails) _islandApplicationManager.ApplicationEngine.GetDisplayGridFromName(_islandApplicationManager.currentGrid);
+                        int ord = 1010;
+                        int prio = 10;
+                        //We need to add our images and labels to the vectors:
+                        CreateLayoutVectors();
+                    
+                        for(Enumeration e = appGridDetails.GetGridScreens().elements(); e.hasMoreElements();)
+                        {
+                            String screenName = (String) e.nextElement();
+                            
+                            _getAppPreferences = new ApplicationPreferenceItem(screenName,++ord,++prio);
+                            
+                            menu.add(_getAppPreferences);
+                        }
+                        
+                        //_islandApplicationManager.preferencesLoaded = true;
+                    }
+                }
+            }

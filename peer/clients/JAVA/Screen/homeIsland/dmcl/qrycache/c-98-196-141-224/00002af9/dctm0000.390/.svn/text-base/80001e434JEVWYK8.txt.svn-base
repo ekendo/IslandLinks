@@ -1,0 +1,8 @@
+select r_object_id from dm_type where name = 'kapture_doc'
+TYPE QR 0000000000000000
+ NULL 
+1
+  r_object_id  STRING S 16
+OBJ QR 1
+A 16 03002af9800001aa
+0

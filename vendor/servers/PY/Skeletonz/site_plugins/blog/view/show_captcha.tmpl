@@ -1,0 +1,127 @@
+$template.getHeader().renderText()
+
+<!-- Style -->
+<style type="text/css">
+#holder table {
+    padding: 10px 0 0px 0;
+}
+
+#holder table td {
+    padding-bottom: 10px;
+}
+
+#holder table img {
+    vertical-align: top;
+    padding: 0 30px 0px 0;
+}
+
+#loading {
+    padding: 20px 0 20px 0;
+    font-size: 16px;
+}
+
+.new_pics {
+    padding-left: 25px;
+    text-decoration: none !important;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+</style>
+
+
+<!-- HTML -->
+<h2 id="caption">Pick a cat (meow-meow)</h2>
+
+<div id="holder"></div>
+<div id="error"></div>
+
+<div id="controller">
+    <input type="button" value="I have selected the cat" onclick="VisualCaptcha.guessMatch(this)" />
+
+    <a href="#" class="new_pics" onclick="return VisualCaptcha.loadCaptchas()">
+        <img src="/static_plugin/blog/arrow_refresh.png" /> Too hard? Refresh
+    </a>
+</div>
+
+<!-- JavaScript -->
+<script type="text/javascript">
+VisualCaptcha = {
+    guessOk: function() {
+        setHTML($('caption'), 'You picked a cat!');
+        RCN($('holder'), null);
+        RCN($('controller'), null);
+
+        top.setTimeout(function() {
+            top.GB_hide();
+            top.Blog.postComment();
+        });
+    },
+
+    guessError: function() {
+        setHTML($('error'), 
+                "You didn't pick a cat, please try again!");
+        VisualCaptcha.loadCaptchas();
+    },
+
+    getContent: function() {
+        return top.$('comment_content').value;
+    },
+
+    guessMatch: function(btn) {
+        var current = VisualCaptcha._getCurrent();
+        if(!current) {
+            alert('You must select a cat');
+            return false;
+        }
+
+        RCN($('error'), null);
+        
+        btn.disabled = true;
+
+        var req = getRequest('blog/validateCaptcha');
+        req.addCallback(function(result) {
+            btn.disabled = false;
+
+            if(result == 'error')
+                VisualCaptcha.guessError();
+            else
+                VisualCaptcha.guessOk();
+        });
+
+        req.sendReq({url: current, 
+                     content: VisualCaptcha.getContent()});
+    },
+
+    loadCaptchas: function() {
+        var req = getRequest('blog/getCaptchaHTML');
+
+        RCN($('holder'), DIV({id: 'loading'},
+            IMG({src: 'static_core/images/indicator.gif'}), BR(),
+            'loading images'
+        ));
+
+        req.addCallback(function(html) {
+            setHTML($('holder'), '<center>' + html + '</center>');
+        });
+        req.sendReq({});
+
+        return false;
+    },
+
+    _getCurrent: function() {
+        return map(\$bytc('input'), function(input) {
+            if(input.checked)
+                return input.value;
+        });
+    }
+
+}
+
+VisualCaptcha.loadCaptchas();
+</script>
+
+$template.getFooter().renderText()

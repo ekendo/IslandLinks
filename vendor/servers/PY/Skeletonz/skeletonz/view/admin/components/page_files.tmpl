@@ -1,0 +1,33 @@
+#def getNewListCommander
+function refreshContent() {
+  GB_P.refresh_content = true;
+}
+
+function getNewListCommander(host_table) {
+    var action_bar = new ActionBar();
+
+    var list_commander = new ListCommander({'host_table': host_table, 'action_bar': action_bar});
+    action_bar.addButtons('default',
+       list_commander.btnDelete('$del_file_url', 'static_core/images/trash.png', ['id'], refreshContent)
+    );
+
+    return list_commander;
+}
+#end def
+
+#def showPageFiles($page_title, $files, $container)
+    var container = AJS.$('$container');
+    var list_commander;
+    var table = AJS.TABLE({'class': 'lc_list', style: 'font-size: 12px'});
+    #if $page_title
+        #set $page_title = $page_title.replace('"', r'\"')
+        AJS.ACN(container, AJS.B("$page_title"));
+    #end if
+    AJS.ACN(container, table);
+
+    list_commander = getNewListCommander(table);
+    #for $file in $files
+        list_commander.add(  $file.toJSON() );
+    #end for
+    list_commander.render();
+#end def

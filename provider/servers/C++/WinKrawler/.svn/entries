@@ -1,0 +1,29 @@
+8
+
+dir
+85
+svn://ekendotech.net/islandsoft/trunk/framework/server/workstation/windows/C++/IslandLinks/remoteIsland/Krawler
+svn://ekendotech.net/islandsoft
+
+
+
+2008-06-06T15:22:17.762803Z
+85
+ekendo
+
+
+svn:special svn:externals svn:needs-lock
+
+KaptureKrawlerClientDist.zip
+file
+
+
+
+
+2008-06-05T18:20:48.025428Z
+47a396e2b2ec427fc0ef0171a096c29f
+2008-06-06T15:22:17.762803Z
+85
+ekendo
+has-props
+

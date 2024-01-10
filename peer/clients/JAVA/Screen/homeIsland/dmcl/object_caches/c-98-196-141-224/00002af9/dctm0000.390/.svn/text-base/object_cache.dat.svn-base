@@ -1,0 +1,2097 @@
+1.0
+OBJ OBJECT_CACHE_FILE_HEADER_TYPE 4
+xxx Aug 23 19:10:45 2007
+A 4 dctm
+A 57 5.3.0.510 SP5 Win32/5.3.0.510 SP5 sun5.Oracle/1 (365,600)
+A 5 UTF-8
+0
+03002af980000129
+dm_type
+OBJ dm_type 15
+A 11 dm_document
+A 12 dm_sysobject
+85
+85
+A 7 kapture
+0000000000000000
+0000000000000000
+2e002af980000129
+  85
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+  85
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+  85
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+  85
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+T
+0
+0
+3
+r_object_id ID S 0
+03002af980000129
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:43 2007
+cache_persistent BOOL S 0
+T
+08002af9800002d8
+dm_sysobject
+OBJ dm_sysobject 85
+A 20 dm_ssa_change_object
+A 12 dm_sysobject
+A 0 
+A 0 
+  0
+  0
+A 0 
+A 0 
+xxx Jul 24 22:17:33 2007
+xxx Jul 24 22:17:33 2007
+A 4 dctm
+nulldate
+F
+F
+nulldate
+F
+A 0 
+F
+1
+T
+  1
+0b002af9800002d7
+  0
+  0
+  0
+  0
+0
+0
+0000000000000000
+0
+F
+A 0 
+0
+0000000000000000
+A 0 
+0
+0
+T
+A 0 
+0c002af980000106
+A 4 dctm
+7
+A 4 docu
+1
+6
+0000000000000000
+08002af9800002d8
+T
+A 0 
+nulldate
+A 0 
+A 0 
+  2
+A 3 1.0
+A 7 CURRENT
+0
+F
+F
+F
+F
+A 7 kapture
+A 16 dm_acl_ssachange
+A 0 
+F
+A 4 dctm
+T
+0000000000000000
+0
+0
+0000000000000000
+  0
+  0
+  0
+  0
+  0
+A 0 
+A 0 
+F
+A 0 
+0
+  0
+F
+nulldate
+nulldate
+  0
+  0
+F
+0
+8
+r_object_id ID S 0
+08002af9800002d8
+_KEEP_LOCK_ BOOL S 0
+F
+_FREEZE_COMPONENTS_ BOOL S 0
+F
+_THAW_COMPONENTS_ BOOL S 0
+F
+_CONTENTS_CHANGED_ BOOL S 0
+F
+_DIST_SAVE_AS_NEW_ BOOL S 0
+F
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:43 2007
+cache_persistent BOOL S 0
+T
+03002af98000019b
+dm_type
+OBJ dm_type 15
+A 13 dm_xml_config
+A 11 dm_document
+86
+85
+A 4 dctm
+0000000000000000
+0000000000000000
+2e002af98000019b
+  86
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+A 14 config_locator
+  86
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+2
+  86
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+F
+  86
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+32
+T
+0
+0
+3
+r_object_id ID S 0
+03002af98000019b
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:38 2007
+cache_persistent BOOL S 0
+T
+03002af98000019f
+dm_type
+OBJ dm_type 15
+A 18 dm_xml_application
+A 9 dm_folder
+92
+87
+A 4 dctm
+0000000000000000
+0000000000000000
+2e002af98000019f
+  92
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+A 13 r_folder_path
+A 13 i_ancestor_id
+A 9 namespace
+A 13 dtd_system_id
+A 13 dtd_public_id
+A 17 root_object_types
+A 13 root_elements
+  92
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+2
+3
+2
+2
+2
+2
+2
+  92
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+T
+T
+F
+F
+F
+T
+T
+  92
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+740
+0
+80
+255
+255
+32
+32
+T
+0
+0
+3
+r_object_id ID S 0
+03002af98000019f
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:38 2007
+cache_persistent BOOL S 0
+T
+03002af980000105
+dm_type
+OBJ dm_type 15
+A 12 dm_sysobject
+A 0 
+85
+0
+A 7 kapture
+0000000000000000
+0000000000000000
+2e002af980000105
+  85
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+  85
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+  85
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+  85
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+T
+0
+0
+3
+r_object_id ID S 0
+03002af980000105
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:43 2007
+cache_persistent BOOL S 0
+T
+03002af9800001aa
+dm_type
+OBJ dm_type 15
+A 11 kapture_doc
+A 11 dm_document
+88
+85
+A 4 dctm
+0000000000000000
+0000000000000000
+2e002af980000500
+  88
+A 11 object_name
+A 13 r_object_type
+A 5 title
+A 7 subject
+A 7 authors
+A 8 keywords
+A 18 a_application_type
+A 8 a_status
+A 15 r_creation_date
+A 13 r_modify_date
+A 10 r_modifier
+A 13 r_access_date
+A 11 a_is_hidden
+A 12 i_is_deleted
+A 16 a_retention_date
+A 9 a_archive
+A 23 a_compound_architecture
+A 15 a_link_resolved
+A 15 i_reference_cnt
+A 12 i_has_folder
+A 11 i_folder_id
+A 14 r_composite_id
+A 17 r_composite_label
+A 17 r_component_label
+A 10 r_order_no
+A 10 r_link_cnt
+A 15 r_link_high_cnt
+A 19 r_assembled_from_id
+A 19 r_frzn_assembly_cnt
+A 19 r_has_frzn_assembly
+A 16 resolution_label
+A 16 r_is_virtual_doc
+A 13 i_contents_id
+A 14 a_content_type
+A 10 r_page_cnt
+A 14 r_content_size
+A 11 a_full_text
+A 14 a_storage_type
+A 12 i_cabinet_id
+A 10 owner_name
+A 12 owner_permit
+A 10 group_name
+A 12 group_permit
+A 12 world_permit
+A 15 i_antecedent_id
+A 14 i_chronicle_id
+A 13 i_latest_flag
+A 12 r_lock_owner
+A 11 r_lock_date
+A 14 r_lock_machine
+A 9 log_entry
+A 15 r_version_label
+A 12 i_branch_cnt
+A 12 i_direct_dsc
+A 16 r_immutable_flag
+A 13 r_frozen_flag
+A 12 r_has_events
+A 10 acl_domain
+A 8 acl_name
+A 13 a_special_app
+A 14 i_is_reference
+A 14 r_creator_name
+A 11 r_is_public
+A 11 r_policy_id
+A 14 r_resume_state
+A 15 r_current_state
+A 14 r_alias_set_id
+A 16 a_effective_date
+A 17 a_expiration_date
+A 17 a_publish_formats
+A 17 a_effective_label
+A 16 a_effective_flag
+A 10 a_category
+A 13 language_code
+A 13 a_is_template
+A 17 a_controlling_app
+A 19 r_full_content_size
+A 21 a_extended_properties
+A 11 a_is_signed
+A 18 a_last_review_date
+A 14 i_retain_until
+A 13 r_aspect_name
+A 13 i_retainer_id
+A 12 i_is_replica
+A 8 i_vstamp
+A 13 kapture_title
+A 11 kapture_url
+A 12 kapture_date
+  88
+2
+2
+2
+2
+2
+2
+2
+2
+4
+4
+2
+4
+0
+0
+4
+0
+2
+0
+1
+0
+3
+3
+2
+2
+1
+1
+1
+3
+1
+0
+2
+1
+3
+2
+1
+1
+0
+2
+3
+2
+1
+2
+1
+1
+3
+3
+0
+2
+4
+2
+2
+2
+1
+0
+0
+0
+0
+2
+2
+2
+0
+2
+0
+3
+1
+1
+3
+4
+4
+2
+2
+2
+2
+2
+0
+2
+5
+2
+0
+4
+4
+2
+3
+0
+1
+2
+2
+4
+  88
+F
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+T
+T
+T
+T
+F
+F
+F
+F
+F
+T
+F
+F
+F
+T
+T
+F
+F
+F
+F
+F
+  88
+255
+32
+400
+192
+48
+48
+32
+16
+0
+0
+32
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+32
+32
+0
+0
+0
+0
+0
+0
+32
+0
+0
+32
+0
+0
+0
+32
+0
+32
+0
+32
+0
+0
+0
+0
+0
+32
+0
+32
+120
+32
+0
+0
+0
+0
+0
+32
+32
+32
+0
+32
+0
+0
+0
+0
+0
+0
+0
+32
+32
+8
+64
+5
+0
+32
+0
+32
+0
+0
+0
+64
+0
+0
+0
+128
+256
+0
+T
+0
+6
+3
+r_object_id ID S 0
+03002af9800001aa
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:42 2007
+cache_persistent BOOL S 0
+T
+03002af980000143
+dm_type
+OBJ dm_type 15
+A 9 dm_format
+A 0 
+22
+0
+A 7 kapture
+0000000000000000
+0000000000000000
+2e002af980000143
+  22
+A 4 name
+A 11 description
+A 9 can_index
+A 15 topic_transform
+A 12 topic_filter
+A 12 topic_format
+A 17 topic_format_name
+A 11 mac_creator
+A 8 mac_type
+A 13 dos_extension
+A 9 is_hidden
+A 9 win31_app
+A 12 com_class_id
+A 9 mime_type
+A 10 icon_index
+A 17 richmedia_enabled
+A 11 asset_class
+A 15 default_storage
+A 17 filename_modifier
+A 12 format_class
+A 12 i_is_replica
+A 8 i_vstamp
+  22
+2
+2
+0
+0
+2
+3
+2
+2
+2
+2
+0
+2
+2
+2
+1
+0
+2
+3
+2
+2
+0
+1
+  22
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+T
+F
+F
+  22
+64
+64
+0
+0
+64
+0
+64
+4
+4
+10
+0
+12
+38
+256
+0
+0
+32
+0
+16
+32
+0
+0
+T
+0
+0
+3
+r_object_id ID S 0
+03002af980000143
+cache_timestamp TIME S 0
+xxx Aug 23 19:10:40 2007
+cache_persistent BOOL S 0
+T

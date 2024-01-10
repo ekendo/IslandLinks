@@ -1,0 +1,56 @@
+#def loginMan
+<script type="text/javascript">
+//Check that we are on the same BASE_url, redirect if not
+var host = window.location.host + '';
+var base_url = '$BASE_URL'.replace('http://', '');
+if(base_url.indexOf(host) != 0) {
+    alert('IMPORTANT: Browser security issue encountered.\nSkeletonz will now redirect you to a page where you can login from.\nFrom there try to login again.');
+    GB_P.location = '$BASE_URL/$full_link';
+}
+
+function checkLoginCallback(res_txt) { 
+    if(res_txt == "ok") {
+        AJS.\$("login_form").submit();
+    }
+    else {
+        AJS.setHTML(AJS.\$('error'), 'Username or password incorrect!');
+    }
+    Indicator.remove(AJS.\$('login_indicator'));
+}
+
+function doLogin() {
+    AJS.setHTML(AJS.\$('error'), '');
+
+    Indicator.append(AJS.\$('login_indicator'));
+    var item = {'username': AJS.\$('username').value, 'password': AJS.\$('password').value};
+    var d = getRequest('users/checkLoginInfo');
+    d.addCallback(checkLoginCallback);
+    d.sendReq(item);
+    return false;
+}
+</script>
+#end def
+#silent $template.getHeader().appendScriptData($loginMan)
+$template.getHeader().renderText()
+<div id="container">
+    <div id="content" style="margin-top: 0px; text-align: center;">
+        <div id="error" class="error">&nbsp;</div>
+        <form onsubmit="return doLogin()" action="users/setLogin" id="login_form">
+            <dl class="dl_big">
+                <dt>Username</dt>
+                <dd>
+                    <input type="text" id="username" name="username" size="10" class="big" style="width: 240px;" />
+                </dd>
+                <dt>Password</dt>
+                <dd>
+                    <input type="password" id="password" name="password" size="10" class="big" style="width: 240px;" />
+                </dd>
+                <center>
+                    <input type="submit" value="Login" class="button" /> <span id="login_indicator"></span>
+                </center>
+            </dl>
+        </form>
+    </div>
+</div>
+
+$template.getFooter().renderText()

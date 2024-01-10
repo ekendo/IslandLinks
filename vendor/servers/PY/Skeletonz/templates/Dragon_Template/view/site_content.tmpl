@@ -1,0 +1,60 @@
+<div id="title">
+	<table cellpadding="5" cellspacing="5">
+		<tr>
+			<td rowspan="5">
+				<a href="http://conocimientoglobal.ekendotech.com/cgi-bin/Skeletonz/main.py/site/main?page_id=1"><img src="http://conocimientoglobal.ekendotech.com/cgi-bin/Skeletonz/templates/Dragon_Template/static/images/photoCG.jpg" height=150 width=150></a>&nbsp;<br><a href="http://conocimientoglobal.ekendotech.com/cgi-bin/Skeletonz/main.py/site/main?page_id=1">#ConocimientoGlobal?</a></br>
+			</td>
+			<td>
+				<font size="2">EN</font>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<font size="2">ES</font>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<font size="2">FR</font>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<font size="2">BP</font>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<font size="2">ZH</font>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+  <div>
+    <div id="CMS_ContentText">
+      #if $page_obj.content == None or $page_obj.content == ''
+          <span class="Content">The page has no content</span>
+      #else
+          #if $edit_mode
+              <span class="Content">$page_obj.getContentEdit()</span>
+          #else
+              <span class="Content">
+              	$page_obj.getContent()
+              </span>
+          #end if
+	  <!-- get the section : default tag cloud of categories//-->
+	  <!-- get category : default //-->
+	  <!-- loop through the products //-->
+      #end if
+    </div>
+  </div>
+  <div id="footer"></div>
+  <div class="clear"></div> <!--CSS hack-->
+</div>
+<div id="credits" align="center">
+  	<a href="http://orangoo.com/skeletonz/">Skeletonz</a> powered
+  <br />
+  <br />
+</div>

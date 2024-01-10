@@ -1,0 +1,106 @@
+/* <?php
+*/
+
+/* Shop Styles here please
+*/
+.legalinfo {
+	background: lightgray;
+	border: 2px solid gray;
+	margin: 10px;
+	padding: 0px 0px 10px 10px;
+}
+/*
+General Formatting
+*/
+.formLabel {
+	float:left;
+	width:30%;
+	text-align:right;
+	font-weight: bold;
+	margin: 2px;
+	white-space: nowrap;
+	clear: left;
+}
+
+.formField {
+	float:left;
+	width:60%;
+	margin: 2px;
+		
+}
+/**
+* Administration Styles
+*/
+.adminListHeader {
+	float:left; height: 48px; background-repeat: no-repeat;
+	text-align: left; font-size: 18px; font-weight: bold;
+	padding-left: 80px;	
+}
+
+.labelcell {
+	margin-left: auto;
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+	width: 30%;
+}
+
+/**
+* Errors, Warnings and Info formatting
+*/
+.shop_error, .shop_warning, .shop_info, .shop_debug, .shop_critical, .shop_tip {
+	font-family : "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size : 14px;
+	
+	text-align: left;
+	vertical-align: middle;
+	
+	margin: 10px 0px 0px 20px;
+	padding-left: 20px;
+
+	line-height: 20px;
+}
+.shop_error {
+        color:          red;
+        background-image: url( ../shop_image/ps_image/log_error.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: white;
+}
+.shop_warning {
+        color:          #993300;
+        background-image: url( ../shop_image/ps_image/log_warning.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+}
+.shop_info {
+
+        color:          #003399;
+        background-image: url( ../shop_image/ps_image/log_info.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+}
+.shop_tip {
+        background-image: url( ../shop_image/ps_image/info.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+
+}
+.shop_debug {
+
+        color:          #003399;
+        background-image: url( ../shop_image/ps_image/log_debug.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+
+}
+.shop_critical {
+	color:		red;
+        font-weight: bold;
+        background-image: url( ../shop_image/ps_image/log_critical.png );
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: white;
+}

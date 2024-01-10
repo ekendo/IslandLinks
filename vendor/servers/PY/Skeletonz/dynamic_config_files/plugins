@@ -1,0 +1,4 @@
+[Model_Blog]
+All revisions: [Blog_Initial, Blog_MoveBlogOut, Blog_AddComments, Blog_RewriteLabels, Blog_MoveHostPage]
+Current revision: Blog_MoveHostPage
+
