@@ -1,9 +1,0 @@
-<Resources>
-<Icon></Icon>
-<BackgroundImage></BackgroundImage>
-<BmpImages>
-<BmpImage Name="Icons[4]"></BmpImage>
-<BmpImage Name="NewsCountsLeft[6]"></BmpImage>
-<BmpImage Name="NewsCountsRight[6]"></BmpImage>
-</BmpImages>
-</Resources>

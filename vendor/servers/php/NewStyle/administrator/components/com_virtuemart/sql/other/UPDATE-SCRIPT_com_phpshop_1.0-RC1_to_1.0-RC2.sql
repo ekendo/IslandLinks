@@ -1,1 +1,0 @@
-ALTER TABLE `mos_pshop_payment_method` ADD `is_creditcard` TINYINT( 1 ) NOT NULL ;

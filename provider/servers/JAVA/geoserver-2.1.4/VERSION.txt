@@ -1,6 +1,0 @@
-version = 2.1.4
-svn revision = 17150
-build date = 01-Jun-2012 17:02
-geotools version = 2.7.5
-geotools revision = 38793
-hudson build = -1

@@ -1,85 +1,0 @@
-8
-
-dir
-83
-svn://ekendotech.net/islandsoft/trunk/framework/client/desktop/windows/Java/IslandLinks/islandTravel
-svn://ekendotech.net/islandsoft
-
-
-
-2007-08-09T03:30:17.193079Z
-8
-ekendo
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-724664bd-8571-49c4-a1b7-4ebd78a94cdb
-
-build
-dir
-
-test
-dir
-
-.cache
-dir
-
-dist
-dir
-
-.jxta
-dir
-
-jxta.log
-file
-82
-
-
-
-2008-06-06T04:08:49.897955Z
-a4d7d825e6c19c4db39c60f4f980cbc7
-2007-08-09T03:30:17.193079Z
-8
-ekendo
-
-nbproject
-dir
-
-src
-dir
-
-README.txt
-file
-
-
-
-
-2008-06-06T04:13:25.404113Z
-7bde2337e762b5d373d0a1d2464c4203
-2007-08-09T03:30:17.193079Z
-8
-ekendo
-
-build.xml
-file
-
-
-
-
-2008-06-06T04:13:25.554329Z
-575058540550adf5d0016d95978b6ee9
-2007-08-09T03:30:17.193079Z
-8
-ekendo
-
